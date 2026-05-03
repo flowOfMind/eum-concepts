@@ -1987,7 +1987,7 @@ a { color: #2563EB; }
 .md-brand b { font-weight: 800; color: #2DB36C; }
 .md-pin { font-size: 16px; }
 .md-actions { display: inline-flex; align-items: center; gap: 8px; }
-.md-bell { width: 36px; height: 36px; border-radius: 50%; background: #2DB36C; border: none; color: #fff; cursor: pointer; display: grid; place-items: center; padding: 0; box-shadow: 0 6px 16px rgba(45,179,108,.30); font-family: inherit; }
+.md-bell { width: 36px; height: 36px; border-radius: 50%; background: #fff; border: 1px solid #2DB36C; color: #2DB36C; cursor: pointer; display: grid; place-items: center; padding: 0; box-shadow: 0 4px 12px rgba(15,23,42,.06); font-family: inherit; }
 .md-profile { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #2DB36C, #5B8CFF); color: #fff; font-size: 13px; font-weight: 800; border: none; cursor: pointer; font-family: inherit; box-shadow: 0 6px 14px rgba(45,179,108,.22); }
 .md-hero { padding: 8px 2px 14px; }
 .md-hero small { font-size: 12px; color: #6B7280; font-weight: 700; display: block; margin-bottom: 4px; }
