@@ -81,12 +81,12 @@ a { color: #2563EB; }
   overflow: hidden; box-shadow: var(--shadow);
   border: 1px solid rgba(0,0,0,.06);
   display: flex; flex-direction: column;
-  min-height: calc(100vh - var(--tabbar-h) - 60px);
+  height: calc(100vh - var(--tabbar-h) - 60px);
   position: relative;
 }
 @media (max-width: 880px) {
   .phone {
-    max-width: none; width: 100vw; min-height: 0;
+    max-width: none; width: 100vw;
     height: calc(100vh - var(--tabbar-h) - env(safe-area-inset-bottom));
     border-radius: 0; border: none; box-shadow: none;
   }
