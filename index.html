@@ -1,0 +1,1484 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>이음 — Peer Score 디자인 시안 비교</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Jua&family=Press+Start+2P&family=DotGothic16&display=swap" rel="stylesheet">
+<style>
+  /* 롯데리아 촵땡겨체 — noonnu 자체 호스팅 (사용자 제공 URL) */
+  @font-face {
+    font-family: 'LotteriaChwapttaenggyeo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+  }
+  /* KERIS 케듀체 — noonnu 호스팅 (R 400 + B 700) */
+  @font-face {
+    font-family: 'KerisKedyuche';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-3@1.0/KERISKEDU_R.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'KerisKedyuche';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-3@1.0/KERISKEDU_B.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+  }
+  /* SB Aggro B (Aggravo) — noonnu 호스팅 */
+  @font-face {
+    font-family: 'Aggravo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+  }
+  /* MonoplexKR Nerd Bold — noonnu 호스팅 */
+  @font-face {
+    font-family: 'MonoplexNerd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-nerd@1.0/MonoplexKRNerd-Bold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+  }
+</style>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__brand">
+      <span class="topbar__logo">이음</span>
+      <span class="topbar__sub">Peer Score · 디자인 시안 비교</span>
+    </div>
+    <nav class="topbar__tabs" id="tabs">
+      <button class="tab" data-tab="home" aria-selected="true">시안 목록</button>
+      <button class="tab" data-tab="M">M</button>
+      <button class="tab" data-tab="MA">MA</button>
+      <button class="tab" data-tab="MB">MB</button>
+      <button class="tab" data-tab="MC">MC</button>
+      <button class="tab" data-tab="MD">MD</button>
+      <button class="tab" data-tab="MQ">MQ</button>
+      <button class="tab" data-tab="MG">MG</button>
+      <button class="tab" data-tab="MI">MI</button>
+      <button class="tab" data-tab="MJ">MJ</button>
+      <button class="tab" data-tab="MP">MP</button>
+      <button class="tab" data-tab="PS">PS</button>
+      <button class="tab" data-tab="PX">PX</button>
+    </nav>
+  </header>
+
+  <main id="stage" class="stage"></main>
+
+  <template id="home-template">
+    <section class="home">
+      <h1 class="home__title">이음 · 디자인 시안 인덱스</h1>
+      <p class="home__sub">메인페이지(앱 홈) 시안 + Peer Score 시안. 카드 클릭으로 이동.</p>
+
+      <h2 class="home__section">메인페이지 (앱 홈) — 기본 + 브랜드 7변종</h2>
+      <div class="home__grid">
+        <button class="card-button" data-tab="M" style="--accent:#1A1A1A">
+          <span class="badge">M</span>
+          <h3>메인 (기본)</h3>
+          <p>중립 톤 · 진행 중 팀 + 미션 캐러셀 + 모각코 + 추천 동료</p>
+        </button>
+        <button class="card-button" data-tab="MA" style="--accent:#2DB36C">
+          <span class="badge">MA</span>
+          <h3>A. 휴먼테크</h3>
+          <p>그린/AI블루 + 노드 플로우 — "AI 시대 같이 만들 동료"</p>
+        </button>
+        <button class="card-button" data-tab="MB" style="--accent:#6C5CE7">
+          <span class="badge">MB</span>
+          <h3>B. 미션랩</h3>
+          <p>보라/민트 + 퀘스트 카드 — XP·레어리티·시즌</p>
+        </button>
+        <button class="card-button" data-tab="MC" style="--accent:#2563EB">
+          <span class="badge">MC</span>
+          <h3>C. AI PM 워크스페이스</h3>
+          <p>블루/퍼플 + 칸반 보드 — 슬랙/노션 차별화</p>
+        </button>
+        <button class="card-button" data-tab="MD" style="--accent:#92400E">
+          <span class="badge">MD</span>
+          <h3>D. 로컬 빌더 클럽</h3>
+          <p>베이지/커피 + 지도 핀 — 관악·동작·서초·강남</p>
+        </button>
+        <button class="card-button" data-tab="MQ" style="--accent:#0F172A">
+          <span class="badge">MQ</span>
+          <h3>Q. ME 복제 <small style="color:#94A3B8;font-weight:600">(sharp / round)</small></h3>
+          <p>컨테이너 sharp-edge(0px) / 버튼은 8px 라운드</p>
+        </button>
+        <button class="card-button" data-tab="MG" style="--accent:#2DB36C">
+          <span class="badge">MG</span>
+          <h3>G. 작업실 + 레이더 <small style="color:#94A3B8;font-weight:600">(Vibe Dashboard)</small></h3>
+          <p>VPN-style ◉ 탐색 버튼 + 티어/일정/추천</p>
+        </button>
+      </div>
+
+      <h2 class="home__section">스토리보드 기반 메인 5종 — 매칭/미션/협업/AI PM/루틴</h2>
+      <div class="home__grid">
+        <button class="card-button" data-tab="MI" style="--accent:#6C5CE7">
+          <span class="badge">MI</span>
+          <h3>I. 미션·평가 <small style="color:#94A3B8;font-weight:600">(B · 백준 감성)</small></h3>
+          <p>오늘의 미션 + 5단계 진행 + 평가 6항목 + 뱃지</p>
+        </button>
+        <button class="card-button" data-tab="MJ" style="--accent:#2563EB">
+          <span class="badge">MJ</span>
+          <h3>J. 협업 보드 <small style="color:#94A3B8;font-weight:600">(C · 워크플로우)</small></h3>
+          <p>프로젝트 헤더 + AI PM 능동 질문 + 4 tile + 결정사항</p>
+        </button>
+        <button class="card-button" data-tab="MP" style="--accent:#2D5DF1">
+          <span class="badge">MP</span>
+          <h3>P. 시스템 PM <small style="color:#94A3B8;font-weight:600">(모임 운영)</small></h3>
+          <p>"보이지 않는 PM" — Hero 없는 운영 대시보드. 지금 행동 카드 + 오늘 할 일 + 당근 가져오기</p>
+        </button>
+      </div>
+
+      <h2 class="home__section">Peer Score (협업 평판) 시안</h2>
+      <div class="home__grid">
+        <button class="card-button" data-tab="PS" style="--accent:#2563EB">
+          <span class="badge">PS</span>
+          <h3>Peer Score (커스텀)</h3>
+          <p>기존 SaaS 시안 — 막대 차트 + 인증 배지</p>
+          <span class="rate">★★★</span>
+        </button>
+        <button class="card-button" data-tab="PX" style="--accent:#B5E22F">
+          <span class="badge">PX</span>
+          <h3>PS · Pixel Persona <small style="color:#94A3B8;font-weight:600">(4안)</small></h3>
+          <p>BOATMATE 무드 · 크림 BG + 화이트 카드 + 라임 프로그레스 + 마스코트</p>
+          <span class="rate">★★★★★</span>
+        </button>
+      </div>
+
+      <p class="home__note">2026-05-01 · 메인 13시안 + Peer Score 4시안</p>
+    </section>
+  </template>
+
+  <!-- PS: Peer Score (커스텀) -->
+  <template id="PS-template">
+    <section class="phone phone--PS">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body">
+        <div class="hero">
+          <span class="hero__chip">📈 협업 평판</span>
+          <h1 class="hero__title">함께 만들어보고,<br>협업 실력을 증명하세요</h1>
+          <p class="hero__sub">말보다 결과로,<br>프로필보다 함께한 기록으로 연결됩니다.</p>
+        </div>
+        <div class="score-card">
+          <div class="score-card__head">
+            <small>나의 협업 신뢰도</small>
+            <span class="score-trend">▲ +12</span>
+          </div>
+          <div class="score-card__body">
+            <div class="score-num">87</div>
+            <div class="score-bars">
+              <div><small>응답 속도</small><div class="bar"><div style="width:90%"></div></div></div>
+              <div><small>결과물 기여</small><div class="bar"><div style="width:82%"></div></div></div>
+              <div><small>커뮤니케이션</small><div class="bar"><div style="width:88%"></div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="cta-stack">
+          <button class="btn btn--primary">협업 매칭 시작</button>
+          <button class="btn btn--ghost">함께한 기록 보기</button>
+        </div>
+        <h3 class="section-title">최근 협업 후기</h3>
+        <ul class="review-list">
+          <li>
+            <div class="review-row">
+              <b>지호 · Claude Code</b>
+              <span class="cred">⭐ 4.9</span>
+            </div>
+            <small>"역할 분담이 명확하고 응답이 빠름. 다시 함께하고 싶음."</small>
+          </li>
+          <li>
+            <div class="review-row">
+              <b>서연 · 디자인+코딩</b>
+              <span class="cred">⭐ 5.0</span>
+            </div>
+            <small>"디자인 → 코드 변환을 빠르게 정리. 미션 클리어."</small>
+          </li>
+        </ul>
+        <h3 class="section-title">획득한 인증</h3>
+        <div class="cred-row">
+          <span class="cred-badge">🏅 첫 협업</span>
+          <span class="cred-badge">🏅 미션 10회</span>
+          <span class="cred-badge">🏅 멘토링 3회</span>
+        </div>
+      </div>
+      <div class="phone__nav">
+        <span class="nav-on"><i class="phone__nav-ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></i><small>대시보드</small></span>
+        <span><i class="phone__nav-ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></i><small>매칭</small></span>
+        <span><i class="phone__nav-ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg></i><small>기록</small></span>
+        <span><i class="phone__nav-ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></i><small>프로필</small></span>
+      </div>
+    </section>
+    <aside class="meta">
+      <h2>Peer Score (커스텀)</h2>
+      <p class="lede">기존 커스텀 SaaS 시안.</p>
+      <dl>
+        <dt>UI</dt><dd>커스텀 SaaS 톤. 데이터 카드 + 그라데이션 막대 + 인증 배지</dd>
+        <dt>장점</dt><dd>정보 밀도 ↑ · 직관적</dd>
+        <dt>유의</dt><dd>딱딱할 수 있음 · 감성 약함</dd>
+      </dl>
+    </aside>
+  </template>
+
+  <!-- PX: Pixel Persona (4안) — BOATMATE 무드 -->
+  <template id="PX-template">
+    <section class="phone phone--PX">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body px-body">
+        <!-- Header: brand + bell -->
+        <div class="px-header">
+          <span class="px-brand">EEUM</span>
+          <div class="px-bell">
+            <span><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></span>
+            <span class="px-deco-dots"></span>
+          </div>
+        </div>
+
+        <!-- Greeting + small mascot -->
+        <div class="px-greet-wrap">
+          <h1 class="px-greet">코더 모니카님,<br>오늘도 함께 만들어요!</h1>
+          <div class="px-mascot" aria-hidden="true">
+            <svg viewBox="0 0 18 18" shape-rendering="crispEdges">
+              <rect x="8" y="0" width="2" height="3" fill="#1A1A1A"/>
+              <rect x="15" y="8" width="3" height="2" fill="#1A1A1A"/>
+              <rect x="8" y="15" width="2" height="3" fill="#1A1A1A"/>
+              <rect x="0" y="8" width="3" height="2" fill="#1A1A1A"/>
+              <rect x="5" y="4" width="8" height="10" fill="#1A1A1A"/>
+              <rect x="4" y="5" width="10" height="8" fill="#1A1A1A"/>
+              <rect x="6" y="8" width="2" height="2" fill="#fff"/>
+              <rect x="10" y="8" width="2" height="2" fill="#fff"/>
+              <rect x="7" y="9" width="1" height="1" fill="#1A1A1A"/>
+              <rect x="11" y="9" width="1" height="1" fill="#1A1A1A"/>
+              <rect x="8" y="11" width="2" height="1" fill="#B5E22F"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Section: 오늘의 페르소나 -->
+        <div class="px-section">
+          <span class="px-section__title">오늘의 페르소나</span>
+          <span class="px-section__count" id="px-pages">1 / 4</span>
+        </div>
+
+        <!-- Persona carousel -->
+        <div class="px-carousel" id="px-carousel">
+          <!-- 1. 바이브 코더 -->
+          <div class="px-card">
+            <div class="px-card__ico">🪄</div>
+            <h3 class="px-card__title">바이브 코더</h3>
+            <span class="px-card__pill">Lv.<em>24</em> · AI CODE MAGE</span>
+            <div class="px-card__meta">
+              <small>월~금</small>
+              <small>응답 <em>90</em> · 제작 <em>82</em> · 커뮤 <em>88</em></small>
+            </div>
+            <div class="px-card__progress">
+              <div class="px-progress px-progress--lime"><div style="width:76%"></div></div>
+              <span class="px-card__pct"><em>76</em>%</span>
+            </div>
+          </div>
+          <!-- 2. 디자이너 -->
+          <div class="px-card">
+            <div class="px-card__ico">🎨</div>
+            <h3 class="px-card__title">UX 메이커</h3>
+            <span class="px-card__pill">Lv.<em>18</em> · PIXEL SKETCHER</span>
+            <div class="px-card__meta">
+              <small>월~목</small>
+              <small>감각 <em>86</em> · 구조화 <em>89</em> · 피드백 <em>91</em></small>
+            </div>
+            <div class="px-card__progress">
+              <div class="px-progress px-progress--yellow"><div style="width:62%"></div></div>
+              <span class="px-card__pct"><em>62</em>%</span>
+            </div>
+          </div>
+          <!-- 3. 마케터 -->
+          <div class="px-card">
+            <div class="px-card__ico">📢</div>
+            <h3 class="px-card__title">그로스 헌터</h3>
+            <span class="px-card__pill">Lv.<em>11</em> · GROWTH HACKER</span>
+            <div class="px-card__meta">
+              <small>화·목·토</small>
+              <small>설득 <em>76</em> · 분석 <em>68</em> · 카피 <em>84</em></small>
+            </div>
+            <div class="px-card__progress">
+              <div class="px-progress px-progress--coral"><div style="width:34%"></div></div>
+              <span class="px-card__pct"><em>34</em>%</span>
+            </div>
+          </div>
+          <!-- 4. 프론트엔드 -->
+          <div class="px-card">
+            <div class="px-card__ico">🧩</div>
+            <h3 class="px-card__title">컴포넌트 기사</h3>
+            <span class="px-card__pill">Lv.<em>15</em> · COMPONENT KNIGHT</span>
+            <div class="px-card__meta">
+              <small>월~금</small>
+              <small>구현 <em>80</em> · 반응형 <em>77</em> · UI <em>78</em></small>
+            </div>
+            <div class="px-card__progress">
+              <div class="px-progress px-progress--mint"><div style="width:54%"></div></div>
+              <span class="px-card__pct"><em>54</em>%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: 페르소나 목록 -->
+        <div class="px-section">
+          <span class="px-section__title">페르소나 목록</span>
+          <a href="#" class="px-section__edit">편집</a>
+        </div>
+
+        <!-- Mini list -->
+        <ul class="px-list">
+          <li>
+            <span class="px-list__ico">🥷</span>
+            <div>
+              <b>리뷰어</b>
+              <small>월·수·금  3회 활동  ~am 11:00</small>
+            </div>
+          </li>
+          <li>
+            <span class="px-list__ico">📚</span>
+            <div>
+              <b>스터디 메이트</b>
+              <small>화·목  2회 활동  ~pm 09:00</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Minimal bottom nav (BOATMATE style: 2 icons) -->
+      <div class="px-bottom">
+        <button class="px-bottom__btn px-bottom__btn--on" aria-label="홈"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></button>
+        <button class="px-bottom__btn" aria-label="프로필"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
+      </div>
+    </section>
+    <aside class="meta">
+      <h2>Peer Score · Pixel Persona <small style="color:#94A3B8;font-weight:600">(4안)</small></h2>
+      <p class="lede">BOATMATE 무드 — 크림 배경 + 화이트 카드 + 헤비 헤드라인 + 라임/옐로/코랄/민트 프로그레스 + 우상단 픽셀 마스코트 + 점선 데코 + 미니멀 nav.</p>
+      <dl>
+        <dt>레이아웃</dt><dd>헤더(브랜드+벨) → 인사 + 마스코트 → 4 페르소나 캐러셀(스왑) → 페이지네이션 → 페르소나 목록 → 2아이콘 미니멀 nav</dd>
+        <dt>카드</dt><dd>화이트 카드 + 16% 라운드 + 부드러운 그림자, 이모지 아이콘 + 큰 헤비 타이틀 + 회색 메타 정보 + 컬러 프로그레스 바 + 퍼센트 숫자(촵땡겨체)</dd>
+        <dt>마스코트</dt><dd>우상단 sparkle 픽셀 캐릭터 (검정 단일 톤, 라임 입) + 점선 데코</dd>
+        <dt>컬러</dt><dd>크림 #F8F8F4 배경 / 화이트 카드 / 라임 #B5E22F / 옐로 #F2C946 / 코랄 #FF8C7A / 민트 #34E89E / 회색 텍스트</dd>
+        <dt>타이포</dt><dd>한글 KerisKedyuche → Pretendard 폴백 / 숫자 촵땡겨체 / 영문 클래스 Press Start 2P</dd>
+      </dl>
+    </aside>
+  </template>
+
+  <!-- M: 메인페이지 (앱 실제 홈) -->
+  <template id="M-template">
+    <section class="phone phone--M">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body m-body">
+        <!-- Topbar -->
+        <div class="m-topbar">
+          <span class="m-brand">이음</span>
+          <button class="m-loc" aria-label="지역 변경">📍 관악 <span class="m-loc__caret">▾</span></button>
+          <button class="m-bell" aria-label="알림"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="m-bell-dot"></span></button>
+        </div>
+
+        <!-- Greeting + CTA (주석 처리) -->
+        <!--
+        <div class="m-hero">
+          <h1 class="m-hero__title">도현님,<br>오늘 2시간,<br>같이 만들 사람을 찾아볼까요?</h1>
+          <div class="m-hero__cta-row">
+            <button class="m-cta m-cta--p">팀 매칭 시작</button>
+            <button class="m-cta m-cta--s">오늘의 미션</button>
+          </div>
+        </div>
+        -->
+
+        <!-- Section 1: AI PM 진행 중인 팀 (캐러셀, 참여 팀 수만큼) -->
+        <div class="m-section">
+          <!--
+          <div class="m-section__head">
+            <span><span class="m-section__chip">🤖 AI PM</span><span class="m-section__title">오늘 할 일</span></span>
+            <a class="m-section__more">팀 전체 →</a>
+          </div>
+          -->
+          <div class="m-ai-carousel">
+            <div class="m-ai-card">
+              <div class="m-ai-card__head">
+                <span class="m-ai-card__chip">🤖 오늘 데모데이팀 할일</span>
+              </div>
+              <div class="m-ai-card__team">
+                <span class="m-ai-card__team-name">팀 · AI 랜딩 데모데이</span>
+                <span class="m-ai-card__team-day">D-2</span>
+              </div>
+              <div class="m-ai-card__progress">
+                <div class="m-ai-card__bar"><div style="width:62%"></div></div>
+                <em>62%</em>
+              </div>
+              <ul class="m-ai-todo">
+                <li><i></i><span>히어로 카피 2안 정리 후 공유</span><b>14:00</b></li>
+                <li class="m-ai-todo--done"><i class="m-ai-todo__done"></i><span>Figma 와이어 v2 리뷰 코멘트</span><b>완료</b></li>
+                <li><i></i><span>Supabase 로그인 붙이기 (지호)</span><b>오늘</b></li>
+              </ul>
+              <button class="m-ai-card__more">팀룸 열기 →</button>
+            </div>
+            <div class="m-ai-card">
+              <div class="m-ai-card__head">
+                <span class="m-ai-card__chip">🤖 오늘 회의록팀 할일</span>
+              </div>
+              <div class="m-ai-card__team">
+                <span class="m-ai-card__team-name">팀 · AI 회의록 요약기</span>
+                <span class="m-ai-card__team-day">D-5</span>
+              </div>
+              <div class="m-ai-card__progress">
+                <div class="m-ai-card__bar"><div style="width:34%"></div></div>
+                <em>34%</em>
+              </div>
+              <ul class="m-ai-todo">
+                <li><i></i><span>OpenAI 프롬프트 1차 작성</span><b>오늘</b></li>
+                <li><i></i><span>Whisper 토큰 한도 검토</span><b>D-1</b></li>
+                <li class="m-ai-todo--done"><i class="m-ai-todo__done"></i><span>Notion 클론 와이어</span><b>완료</b></li>
+              </ul>
+              <button class="m-ai-card__more">팀룸 열기 →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: 오늘의 미션 -->
+        <div class="m-section">
+          <div class="m-section__head">
+            <span class="m-section__title">오늘의 바이브코딩 미션</span>
+            <a class="m-section__more">전체 →</a>
+          </div>
+          <div class="m-mission-row">
+            <div class="m-mission-card m-mission-card--30">
+              <span class="m-mission-card__time">30분</span>
+              <h4>ChatGPT로 자기소개 페이지 만들기</h4>
+              <small>입문 · 개인</small>
+              <div class="m-mission-card__foot">시작</div>
+            </div>
+            <div class="m-mission-card m-mission-card--2h">
+              <span class="m-mission-card__time">2시간</span>
+              <h4>Figma 와이어 → HTML 구현</h4>
+              <small>주니어 · 팀</small>
+              <div class="m-mission-card__foot">시작</div>
+            </div>
+            <div class="m-mission-card m-mission-card--3d">
+              <span class="m-mission-card__time">3일</span>
+              <h4>AI 챗봇 MVP 만들기</h4>
+              <small>실무자 · 팀</small>
+              <div class="m-mission-card__foot">시작</div>
+            </div>
+            <div class="m-mission-card m-mission-card--7d">
+              <span class="m-mission-card__time">7일</span>
+              <h4>실배포 미니 서비스 + 유저 5명 피드백</h4>
+              <small>실무자 · 팀</small>
+              <div class="m-mission-card__foot">시작</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4: 내 주변 모각코 -->
+        <div class="m-section">
+          <div class="m-section__head">
+            <span class="m-section__title">내 주변 모각코</span>
+            <a class="m-section__more">지도 →</a>
+          </div>
+          <div class="m-loc-chips">
+            <span class="m-chip m-chip--on">관악</span>
+            <span class="m-chip">동작</span>
+            <span class="m-chip">서초</span>
+            <span class="m-chip">강남</span>
+          </div>
+          <ul class="m-mogak-list">
+            <li>
+              <div class="m-mogak-list__time"><em>오늘</em><small>19:00</small></div>
+              <div class="m-mogak-list__body">
+                <h4>관악 AI 모각코 · 서울대입구역 카페</h4>
+                <small>3 / 5명 · 시즌 5</small>
+              </div>
+              <button class="m-mogak-list__join">참여</button>
+            </li>
+            <li>
+              <div class="m-mogak-list__time"><em>토</em><small>14:00</small></div>
+              <div class="m-mogak-list__body">
+                <h4>강남 디자인+코딩 모각코</h4>
+                <small>4 / 6명 · 디자이너 환영</small>
+              </div>
+              <button class="m-mogak-list__join">참여</button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Section 5: 추천 팀원 / 멘토 -->
+        <div class="m-section">
+          <div class="m-section__head">
+            <span class="m-section__title">관심사 기반 추천 팀원</span>
+            <a class="m-section__more">전체 →</a>
+          </div>
+          <div class="m-people-row">
+            <div class="m-person">
+              <div class="m-person__avt" style="background:linear-gradient(135deg,#7C8BFF,#FFA864)">JH</div>
+              <b>지호</b>
+              <small>실무자 · 프론트</small>
+              <div class="m-person__tags"><span>AI 도구</span><span>오픈소스</span></div>
+              <button class="m-person__btn">함께하기</button>
+            </div>
+            <div class="m-person">
+              <div class="m-person__avt" style="background:linear-gradient(135deg,#FFD4DD,#FF8C7A)">SY</div>
+              <b>서연</b>
+              <small>주니어 · 디자인</small>
+              <div class="m-person__tags"><span>디자인+코딩</span><span>사이드</span></div>
+              <button class="m-person__btn">함께하기</button>
+            </div>
+            <div class="m-person m-person--mentor">
+              <span class="m-person__mentor-tag">멘토</span>
+              <div class="m-person__avt" style="background:linear-gradient(135deg,#34E89E,#2563EB)">MJ</div>
+              <b>민재</b>
+              <small>시니어 · 테크리드</small>
+              <div class="m-person__tags"><span>아키텍처</span><span>코드리뷰</span></div>
+              <button class="m-person__btn m-person__btn--mentor">멘토링 신청</button>
+            </div>
+            <div class="m-person">
+              <div class="m-person__avt" style="background:linear-gradient(135deg,#FFE7B5,#F2C946)">HR</div>
+              <b>하린</b>
+              <small>주니어 · UI/UX</small>
+              <div class="m-person__tags"><span>디자인+코딩</span><span>스타트업</span></div>
+              <button class="m-person__btn">함께하기</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: 지금 모집 중인 팀 (이동됨) -->
+        <div class="m-section">
+          <div class="m-section__head">
+            <span class="m-section__title">지금 모집 중인 팀</span>
+            <a class="m-section__more">전체 →</a>
+          </div>
+          <ul class="m-team-list">
+            <li>
+              <div class="m-team-list__top">
+                <span class="m-tag m-tag--side">사이드 프로젝트</span>
+                <span class="m-team-list__day">D-1</span>
+              </div>
+              <h4>AI 회의록 요약 앱 — 1주 MVP</h4>
+              <div class="m-team-list__roles">
+                <span class="m-role">프론트 1</span>
+                <span class="m-role">백엔드 1</span>
+                <span class="m-role m-role--on">디자이너 모집중</span>
+              </div>
+              <div class="m-team-list__foot">
+                <small>3 / 4명 · 서윤 외 2명</small>
+                <button class="m-join">합류 신청</button>
+              </div>
+            </li>
+            <li>
+              <div class="m-team-list__top">
+                <span class="m-tag m-tag--ai">AI 도구</span>
+                <span class="m-team-list__day">D-3</span>
+              </div>
+              <h4>Cursor + Supabase 투두앱 만들기</h4>
+              <div class="m-team-list__roles">
+                <span class="m-role">백엔드 1</span>
+                <span class="m-role m-role--on">프론트 모집중</span>
+              </div>
+              <div class="m-team-list__foot">
+                <small>2 / 3명 · 도현 외 1명</small>
+                <button class="m-join">합류 신청</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- Bottom nav (5 items per IA) -->
+      <nav class="m-nav">
+        <button class="m-nav__item m-nav__item--on"><span class="m-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
+        <button class="m-nav__item"><span class="m-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span><small>매칭</small></button>
+        <button class="m-nav__item"><span class="m-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>팀룸</small></button>
+        <button class="m-nav__item"><span class="m-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><small>미션</small></button>
+        <button class="m-nav__item"><span class="m-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
+      </nav>
+    </section>
+    <aside class="meta">
+      <h2>메인페이지 (앱 홈)</h2>
+      <p class="lede">"AI 시대의 팀메이킹 + 미션 워크스페이스" 포지셔닝 — 매칭으로 만나고, 미션으로 어색함을 없애고, AI PM이 협업을 굴린다.</p>
+      <dl>
+        <dt>구조</dt><dd>상단 인사+CTA → AI PM 오늘 할 일(진행 중인 팀) → 오늘의 미션 캐러셀(30분/2h/3일/7일) → 지금 모집 중인 팀 → 내 주변 모각코(관악/동작/서초/강남) → 관심사 기반 추천 팀원·멘토 → 5탭 nav(홈/매칭/팀룸/미션/프로필)</dd>
+        <dt>전제</dt><dd>관심사 8개 · 1~2개 선택 · 1:1 매칭 미운영 · 그룹/모각코 무료. 점수는 활동/완료/뱃지 중심(매너점수는 비공개)</dd>
+        <dt>카피</dt><dd>"오늘 2시간, 같이 만들 사람을 찾아볼까요?" — 친목/소개팅 톤 배제, 미션·결과물·역할 명시 톤</dd>
+        <dt>핵심 루프</dt><dd>매칭 → 팀룸 → AI PM → 미션 수행 → 결과물 제출 → 평판/다음 매칭</dd>
+        <dt>혼자 진입 시</dt><dd>오늘의 미션(30분 개인) → 결과물 제출 → 뱃지 → 비슷한 입문자 모각코 추천 (매칭 실패 시 리텐션 보완)</dd>
+      </dl>
+    </aside>
+  </template>
+
+  <!-- MA: Human Tech / Soft AI Network -->
+  <template id="MA-template">
+    <section class="phone phone--MA">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body ma-body">
+        <div class="ma-topbar">
+          <div class="ma-brand">
+            <span class="ma-brand__dots"><i></i><i></i></span>
+            <span>이음</span>
+          </div>
+          <button class="ma-bell" aria-label="알림"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></button>
+        </div>
+        <div class="ma-hero">
+          <div class="ma-hero__text">
+            <span class="ma-chip">AI 시대 · 같이 만드는</span>
+            <h1>오늘 2시간,<br>같이 만들 동료를<br>만나볼까요?</h1>
+          </div>
+          <div class="ma-tri" aria-hidden="true">
+            <svg class="ma-tri__lines" viewBox="0 0 120 115" preserveAspectRatio="none">
+              <path d="M52,30 Q20,55 24,86" stroke="#2DB36C" stroke-width="1.5" fill="none" stroke-dasharray="2 4"/>
+              <path d="M68,30 Q100,55 96,86" stroke="#5B8CFF" stroke-width="1.5" fill="none" stroke-dasharray="2 4"/>
+              <path d="M32,98 Q60,117 88,98" stroke="#FFB020" stroke-width="1.5" fill="none" stroke-dasharray="2 4"/>
+            </svg>
+            <div class="ma-tri__n ma-tri__n--me">나</div>
+            <div class="ma-tri__n ma-tri__n--ai">AI</div>
+            <div class="ma-tri__n ma-tri__n--team">팀</div>
+          </div>
+        </div>
+        <!--
+        <div class="ma-cta-row">
+          <button class="ma-cta ma-cta--p">팀 매칭 시작</button>
+          <button class="ma-cta ma-cta--s">오늘의 미션</button>
+        </div>
+        -->
+        <div class="ma-section">
+          <div class="ma-aicard">
+            <div class="ma-aicard__title">데모데이팀 AI PM이 정리한 오늘의 할 일</div>
+            <div class="ma-aicard__head">
+              <span class="ma-aicard__name">AI 랜딩 데모데이</span>
+              <span class="ma-aicard__day">D-2 · 62%</span>
+            </div>
+            <div class="ma-aicard__bar"><div style="width:62%"></div></div>
+            <ul class="ma-aicard__todo">
+              <li><span>히어로 카피 2안 정리</span><b>14:00</b></li>
+              <li class="done"><span>Figma 와이어 v2 리뷰</span><b>완료</b></li>
+              <li><span>Supabase 로그인 붙이기</span><b>오늘</b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="ma-section">
+          <h3>오늘의 바이브코딩 미션</h3>
+          <div class="ma-missions">
+            <div class="ma-mc">
+              <span class="ma-mc__t">30분</span>
+              <h4>ChatGPT로 자기소개 페이지</h4>
+              <button class="ma-mc__go">시작하기</button>
+            </div>
+            <div class="ma-mc ma-mc--blue">
+              <span class="ma-mc__t">2시간</span>
+              <h4>Figma → HTML 구현</h4>
+              <button class="ma-mc__go">시작하기</button>
+            </div>
+            <div class="ma-mc ma-mc--mint">
+              <span class="ma-mc__t">3일</span>
+              <h4>AI 챗봇 MVP 만들기</h4>
+              <button class="ma-mc__go">시작하기</button>
+            </div>
+            <div class="ma-mc ma-mc--navy">
+              <span class="ma-mc__t">7일</span>
+              <h4>실배포 + 유저 5명 피드백</h4>
+              <button class="ma-mc__go">시작하기</button>
+            </div>
+          </div>
+        </div>
+        <div class="ma-section">
+          <h3>지금 모집 중인 팀</h3>
+          <ul class="ma-teams">
+            <li>
+              <div class="ma-teams__main">
+                <small>사이드 프로젝트 · D-1</small>
+                <h4>AI 회의록 요약 앱 — 1주 MVP</h4>
+                <div class="ma-teams__roles"><span>프론트 ✓</span><span>백엔드 ✓</span><span class="open">디자이너 모집</span></div>
+              </div>
+              <button class="ma-teams__go">참가</button>
+            </li>
+            <li>
+              <div class="ma-teams__main">
+                <small>AI 도구 · D-3</small>
+                <h4>Cursor + Supabase 투두앱</h4>
+                <div class="ma-teams__roles"><span>백엔드 ✓</span><span class="open">프론트 모집</span></div>
+              </div>
+              <button class="ma-teams__go">참가</button>
+            </li>
+          </ul>
+        </div>
+        <div class="ma-section">
+          <h3>내 주변 모각코</h3>
+          <ul class="ma-mogak">
+            <li>
+              <div class="ma-mogak__main"><em>오늘</em> 19:00 · 관악 AI 모각코<small>서울대입구역 카페 · 3 / 5명</small></div>
+              <button class="ma-mogak__go">참가</button>
+            </li>
+            <li>
+              <div class="ma-mogak__main"><em>토</em> 14:00 · 강남 디자인+코딩<small>4 / 6명 · 디자이너 환영</small></div>
+              <button class="ma-mogak__go">참가</button>
+            </li>
+          </ul>
+        </div>
+        <div class="ma-section">
+          <h3>관심사 기반 추천 동료</h3>
+          <div class="ma-people">
+            <div class="ma-p"><div class="ma-p__avt" style="background:linear-gradient(135deg,#5B8CFF,#2DB36C)">JH</div><b>지호</b><small>실무자 · 프론트</small></div>
+            <div class="ma-p"><div class="ma-p__avt" style="background:linear-gradient(135deg,#5B8CFF,#A78BCA)">SY</div><b>서연</b><small>주니어 · 디자인</small></div>
+            <div class="ma-p ma-p--mentor"><span>멘토</span><div class="ma-p__avt" style="background:linear-gradient(135deg,#FFB020,#2DB36C)">MJ</div><b>민재</b><small>시니어</small></div>
+          </div>
+        </div>
+      </div>
+      <nav class="ma-nav">
+        <button class="on"><span class="ma-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
+        <button><span class="ma-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span><small>매칭</small></button>
+        <button><span class="ma-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>팀룸</small></button>
+        <button><span class="ma-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><small>미션</small></button>
+        <button><span class="ma-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
+      </nav>
+    </section>
+    <aside class="meta">
+      <h2>A. Human Tech / Soft AI Network</h2>
+      <p class="lede">"AI 시대, 같이 만들 동료를 만나다" — 따뜻한 사람 연결 + AI 시대의 생산성. 그린/AI블루/네이비 + 노드 플로우 모티프.</p>
+      <dl>
+        <dt>컬러</dt><dd>Primary #2DB36C · AI Blue #5B8CFF · Navy #111827 · Soft Mint #E7F6EE · Warm White #FAFAF7</dd>
+        <dt>모티프</dt><dd>나 → AI → 팀으로 이어지는 점-선 노드 플로우. 둥근 카드, 부드러운 그라데이션</dd>
+        <dt>톤</dt><dd>따뜻하지만 느슨하지 않다 / 기술적이지만 차갑지 않다</dd>
+        <dt>적합도</dt><dd>메인 브랜드 — 가장 추천 (이름 + 매칭 인프라 + AI 피벗 균형)</dd>
+      </dl>
+    </aside>
+  </template>
+
+  <!-- MB: Mission Lab — 퀘스트/XP/미션 중심 -->
+  <template id="MB-template">
+    <section class="phone phone--MB">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mb-body">
+        <div class="mb-topbar">
+          <span class="mb-brand">EEUM</span>
+          <span class="mb-streak">🔥 4일 연속</span>
+        </div>
+        <div class="mb-hero">
+          <span class="mb-tag">시즌 5 · DAY 24</span>
+          <h1>오늘의 퀘스트를 클리어하세요.</h1>
+          <div class="mb-progress">
+            <div class="mb-progress__bar"><div style="width:62%"></div></div>
+            <small>이번 주 미션 <em>3</em>/<em>5</em> · 합계 <em>+850 XP</em></small>
+          </div>
+        </div>
+        <div class="mb-section">
+          <h3>오늘의 퀘스트</h3>
+          <div class="mb-quest">
+            <div class="mb-quest__rarity">LEGENDARY</div>
+            <h4>AI 챗봇 MVP 만들기</h4>
+            <div class="mb-quest__meta"><span>3일 · 팀 4명</span><span>+1,200 XP</span></div>
+            <button class="mb-quest__cta">시작하기 →</button>
+          </div>
+          <div class="mb-quest-row">
+            <div class="mb-q mb-q--epic"><span>EPIC</span><h5>Figma → HTML</h5><small>2시간 · +400 XP</small></div>
+            <div class="mb-q mb-q--rare"><span>RARE</span><h5>자기소개 페이지</h5><small>30분 · +120 XP</small></div>
+          </div>
+        </div>
+        <div class="mb-section">
+          <h3>이번 주 클리어</h3>
+          <ul class="mb-clear">
+            <li><span>✓</span><span class="mb-clear__t">Cursor 투두앱 만들기</span><b>+250 XP</b></li>
+            <li><span>✓</span><span class="mb-clear__t">프롬프트 개선 실험</span><b>+180 XP</b></li>
+            <li><span>✓</span><span class="mb-clear__t">모각코 1회 참여</span><b>+100 XP</b></li>
+          </ul>
+        </div>
+        <div class="mb-section">
+          <h3>같이 클리어할 팀</h3>
+          <ul class="mb-teams">
+            <li>
+              <h4>AI 회의록 요약 앱</h4>
+              <small>1주 MVP · 3 / 4명 · 디자이너 모집</small>
+              <button>합류</button>
+            </li>
+            <li>
+              <h4>Cursor + Supabase 투두</h4>
+              <small>3일 · 2 / 3명 · 프론트 모집</small>
+              <button>합류</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="mb-nav">
+        <button class="on"><span class="mb-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
+        <button><span class="mb-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><small>미션</small></button>
+        <button><span class="mb-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><small>팀</small></button>
+        <button><span class="mb-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span><small>랭킹</small></button>
+        <button><span class="mb-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
+      </nav>
+    </section>
+    <aside class="meta">
+      <h2>B. Mission Lab</h2>
+      <p class="lede">"오늘의 미션으로 팀을 시작하세요" — 미션·퀘스트 중심 리텐션 레이어. 백준+듀오링고 감성.</p>
+      <dl>
+        <dt>컬러</dt><dd>Primary Purple #6C5CE7 · Mint #00C2A8 · Dark #16161A · Surface #F7F7FB</dd>
+        <dt>모티프</dt><dd>퀘스트 카드 · 레어리티 · XP · 진행률 · 시즌</dd>
+        <dt>적합도</dt><dd>홈/리텐션 경험 — 매칭 실패 보완 + 혼자도 할 일</dd>
+      </dl>
+    </aside>
+  </template>
+
+  <!-- MC: AI PM Workspace — 칸반 보드 -->
+  <template id="MC-template">
+    <section class="phone phone--MC">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mc-body">
+        <div class="mc-topbar">
+          <span class="mc-brand-wrap">
+            <button class="mc-menu" aria-label="메뉴">☰</button>
+            <span class="mc-brand">eeum / workspace</span>
+          </span>
+          <button class="mc-bell" aria-label="알림">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+              <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
+            </svg>
+            <span class="mc-bell__dot">3</span>
+          </button>
+        </div>
+        <div class="mc-board-head">
+          <h1>AI 랜딩 데모데이 <small>D-2</small></h1>
+          <div class="mc-team-avts">
+            <span style="background:#2563EB">D</span>
+            <span style="background:#7C3AED">S</span>
+            <span style="background:#10B981">J</span>
+            <span class="more">+1</span>
+          </div>
+        </div>
+        <div class="mc-aipm">
+          <div class="mc-aipm__head"><span class="mc-aipm__chip">AI PM</span><small>2분 전</small></div>
+          <p>오늘 우선순위는 <b>히어로 카피</b>와 <b>Supabase 로그인</b>입니다. 18시 회고 미팅 어떨까요?</p>
+          <div class="mc-aipm__btns"><button>역할 다시 나누기</button><button>회의 요약</button></div>
+        </div>
+        <div class="mc-board">
+          <div class="mc-col">
+            <div class="mc-col__head"><h4>To Do</h4><small>3</small></div>
+            <div class="mc-task"><span class="mc-task__pri mc-task__pri--high"></span>히어로 카피 2안<small>도현 · 14:00</small></div>
+            <div class="mc-task"><span class="mc-task__pri"></span>Supabase 로그인<small>지호 · 오늘</small></div>
+            <div class="mc-task"><span class="mc-task__pri mc-task__pri--low"></span>SEO 메타<small>서윤 · D-2</small></div>
+          </div>
+          <div class="mc-col">
+            <div class="mc-col__head"><h4>Doing</h4><small>1</small></div>
+            <div class="mc-task is-on"><span class="mc-task__pri mc-task__pri--high"></span>Figma v2 리뷰<small>하린 · 진행 중</small></div>
+          </div>
+          <div class="mc-col">
+            <div class="mc-col__head"><h4>Done</h4><small>5</small></div>
+            <div class="mc-task is-done">PRD 작성</div>
+            <div class="mc-task is-done">색상 팔레트</div>
+            <div class="mc-task is-done">로고 시안</div>
+          </div>
+        </div>
+        <div class="mc-section">
+          <h3>오늘의 미션 <small>개인</small></h3>
+          <ul class="mc-list">
+            <li>30분 · ChatGPT PRD 작성<button>시작</button></li>
+            <li>2시간 · 프롬프트 개선 실험<button>시작</button></li>
+          </ul>
+        </div>
+      </div>
+      <nav class="mc-nav">
+        <button class="on"><span class="mc-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span><small>대시</small></button>
+        <button><span class="mc-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span><small>보드</small></button>
+        <button><span class="mc-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><small>미션</small></button>
+        <button><span class="mc-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>채팅</small></button>
+        <button><span class="mc-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
+      </nav>
+    </section>
+    <aside class="meta">
+      <h2>C. AI PM Workspace</h2>
+      <p class="lede">"팀이 생기면, AI PM이 바로 일을 시작합니다" — 칸반 보드 + AI PM 메시지가 중심. 슬랙/노션 차별화 레이어.</p>
+      <dl>
+        <dt>컬러</dt><dd>Primary #2563EB · AI Purple #7C3AED · Surface #F8FAFC · Navy #0F172A</dd>
+        <dt>모티프</dt><dd>To Do / Doing / Done 칸반 + AI PM 메시지 카드 + 우선순위 점</dd>
+        <dt>적합도</dt><dd>팀룸 핵심 기능 — 장기 비전, 유료화 가능성</dd>
+      </dl>
+    </aside>
+  </template>
+
+  <!-- MD: Local Builder Club — 동네 IT 빌더 -->
+  <template id="MD-template">
+    <section class="phone phone--MD">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body md-body">
+        <div class="md-topbar">
+          <button class="md-brand" aria-label="지역 변경">
+            <span><b>관악</b> · 빌더 클럽</span>
+            <span class="md-brand__caret">▾</span>
+          </button>
+          <div class="md-actions">
+            <button class="md-bell" aria-label="알림">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+                <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
+              </svg>
+            </button>
+            <button class="md-profile" aria-label="내 프로필">D</button>
+          </div>
+        </div>
+        <div class="md-hero">
+          <small>오늘 저녁, 근처에서</small>
+          <h1>같이 코딩할 사람이 있어요.</h1>
+        </div>
+        <div class="md-map" aria-hidden="true">
+          <div class="md-map__pin md-map__pin--1" style="top:30%;left:25%"><span>3</span></div>
+          <div class="md-map__pin md-map__pin--2" style="top:55%;left:60%"><span>2</span></div>
+          <div class="md-map__pin md-map__pin--3" style="top:40%;left:78%"><span>5</span></div>
+          <div class="md-map__here" style="top:48%;left:48%"></div>
+          <div class="md-map__lbl">
+            <span>활동 중인 모각코 4곳 · 1.2km 이내</span>
+            <button class="md-map__go" aria-label="이동하기">→</button>
+          </div>
+        </div>
+        <div class="md-section">
+          <h3>오늘 저녁 가능한 모각코</h3>
+          <ul class="md-cafe">
+            <li>
+              <div class="md-cafe__time"><em>오늘</em><small>19:00</small></div>
+              <div class="md-cafe__body">
+                <h4>관악 AI 모각코</h4>
+                <small>☕ 서울대입구역 BLUEBOTTLE · 3 / 5명</small>
+                <small>👣 800m · 도보 11분</small>
+              </div>
+              <button class="md-cafe__join">참여</button>
+            </li>
+            <li>
+              <div class="md-cafe__time"><em>오늘</em><small>20:30</small></div>
+              <div class="md-cafe__body">
+                <h4>동작 빌더 야학</h4>
+                <small>☕ 사당역 카페 베니 · 4 / 6명</small>
+                <small>👣 1.2km · 버스 9분</small>
+              </div>
+              <button class="md-cafe__join">참여</button>
+            </li>
+          </ul>
+        </div>
+        <div class="md-section">
+          <h3>이번 주 빌더 모임</h3>
+          <ul class="md-event">
+            <li><span class="md-event__d">토</span><div><b>강남 디자인+코딩</b><small>14:00 · 디자이너 환영</small></div><button class="md-event__go" aria-label="이동">→</button></li>
+            <li><span class="md-event__d">일</span><div><b>서초 사이드 프로젝트 데이</b><small>10:00 · 1일 MVP</small></div><button class="md-event__go" aria-label="이동">→</button></li>
+          </ul>
+        </div>
+        <div class="md-section">
+          <h3>오늘의 동네 빌더</h3>
+          <div class="md-people">
+            <div class="md-p"><div class="md-p__avt" style="background:#2DB36C">JH</div><b>지호 · 봉천동</b><small>0.4km</small></div>
+            <div class="md-p"><div class="md-p__avt" style="background:#92400E">SY</div><b>서윤 · 사당</b><small>1.0km</small></div>
+            <div class="md-p"><div class="md-p__avt" style="background:#3B82F6">HR</div><b>하린 · 신림</b><small>0.7km</small></div>
+          </div>
+        </div>
+      </div>
+      <nav class="md-nav">
+        <button class="on"><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
+        <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></span><small>지도</small></button>
+        <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><small>모임</small></button>
+        <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>채팅</small></button>
+        <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>나</small></button>
+      </nav>
+    </section>
+    <aside class="meta">
+      <h2>D. Local Builder Club</h2>
+      <p class="lede">"오늘 저녁, 근처에서 같이 만들 사람" — 관악·동작·서초·강남 4구 동네 IT 빌더 모임 정체성.</p>
+      <dl>
+        <dt>컬러</dt><dd>Primary #2DB36C · Warm Beige #FFF7ED · Coffee #92400E · Local Blue #3B82F6</dd>
+        <dt>모티프</dt><dd>위치 핀 + 카페 + 거리/도보 시간 + 동네별 빌더 분포</dd>
+        <dt>적합도</dt><dd>초기 마케팅 캠페인 — 런칭 초기 랜딩/광고/오프라인 영업</dd>
+      </dl>
+    </aside>
+  </template>
+
+
+  <!-- MP: 시스템 PM (모임 운영 대시보드) -->
+  <template id="MP-template">
+    <section class="phone phone--MP">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mp-body">
+        <!-- Topbar -->
+        <div class="mp-topbar">
+          <span class="mp-brand">
+            <span class="mp-brand__dots"><i></i><i></i></span>
+            <span>이음</span>
+          </span>
+          <div class="mp-userbar">
+            <button class="mp-userbar__bell" aria-label="알림">
+              <span><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></span>
+              <span class="mp-userbar__dot">3</span>
+            </button>
+            <button class="mp-userbar__avt" aria-label="내 프로필">D</button>
+          </div>
+        </div>
+
+        <!-- Today header -->
+        <h1 class="mp-today">오늘</h1>
+
+        <!-- 지금 필요한 행동 -->
+        <div class="mp-now">
+          <span class="mp-now__chip">⚠ 지금 필요한 행동</span>
+          <p>사이드 프로젝트 방에서 <b>역할 선택</b>이 필요해요. 4명 중 <b>2명</b>이 역할을 골랐습니다.</p>
+          <button class="mp-now__btn">역할 선택하기 →</button>
+        </div>
+
+        <!-- 오늘 해야 할 일 -->
+        <div class="mp-section">
+          <h3>오늘 해야 할 일</h3>
+          <ul class="mp-todo">
+            <li class="mp-todo--urgent">
+              <span class="mp-todo__num">1</span>
+              <div>
+                <b>AI 랜딩페이지 팀</b>
+                <small>역할 선택 필요</small>
+                <small class="mp-todo__deadline">⏱ 마감 오늘 오후 6시</small>
+              </div>
+              <button>이동</button>
+            </li>
+            <li>
+              <span class="mp-todo__num">2</span>
+              <div>
+                <b>사당 모각코</b>
+                <small>참석 여부 응답 필요</small>
+                <small class="mp-todo__deadline">📅 내일 오후 2시</small>
+              </div>
+              <button>이동</button>
+            </li>
+            <li class="mp-todo--reward">
+              <span class="mp-todo__num">3</span>
+              <div>
+                <b>Cursor 입문 미션</b>
+                <small>결과물 등록 대기</small>
+                <small class="mp-todo__deadline">🏅 첫 미션 뱃지</small>
+              </div>
+              <button>이동</button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 참여 가능한 미션 -->
+        <div class="mp-section">
+          <h3>참여 가능한 미션</h3>
+          <ul class="mp-mission-list">
+            <li>
+              <div>
+                <b>90분 안에 AI 랜딩페이지 만들기</b>
+                <small>3 / 4명 · 디자이너 모집중</small>
+              </div>
+              <button>참여</button>
+            </li>
+            <li>
+              <div>
+                <b>3시간 Cursor 데모 만들기</b>
+                <small>2 / 4명 · 입문 환영</small>
+              </div>
+              <button>참여</button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 내 주변 모임 흐름 -->
+        <div class="mp-section">
+          <h3>내 주변 모임 흐름</h3>
+          <ul class="mp-flow">
+            <li>
+              <em>오늘 19:00</em>
+              <div><b>관악 AI 모각코</b><small>3 / 5명 · 시즌 5</small></div>
+            </li>
+            <li>
+              <em>토 14:00</em>
+              <div><b>강남 디자인+코딩</b><small>4 / 6명</small></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 지난 모임 이어가기 -->
+        <div class="mp-section">
+          <h3>지난 모임 이어가기</h3>
+          <ul class="mp-archive">
+            <li>
+              <div>
+                <b>AI 회의록 요약기</b>
+                <small>4명 · 4/26 · 데모 완료</small>
+              </div>
+              <button>같은 멤버로 다음</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Bottom nav: 오늘 / 매칭 / 방 / 기록 / 내 정보 -->
+      <nav class="mp-nav">
+        <button class="on"><span class="mp-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><small>오늘</small></button>
+        <button><span class="mp-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span><small>매칭</small></button>
+        <button><span class="mp-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>방</small></button>
+        <button><span class="mp-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg></span><small>기록</small></button>
+        <button><span class="mp-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>내 정보</small></button>
+      </nav>
+    </section>
+    <aside class="meta">
+      <h2>P. 시스템 PM <small style="color:#94A3B8;font-weight:600">(모임 운영 대시보드)</small></h2>
+      <p class="lede">"바이브코딩 모임의 보이지 않는 PM" — Hero 없는 모임 운영판. 첫 화면이 사용자가 지금 응답해야 할 행동을 직접 보여줌.</p>
+      <dl>
+        <dt>철학</dt><dd>사람 연결이 아닌 "협업 가능 상태 만들기". 시스템이 PM 역할(목적/역할/일정/실행/기록/후속) 자동 또는 보조 처리</dd>
+        <dt>구조</dt><dd>'오늘' 헤더 → ⚠ 지금 필요한 행동(상태 카드) → 오늘 해야 할 일 3건(역할/응답/결과물) → 참여 가능한 미션 → 주변 모임 흐름 → 🥕 당근 모임 가져오기 → 지난 모임 이어가기 → 5탭 nav(오늘/매칭/방/기록/내 정보)</dd>
+        <dt>차별</dt><dd>당근(모집은 OK, 운영 X)·오픈채팅(신뢰 X)·디스코드(초보 X) 대비 모집-진행-기록 자동화. 두 모드(주선자 보조 + 무주선자 자동 진행)</dd>
+        <dt>핵심</dt><dd>"모임장이 없어도, 모임은 굴러가야 하니까." 점수제 X, 활동 기록 + 협업 신뢰도 중심</dd>
+      </dl>
+    </aside>
+  </template>
+
+  <!-- MI: 미션·평가 (Storyboard B) -->
+  <template id="MI-template">
+    <section class="phone phone--MI">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mi-body">
+        <div class="mi-topbar">
+          <span class="mi-brand">이음 <span>· 미션</span></span>
+          <div class="mi-actions">
+            <button class="mi-bell" aria-label="알림"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></button>
+            <button class="mi-profile" aria-label="내 프로필">D</button>
+          </div>
+        </div>
+        <div class="mi-mission">
+          <span class="mi-mission__lvl">Lv.2 · 변형하기</span>
+          <h2>GPT로 회의록 요약기 만들기</h2>
+          <div class="mi-mission__meta">
+            <span>⏱ 2시간</span>
+            <span>🎯 개인 미션</span>
+            <span>🏅 +250 XP</span>
+          </div>
+          <div class="mi-mission__bar"><div style="width:35%"></div></div>
+          <small>진행 35% · 체크리스트 3 / 8</small>
+        </div>
+        <div class="mi-section">
+          <h3>진행 단계</h3>
+          <ul class="mi-steps">
+            <li class="done"><span>1</span><b>목표 설정</b><small>완료</small></li>
+            <li class="done"><span>2</span><b>준비물 확인</b><small>완료</small></li>
+            <li class="on"><span>3</span><b>결과물 만들기</b><small>진행 중</small></li>
+            <li><span>4</span><b>제출</b><small>대기</small></li>
+            <li><span>5</span><b>평가</b><small>대기</small></li>
+          </ul>
+        </div>
+        <div class="mi-section">
+          <h3>제출 후 평가 항목</h3>
+          <div class="mi-eval">
+            <div class="mi-eval__row"><span>완성도</span><b class="mi-eval__num">5</b><div class="mi-eval__gauge" data-score="5"><i></i><i></i><i></i><i></i><i></i></div></div>
+            <div class="mi-eval__row"><span>문제 해결력</span><b class="mi-eval__num">4</b><div class="mi-eval__gauge" data-score="4"><i></i><i></i><i></i><i></i><i></i></div></div>
+            <div class="mi-eval__row"><span>프롬프트 활용</span><b class="mi-eval__num">5</b><div class="mi-eval__gauge" data-score="5"><i></i><i></i><i></i><i></i><i></i></div></div>
+            <div class="mi-eval__row"><span>UI/UX</span><b class="mi-eval__num">3</b><div class="mi-eval__gauge" data-score="3"><i></i><i></i><i></i><i></i><i></i></div></div>
+            <div class="mi-eval__row"><span>코드 구조</span><b class="mi-eval__num">4</b><div class="mi-eval__gauge" data-score="4"><i></i><i></i><i></i><i></i><i></i></div></div>
+            <div class="mi-eval__row"><span>협업 태도</span><b class="mi-eval__num mi-eval__num--zero">—</b><div class="mi-eval__gauge" data-score="0"><i></i><i></i><i></i><i></i><i></i></div></div>
+          </div>
+        </div>
+        <div class="mi-section">
+          <h3>가까운 뱃지</h3>
+          <div class="mi-badges">
+            <div class="mi-b"><span>🏅</span><b>첫 배포</b><small>1개 남음</small></div>
+            <div class="mi-b"><span>🔥</span><b>3일 연속</b><small>오늘만 더</small></div>
+            <div class="mi-b mi-b--locked"><span>🔒</span><b>MVP 완성</b><small>잠김</small></div>
+          </div>
+        </div>
+      </div>
+      <nav class="mi-nav">
+        <button class="on"><span class="mi-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
+        <button><span class="mi-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><small>미션</small></button>
+        <button><span class="mi-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></span><small>제출</small></button>
+        <button><span class="mi-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><small>피드</small></button>
+        <button><span class="mi-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
+      </nav>
+    </section>
+    <aside class="meta">
+      <h2>I. 미션·평가 <small style="color:#94A3B8;font-weight:600">(Storyboard B)</small></h2>
+      <p class="lede">"바이브코딩 시대의 백준" — 오늘의 미션 → 단계별 진행 → 결과물 제출 → AI/동료/멘토 평가 → 점수·뱃지.</p>
+      <dl>
+        <dt>구조</dt><dd>오늘의 미션 카드 → 5단계 진행 → 평가 6항목 미리보기 → 가까운 뱃지</dd>
+        <dt>핵심</dt><dd>매칭 실패해도 할 일 있음 — 혼자도 미션 진행 가능. 평가는 6항목(완성도/문제해결/프롬프트/UI/코드/협업)</dd>
+      </dl>
+    </aside>
+  </template>
+
+  <!-- MJ: 협업 보드 (Storyboard C) -->
+  <template id="MJ-template">
+    <section class="phone phone--MJ">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mj-body">
+        <div class="mj-topbar">
+          <button class="mj-proj">▾ AI 회의록 요약기</button>
+          <div class="mj-team-avts">
+            <span style="background:#2563EB">D</span>
+            <span style="background:#10B981">S</span>
+            <span style="background:#F59E0B">J</span>
+            <span class="more">+1</span>
+          </div>
+        </div>
+        <div class="mj-head">
+          <div>
+            <small>D-3 · 7일째</small>
+            <h2>이번 주 배포 가능합니다</h2>
+          </div>
+          <div class="mj-progress">
+            <em>60%</em>
+            <div><div style="width:60%"></div></div>
+          </div>
+        </div>
+        <div class="mj-aipm">
+          <div class="mj-aipm__head">
+            <span class="mj-aipm__chip">AI PM</span>
+            <button class="mj-aipm__send" aria-label="보내기">→</button>
+          </div>
+          <p>"막힌 부분이 있나요? 내일 목표를 줄여야 할까요?"</p>
+          <div class="mj-aipm__btns">
+            <button>다 잘 되고 있어요</button>
+            <button>줄이기</button>
+          </div>
+        </div>
+        <div class="mj-grid">
+          <div class="mj-tile"><small>🎯 이번 주 목표</small><b>로그인 + 요약 배포</b></div>
+          <div class="mj-tile"><small>📋 오늘 할 일</small><b>3 / 7 완료</b></div>
+          <div class="mj-tile"><small>👥 역할</small><b>4명 / 4역할</b></div>
+          <div class="mj-tile"><small>📦 산출물</small><b>3개 (Figma + repo)</b></div>
+        </div>
+        <div class="mj-section">
+          <div class="mj-todo">
+            <div class="mj-todo__head">
+              <span class="mj-todo__chip">오늘 할 일</span>
+              <small>3 / 7 완료</small>
+            </div>
+            <div class="mj-todo__row done"><b>지호 · 완료</b><span>요약 프롬프트 1차 완성</span></div>
+            <div class="mj-todo__row on"><b>하린 · 진행</b><span>Figma 와이어 v2 검토</span></div>
+            <div class="mj-todo__row"><b>도현 · 14:00</b><span>Supabase 로그인 붙이기</span></div>
+          </div>
+        </div>
+        <div class="mj-section">
+          <h3>최근 결정사항</h3>
+          <ul class="mj-decisions">
+            <li><b>요약 모델은 Claude로 결정</b><small>비용/품질 비교 후 · 어제</small></li>
+            <li><b>UI는 미니멀 다크 톤</b><small>하린 제안 · 그제</small></li>
+          </ul>
+        </div>
+      </div>
+      <nav class="mj-nav">
+        <button class="on"><span class="mj-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span><small>대시</small></button>
+        <button><span class="mj-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>채팅</small></button>
+        <button><span class="mj-nav__ico">✓</span><small>태스크</small></button>
+        <button><span class="mj-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span><small>문서</small></button>
+        <button><span class="mj-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>나</small></button>
+      </nav>
+    </section>
+    <aside class="meta">
+      <h2>J. 협업 보드 <small style="color:#94A3B8;font-weight:600">(Storyboard C · 협업 워크플로우)</small></h2>
+      <p class="lede">"바이브코딩 시대의 슬랙+노션+AI PM" — 프로젝트 단위 워크스페이스 홈. 채팅 X, 작업 진척과 결정 기록 중심.</p>
+      <dl>
+        <dt>구조</dt><dd>프로젝트 셀렉터 → 진행률 헤더 → AI PM 체크인 → 4-tile 요약 → 오늘 할 일 → 최근 결정사항</dd>
+        <dt>핵심</dt><dd>채팅보다 진척·결정·산출물 우선. AI PM이 "막힌 부분?", "내일 목표 줄일까요?" 능동 질문</dd>
+      </dl>
+    </aside>
+  </template>
+
+
+  <!-- MG: 작업실 + 레이더 (Vibe Dashboard) -->
+  <template id="MG-template">
+    <section class="phone phone--MG">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mg-body">
+        <div class="mg-topbar">
+          <div class="mg-greet">
+            <small>안녕하세요, 도현님</small>
+            <h2>오늘도 1시간만 만들어볼까요?</h2>
+          </div>
+          <div class="mg-actions">
+            <button class="mg-bell" aria-label="알림"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></button>
+            <button class="mg-profile" aria-label="내 프로필">D</button>
+          </div>
+        </div>
+
+        <!-- Tier card (상단) -->
+        <div class="mg-tier">
+          <div class="mg-tier__lvl">
+            <small>VIBE TIER</small>
+            <h4>Lv.3 Builder</h4>
+          </div>
+          <div class="mg-tier__stats">
+            <div><em>2/5</em><small>이번 주 미션</small></div>
+            <div><em>4일</em><small>연속 작업</small></div>
+            <div><em>12</em><small>완료 미션</small></div>
+          </div>
+          <div class="mg-tier__bar"><div style="width:40%"></div></div>
+          <small class="mg-tier__next">다음 티어 Lv.4 Maker — 미션 <em>2</em>개 남음</small>
+        </div>
+
+        <!-- Vibe Radar CTA -->
+        <div class="mg-radar">
+          <div class="mg-radar__rings" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <button class="mg-radar__btn" type="button">
+            <span class="mg-radar__icon">◉</span>
+            <span class="mg-radar__lbl">오늘의<br>바이브 코딩</span>
+          </button>
+          <div class="mg-radar__sub">Vibe Radar</div>
+          <div class="mg-radar__meta">
+            <small>📍 관악구 · 반경 1.2km</small>
+            <small>대기 중인 빌더 <em>12</em>명</small>
+          </div>
+        </div>
+
+        <!-- Current Mission -->
+        <div class="mg-mission">
+          <div class="mg-mission__head">
+            <span class="mg-mission__chip">현재 미션</span>
+            <span class="mg-mission__day">D-2</span>
+          </div>
+          <h3>AI 랜딩페이지 만들기</h3>
+          <div class="mg-mission__bar"><div style="width:42%"></div></div>
+          <div class="mg-mission__row">
+            <small>진행률 <em>42%</em></small>
+            <small>오늘 할 일 <em>3</em>개</small>
+          </div>
+          <ul class="mg-mission__todo">
+            <li>· 카피 초안 작성</li>
+            <li>· Hero 섹션 구현</li>
+            <li>· 배포 링크 만들기</li>
+          </ul>
+        </div>
+
+        <!-- Today's schedule -->
+        <div class="mg-section">
+          <h3 class="mg-section__title">오늘의 일정</h3>
+          <ul class="mg-sched">
+            <li>
+              <span class="mg-sched__t">19:30</span>
+              <div><b>AI 사이드 프로젝트 팀룸</b><small>도현 외 3명 · 줌</small></div>
+            </li>
+            <li>
+              <span class="mg-sched__t">21:00</span>
+              <div><b>강남 모각코 후보</b><small>4 / 6명 · 미참여</small></div>
+              <button class="mg-sched__join">참여</button>
+            </li>
+            <li class="mg-sched--mute">
+              <span class="mg-sched__t">D+1<br>10:00</span>
+              <div><b>미션 마감</b><small>AI 랜딩페이지</small></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Recommendation -->
+        <div class="mg-section">
+          <h3 class="mg-section__title">추천 미션 / 팀</h3>
+          <ul class="mg-rec">
+            <li><span>30M</span><b>ChatGPT로 PRD 작성</b><small>+120 XP</small></li>
+            <li><span>3D</span><b>AI 회의록 요약 앱 팀 합류</b><small>3 / 4명</small></li>
+          </ul>
+        </div>
+      </div>
+      <nav class="mg-nav">
+        <button class="on"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
+        <button><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16.9A5 5 0 0 1 7.1 19"/><path d="M2 21a9 9 0 0 1 9-9"/><path d="M2 14a13 13 0 0 1 13-13"/><circle cx="20" cy="4" r="2"/></svg></span><small>레이더</small></button>
+        <button><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>팀룸</small></button>
+        <button><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><small>미션</small></button>
+        <button><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
+      </nav>
+    </section>
+    <aside class="meta">
+      <h2>G. 작업실 + 레이더 <small style="color:#94A3B8;font-weight:600">(Vibe Dashboard)</small></h2>
+      <p class="lede">"내 바이브코딩 상태판" — 평상시에는 미션·티어·일정이 보이는 작업 대시보드, 중앙 VPN-style 버튼으로 주변 모각코 탐색 모드 전환.</p>
+      <dl>
+        <dt>구조</dt><dd>현재 미션(상단) → ◉ Vibe Radar(중앙 CTA) → 내 티어 → 오늘 일정 → 추천 미션/팀</dd>
+        <dt>중앙 CTA</dt><dd>VPN 4단계: <b>idle</b>(◉ pulse ring) → <b>탐색 중</b>(레이더 sweep) → <b>발견</b>(카드 노출) → <b>연결됨</b>(팀룸 이동). 시제품은 idle + pulse ring 활성</dd>
+        <dt>철학</dt><dd>매칭앱 X, "작업을 진전시키는 앱". 사람 구경 X, 미션 진행 + 필요시 근처 연결. 빈 상태는 실패가 아닌 "모집 중"으로 표현 ("1명만 더 모이면 열려요")</dd>
+        <dt>결과 카드</dt><dd>사람 프로필 X, 작업 중심: 시간·장소·주제·관심사·참여자 수·레벨 분포</dd>
+        <dt>적합도</dt><dd>홈 정체성 후보 — 사용자 문서: A안 휴먼테크 + B안 미션랩의 결합형, 매일 들어올 이유 확보</dd>
+      </dl>
+    </aside>
+  </template>
+
+
+
+  <!-- MQ: ME 복제 — 컨테이너 sharp-edge / 버튼 라운드 -->
+  <template id="MQ-template">
+    <section class="phone phone--ME phone--MQ">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body me-body">
+        <div class="me-topbar">
+          <button class="me-menu" aria-label="메뉴">☰</button>
+          <div class="me-shell">
+            <span class="me-shell__path">~/eeum/quest</span>
+            <span class="me-shell__sep">$</span>
+            <span class="me-shell__cmd"><b class="me-shell__hl">status</b> --season 5</span>
+          </div>
+          <button class="me-bell" aria-label="알림">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+              <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
+            </svg>
+            <span class="me-bell__dot">3</span>
+          </button>
+        </div>
+        <div class="me-block">
+          <div class="me-line"><span class="me-line__c">&gt;</span> profile</div>
+          <div class="me-prof">
+            <div class="me-prof__row"><span>USER</span><b>코더 모니카</b></div>
+            <div class="me-prof__row"><span>RANK</span><b>#127 · LV.12</b></div>
+            <div class="me-prof__row"><span>SEASON</span><b>5 · DAY 24</b></div>
+            <div class="me-prof__bar">
+              <div class="me-prof__bar-rail"><div class="me-prof__bar-fill" style="width:74%"></div></div>
+              <span><em>3,720</em> / 5,000 XP <small>+1,280 to LV.13</small></span>
+            </div>
+          </div>
+        </div>
+        <div class="me-block">
+          <div class="me-line"><span class="me-line__c">&gt;</span> daily.quest</div>
+          <div class="me-quest">
+            <div class="me-quest__head">
+              <span class="me-quest__tag">[LEGENDARY]</span>
+              <span class="me-quest__time">3D · TEAM</span>
+            </div>
+            <h4>AI 챗봇 MVP 만들기</h4>
+            <div class="me-quest__rew">
+              <span>+1,200 XP</span><span>+500 ⚡</span><span>+1 BADGE</span>
+            </div>
+            <button class="me-quest__cta">→ run quest_start.sh</button>
+          </div>
+          <div class="me-quest-row">
+            <div class="me-q"><span class="me-q__t">[EPIC]</span><b>Figma → HTML</b><small>2H · +400 XP</small></div>
+            <div class="me-q"><span class="me-q__t me-q__t--rare">[RARE]</span><b>자기소개 페이지</b><small>30M · +120 XP</small></div>
+          </div>
+        </div>
+        <div class="me-block">
+          <div class="me-line"><span class="me-line__c">&gt;</span> ranking --season 5 --top 3</div>
+          <ul class="me-rank">
+            <li><span>001</span><b>코드매지션</b><em>5,420</em></li>
+            <li><span>002</span><b>그로스헌터</b><em>4,980</em></li>
+            <li class="on"><span>127</span><b>코더 모니카</b><em>3,720</em><i>← you</i></li>
+          </ul>
+        </div>
+        <div class="me-block">
+          <div class="me-line"><span class="me-line__c">&gt;</span> badges.earned</div>
+          <div class="me-badges">
+            <div class="me-b"><span>[✓]</span><b>첫 MVP</b></div>
+            <div class="me-b"><span>[✓]</span><b>4일 연속</b></div>
+            <div class="me-b"><span>[✓]</span><b>팀 미션 3회</b></div>
+            <div class="me-b me-b--locked"><span>[ ]</span><b>오픈소스 PR</b></div>
+          </div>
+        </div>
+        <div class="me-prompt"><span class="me-line__c">_</span></div>
+      </div>
+      <nav class="me-nav">
+        <button class="on"><span class="me-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><small>[quest]</small></button>
+        <button><span class="me-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><small>[team]</small></button>
+        <button><span class="me-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span><small>[rank]</small></button>
+        <button><span class="me-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span><small>[stat]</small></button>
+        <button><span class="me-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>[me]</small></button>
+      </nav>
+    </section>
+    <aside class="meta">
+      <h2>Q. ME 복제 <small style="color:#94A3B8;font-weight:600">(sharp container / round button)</small></h2>
+      <p class="lede">ME와 동일한 콘텐츠 — 컨테이너는 라운드 제거(0px) sharp edge, 버튼은 8px 라운드.</p>
+      <dl>
+        <dt>차이</dt><dd>profile/quest/q/rank/badge 컨테이너: border-radius 0 / quest CTA·메뉴·벨·매뉴얼 버튼은 8px 라운드</dd>
+      </dl>
+    </aside>
+  </template>
+
+<script src="./script.js"></script>
+</body>
+</html>
