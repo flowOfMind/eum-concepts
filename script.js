@@ -29,11 +29,17 @@
     });
   };
 
+const navSelectors = '.m-nav, .ma-nav, .mb-nav, .mc-nav, .md-nav, .mg-nav, .mi-nav, .mj-nav, .mp-nav, .me-nav, .phone__nav, .px-bottom';
+
 const render = (key) => {
     const tpl = document.getElementById(`${key}-template`);
     if (!tpl) return;
     stage.innerHTML = '';
+    const dockNav = document.getElementById('dock-nav-slot');
+    if (dockNav) dockNav.innerHTML = '';
     stage.appendChild(tpl.content.cloneNode(true));
+    const phoneNav = stage.querySelector(navSelectors);
+    if (phoneNav && dockNav) dockNav.appendChild(phoneNav);
     tabs.forEach(t => t.setAttribute('aria-selected', t.dataset.tab === key ? 'true' : 'false'));
     if (location.hash !== `#${key}`) history.replaceState(null, '', `#${key}`);
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -41,7 +47,7 @@ const render = (key) => {
       el.addEventListener('click', () => render(el.dataset.tab));
     });
     if (key === 'PX') setupPXCarousel();
-    if (key === 'ME') setupMEThemeToggle();
+    if (key === 'ME' || key === 'MQ') setupMEThemeToggle();
   };
 
   tabs.forEach(t => t.addEventListener('click', () => render(t.dataset.tab)));
