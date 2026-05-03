@@ -36,10 +36,21 @@ const render = (key) => {
     if (!tpl) return;
     stage.innerHTML = '';
     const dockNav = document.getElementById('dock-nav-slot');
-    if (dockNav) dockNav.innerHTML = '';
+    if (dockNav) {
+      dockNav.innerHTML = '';
+      dockNav.className = 'dock__nav';
+    }
     stage.appendChild(tpl.content.cloneNode(true));
+    const phoneSection = stage.querySelector('.phone');
     const phoneNav = stage.querySelector(navSelectors);
-    if (phoneNav && dockNav) dockNav.appendChild(phoneNav);
+    if (phoneNav && dockNav) {
+      if (phoneSection) {
+        phoneSection.classList.forEach(c => {
+          if (c.startsWith('phone--')) dockNav.classList.add(c);
+        });
+      }
+      dockNav.appendChild(phoneNav);
+    }
     tabs.forEach(t => t.setAttribute('aria-selected', t.dataset.tab === key ? 'true' : 'false'));
     if (location.hash !== `#${key}`) history.replaceState(null, '', `#${key}`);
     window.scrollTo({ top: 0, behavior: 'instant' });
