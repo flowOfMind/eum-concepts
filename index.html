@@ -48,12 +48,10 @@
 <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar__brand">
-      <span class="topbar__logo">이음</span>
-      <span class="topbar__sub">Peer Score · 디자인 시안 비교</span>
-    </div>
-    <nav class="topbar__tabs" id="tabs">
+  <main id="stage" class="stage"></main>
+
+  <nav class="topbar topbar--bottom" id="tabs">
+    <div class="topbar__tabs">
       <button class="tab" data-tab="home" aria-selected="true">시안 목록</button>
       <button class="tab" data-tab="MA">A</button>
       <button class="tab" data-tab="MB">B</button>
@@ -67,10 +65,8 @@
       <button class="tab" data-tab="MQ">Q</button>
       <button class="tab" data-tab="PS">R</button>
       <button class="tab" data-tab="PX">X</button>
-    </nav>
-  </header>
-
-  <main id="stage" class="stage"></main>
+    </div>
+  </nav>
 
   <template id="home-template">
     <section class="home">
@@ -191,15 +187,6 @@
         <span><i class="phone__nav-ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></i><small>프로필</small></span>
       </div>
     </section>
-    <aside class="meta">
-      <h2>Peer Score (커스텀)</h2>
-      <p class="lede">기존 커스텀 SaaS 시안.</p>
-      <dl>
-        <dt>UI</dt><dd>커스텀 SaaS 톤. 데이터 카드 + 그라데이션 막대 + 인증 배지</dd>
-        <dt>장점</dt><dd>정보 밀도 ↑ · 직관적</dd>
-        <dt>유의</dt><dd>딱딱할 수 있음 · 감성 약함</dd>
-      </dl>
-    </aside>
   </template>
 
   <!-- PX: Pixel Persona (4안) — BOATMATE 무드 -->
@@ -332,17 +319,6 @@
         <button class="px-bottom__btn" aria-label="프로필"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
       </div>
     </section>
-    <aside class="meta">
-      <h2>Peer Score · Pixel Persona <small style="color:#94A3B8;font-weight:600">(4안)</small></h2>
-      <p class="lede">BOATMATE 무드 — 크림 배경 + 화이트 카드 + 헤비 헤드라인 + 라임/옐로/코랄/민트 프로그레스 + 우상단 픽셀 마스코트 + 점선 데코 + 미니멀 nav.</p>
-      <dl>
-        <dt>레이아웃</dt><dd>헤더(브랜드+벨) → 인사 + 마스코트 → 4 페르소나 캐러셀(스왑) → 페이지네이션 → 페르소나 목록 → 2아이콘 미니멀 nav</dd>
-        <dt>카드</dt><dd>화이트 카드 + 16% 라운드 + 부드러운 그림자, 이모지 아이콘 + 큰 헤비 타이틀 + 회색 메타 정보 + 컬러 프로그레스 바 + 퍼센트 숫자(촵땡겨체)</dd>
-        <dt>마스코트</dt><dd>우상단 sparkle 픽셀 캐릭터 (검정 단일 톤, 라임 입) + 점선 데코</dd>
-        <dt>컬러</dt><dd>크림 #F8F8F4 배경 / 화이트 카드 / 라임 #B5E22F / 옐로 #F2C946 / 코랄 #FF8C7A / 민트 #34E89E / 회색 텍스트</dd>
-        <dt>타이포</dt><dd>한글 KerisKedyuche → Pretendard 폴백 / 숫자 촵땡겨체 / 영문 클래스 Press Start 2P</dd>
-      </dl>
-    </aside>
   </template>
 
   <!-- M: 메인페이지 (앱 실제 홈) -->
@@ -574,17 +550,6 @@
         <button class="m-nav__item"><span class="m-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
       </nav>
     </section>
-    <aside class="meta">
-      <h2>메인페이지 (앱 홈)</h2>
-      <p class="lede">"AI 시대의 팀메이킹 + 미션 워크스페이스" 포지셔닝 — 매칭으로 만나고, 미션으로 어색함을 없애고, AI PM이 협업을 굴린다.</p>
-      <dl>
-        <dt>구조</dt><dd>상단 인사+CTA → AI PM 오늘 할 일(진행 중인 팀) → 오늘의 미션 캐러셀(30분/2h/3일/7일) → 지금 모집 중인 팀 → 내 주변 모각코(관악/동작/서초/강남) → 관심사 기반 추천 팀원·멘토 → 5탭 nav(홈/매칭/팀룸/미션/프로필)</dd>
-        <dt>전제</dt><dd>관심사 8개 · 1~2개 선택 · 1:1 매칭 미운영 · 그룹/모각코 무료. 점수는 활동/완료/뱃지 중심(매너점수는 비공개)</dd>
-        <dt>카피</dt><dd>"오늘 2시간, 같이 만들 사람을 찾아볼까요?" — 친목/소개팅 톤 배제, 미션·결과물·역할 명시 톤</dd>
-        <dt>핵심 루프</dt><dd>매칭 → 팀룸 → AI PM → 미션 수행 → 결과물 제출 → 평판/다음 매칭</dd>
-        <dt>혼자 진입 시</dt><dd>오늘의 미션(30분 개인) → 결과물 제출 → 뱃지 → 비슷한 입문자 모각코 추천 (매칭 실패 시 리텐션 보완)</dd>
-      </dl>
-    </aside>
   </template>
 
   <!-- MA: Human Tech / Soft AI Network -->
@@ -712,16 +677,6 @@
         <button><span class="ma-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
       </nav>
     </section>
-    <aside class="meta">
-      <h2>A. Human Tech / Soft AI Network</h2>
-      <p class="lede">"AI 시대, 같이 만들 동료를 만나다" — 따뜻한 사람 연결 + AI 시대의 생산성. 그린/AI블루/네이비 + 노드 플로우 모티프.</p>
-      <dl>
-        <dt>컬러</dt><dd>Primary #2DB36C · AI Blue #5B8CFF · Navy #111827 · Soft Mint #E7F6EE · Warm White #FAFAF7</dd>
-        <dt>모티프</dt><dd>나 → AI → 팀으로 이어지는 점-선 노드 플로우. 둥근 카드, 부드러운 그라데이션</dd>
-        <dt>톤</dt><dd>따뜻하지만 느슨하지 않다 / 기술적이지만 차갑지 않다</dd>
-        <dt>적합도</dt><dd>메인 브랜드 — 가장 추천 (이름 + 매칭 인프라 + AI 피벗 균형)</dd>
-      </dl>
-    </aside>
   </template>
 
   <!-- MB: Mission Lab — 퀘스트/XP/미션 중심 -->
@@ -786,15 +741,6 @@
         <button><span class="mb-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
       </nav>
     </section>
-    <aside class="meta">
-      <h2>B. Mission Lab</h2>
-      <p class="lede">"오늘의 미션으로 팀을 시작하세요" — 미션·퀘스트 중심 리텐션 레이어. 백준+듀오링고 감성.</p>
-      <dl>
-        <dt>컬러</dt><dd>Primary Purple #6C5CE7 · Mint #00C2A8 · Dark #16161A · Surface #F7F7FB</dd>
-        <dt>모티프</dt><dd>퀘스트 카드 · 레어리티 · XP · 진행률 · 시즌</dd>
-        <dt>적합도</dt><dd>홈/리텐션 경험 — 매칭 실패 보완 + 혼자도 할 일</dd>
-      </dl>
-    </aside>
   </template>
 
   <!-- MC: AI PM Workspace — 칸반 보드 -->
@@ -863,15 +809,6 @@
         <button><span class="mc-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
       </nav>
     </section>
-    <aside class="meta">
-      <h2>C. AI PM Workspace</h2>
-      <p class="lede">"팀이 생기면, AI PM이 바로 일을 시작합니다" — 칸반 보드 + AI PM 메시지가 중심. 슬랙/노션 차별화 레이어.</p>
-      <dl>
-        <dt>컬러</dt><dd>Primary #2563EB · AI Purple #7C3AED · Surface #F8FAFC · Navy #0F172A</dd>
-        <dt>모티프</dt><dd>To Do / Doing / Done 칸반 + AI PM 메시지 카드 + 우선순위 점</dd>
-        <dt>적합도</dt><dd>팀룸 핵심 기능 — 장기 비전, 유료화 가능성</dd>
-      </dl>
-    </aside>
   </template>
 
   <!-- MD: Local Builder Club — 동네 IT 빌더 -->
@@ -955,15 +892,6 @@
         <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>나</small></button>
       </nav>
     </section>
-    <aside class="meta">
-      <h2>D. Local Builder Club</h2>
-      <p class="lede">"오늘 저녁, 근처에서 같이 만들 사람" — 관악·동작·서초·강남 4구 동네 IT 빌더 모임 정체성.</p>
-      <dl>
-        <dt>컬러</dt><dd>Primary #2DB36C · Warm Beige #FFF7ED · Coffee #92400E · Local Blue #3B82F6</dd>
-        <dt>모티프</dt><dd>위치 핀 + 카페 + 거리/도보 시간 + 동네별 빌더 분포</dd>
-        <dt>적합도</dt><dd>초기 마케팅 캠페인 — 런칭 초기 랜딩/광고/오프라인 영업</dd>
-      </dl>
-    </aside>
   </template>
 
 
@@ -1090,16 +1018,6 @@
         <button><span class="mp-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>내 정보</small></button>
       </nav>
     </section>
-    <aside class="meta">
-      <h2>P. 시스템 PM <small style="color:#94A3B8;font-weight:600">(모임 운영 대시보드)</small></h2>
-      <p class="lede">"바이브코딩 모임의 보이지 않는 PM" — Hero 없는 모임 운영판. 첫 화면이 사용자가 지금 응답해야 할 행동을 직접 보여줌.</p>
-      <dl>
-        <dt>철학</dt><dd>사람 연결이 아닌 "협업 가능 상태 만들기". 시스템이 PM 역할(목적/역할/일정/실행/기록/후속) 자동 또는 보조 처리</dd>
-        <dt>구조</dt><dd>'오늘' 헤더 → ⚠ 지금 필요한 행동(상태 카드) → 오늘 해야 할 일 3건(역할/응답/결과물) → 참여 가능한 미션 → 주변 모임 흐름 → 🥕 당근 모임 가져오기 → 지난 모임 이어가기 → 5탭 nav(오늘/매칭/방/기록/내 정보)</dd>
-        <dt>차별</dt><dd>당근(모집은 OK, 운영 X)·오픈채팅(신뢰 X)·디스코드(초보 X) 대비 모집-진행-기록 자동화. 두 모드(주선자 보조 + 무주선자 자동 진행)</dd>
-        <dt>핵심</dt><dd>"모임장이 없어도, 모임은 굴러가야 하니까." 점수제 X, 활동 기록 + 협업 신뢰도 중심</dd>
-      </dl>
-    </aside>
   </template>
 
   <!-- MI: 미션·평가 (Storyboard B) -->
@@ -1163,14 +1081,6 @@
         <button><span class="mi-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
       </nav>
     </section>
-    <aside class="meta">
-      <h2>I. 미션·평가 <small style="color:#94A3B8;font-weight:600">(Storyboard B)</small></h2>
-      <p class="lede">"바이브코딩 시대의 백준" — 오늘의 미션 → 단계별 진행 → 결과물 제출 → AI/동료/멘토 평가 → 점수·뱃지.</p>
-      <dl>
-        <dt>구조</dt><dd>오늘의 미션 카드 → 5단계 진행 → 평가 6항목 미리보기 → 가까운 뱃지</dd>
-        <dt>핵심</dt><dd>매칭 실패해도 할 일 있음 — 혼자도 미션 진행 가능. 평가는 6항목(완성도/문제해결/프롬프트/UI/코드/협업)</dd>
-      </dl>
-    </aside>
   </template>
 
   <!-- MJ: 협업 보드 (Storyboard C) -->
@@ -1241,14 +1151,6 @@
         <button><span class="mj-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>나</small></button>
       </nav>
     </section>
-    <aside class="meta">
-      <h2>J. 협업 보드 <small style="color:#94A3B8;font-weight:600">(Storyboard C · 협업 워크플로우)</small></h2>
-      <p class="lede">"바이브코딩 시대의 슬랙+노션+AI PM" — 프로젝트 단위 워크스페이스 홈. 채팅 X, 작업 진척과 결정 기록 중심.</p>
-      <dl>
-        <dt>구조</dt><dd>프로젝트 셀렉터 → 진행률 헤더 → AI PM 체크인 → 4-tile 요약 → 오늘 할 일 → 최근 결정사항</dd>
-        <dt>핵심</dt><dd>채팅보다 진척·결정·산출물 우선. AI PM이 "막힌 부분?", "내일 목표 줄일까요?" 능동 질문</dd>
-      </dl>
-    </aside>
   </template>
 
 
@@ -1355,17 +1257,6 @@
         <button><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
       </nav>
     </section>
-    <aside class="meta">
-      <h2>G. 작업실 + 레이더 <small style="color:#94A3B8;font-weight:600">(Vibe Dashboard)</small></h2>
-      <p class="lede">"내 바이브코딩 상태판" — 평상시에는 미션·티어·일정이 보이는 작업 대시보드, 중앙 VPN-style 버튼으로 주변 모각코 탐색 모드 전환.</p>
-      <dl>
-        <dt>구조</dt><dd>현재 미션(상단) → ◉ Vibe Radar(중앙 CTA) → 내 티어 → 오늘 일정 → 추천 미션/팀</dd>
-        <dt>중앙 CTA</dt><dd>VPN 4단계: <b>idle</b>(◉ pulse ring) → <b>탐색 중</b>(레이더 sweep) → <b>발견</b>(카드 노출) → <b>연결됨</b>(팀룸 이동). 시제품은 idle + pulse ring 활성</dd>
-        <dt>철학</dt><dd>매칭앱 X, "작업을 진전시키는 앱". 사람 구경 X, 미션 진행 + 필요시 근처 연결. 빈 상태는 실패가 아닌 "모집 중"으로 표현 ("1명만 더 모이면 열려요")</dd>
-        <dt>결과 카드</dt><dd>사람 프로필 X, 작업 중심: 시간·장소·주제·관심사·참여자 수·레벨 분포</dd>
-        <dt>적합도</dt><dd>홈 정체성 후보 — 사용자 문서: A안 휴먼테크 + B안 미션랩의 결합형, 매일 들어올 이유 확보</dd>
-      </dl>
-    </aside>
   </template>
 
 
@@ -1447,13 +1338,6 @@
         <button><span class="me-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>[me]</small></button>
       </nav>
     </section>
-    <aside class="meta">
-      <h2>Q. ME 복제 <small style="color:#94A3B8;font-weight:600">(sharp container / round button)</small></h2>
-      <p class="lede">ME와 동일한 콘텐츠 — 컨테이너는 라운드 제거(0px) sharp edge, 버튼은 8px 라운드.</p>
-      <dl>
-        <dt>차이</dt><dd>profile/quest/q/rank/badge 컨테이너: border-radius 0 / quest CTA·메뉴·벨·매뉴얼 버튼은 8px 라운드</dd>
-      </dl>
-    </aside>
   </template>
 
 <script src="./script.js"></script>
