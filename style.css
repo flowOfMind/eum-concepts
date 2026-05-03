@@ -2539,6 +2539,81 @@ a { color: #2563EB; }
 .phone--MQ .me-quest__rew span { border-radius: 0; }
 .phone--MQ .me-shell { margin-right: 7px; }
 
+/* ============================================================ */
+/* === Floating pill nav (모든 변종 공통 오버라이드)         === */
+/* ============================================================ */
+.m-nav, .ma-nav, .mb-nav, .mc-nav, .md-nav,
+.mg-nav, .mi-nav, .mj-nav, .mp-nav, .me-nav,
+.phone__nav, .px-bottom {
+  margin: 6px 16px calc(8px + env(safe-area-inset-bottom));
+  border-radius: 999px;
+  background: #1a1a1a;
+  padding: 6px 10px;
+  border: none !important;
+  box-shadow: 0 10px 28px rgba(15,23,42,.22);
+  display: flex !important;
+  grid-template-columns: none !important;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2px;
+  position: relative;
+  z-index: 2;
+}
 
+.m-nav button, .ma-nav button, .mb-nav button, .mc-nav button, .md-nav button,
+.mg-nav button, .mi-nav button, .mj-nav button, .mp-nav button, .me-nav button,
+.phone__nav span, .px-bottom__btn {
+  width: 44px !important; height: 44px !important;
+  min-width: 44px;
+  border-radius: 50% !important;
+  background: transparent !important;
+  color: rgba(255,255,255,.55) !important;
+  display: grid !important;
+  place-items: center;
+  padding: 0 !important;
+  flex: 0 0 auto;
+  border: none;
+  font-size: 0;
+}
 
+.m-nav button small, .ma-nav button small, .mb-nav button small, .mc-nav button small,
+.md-nav button small, .mg-nav button small, .mi-nav button small, .mj-nav button small,
+.mp-nav button small, .me-nav button small, .phone__nav small {
+  display: none !important;
+}
+
+.m-nav__ico, .ma-nav__ico, .mb-nav__ico, .mc-nav__ico, .md-nav__ico,
+.mg-nav__ico, .mi-nav__ico, .mj-nav__ico, .mp-nav__ico, .me-nav__ico,
+.phone__nav-ico {
+  font-size: 18px !important;
+  transform: none !important;
+}
+
+/* selected item: accent-filled circle */
+.m-nav .m-nav__item--on,
+.ma-nav button.on,
+.mb-nav button.on,
+.mc-nav button.on,
+.md-nav button.on,
+.mg-nav button.on,
+.mi-nav button.on,
+.mj-nav button.on,
+.mp-nav button.on,
+.me-nav button.on,
+.phone__nav .nav-on,
+.px-bottom__btn--on {
+  color: #fff !important;
+}
+.m-nav .m-nav__item--on { background: #34E89E !important; color: #16161A !important; }
+.ma-nav button.on { background: #2DB36C !important; }
+.mb-nav button.on { background: #2563EB !important; }
+.mc-nav button.on { background: #2563EB !important; }
+.md-nav button.on { background: #2DB36C !important; }
+.mg-nav button.on { background: var(--mg-acc) !important; }
+.mi-nav button.on { background: var(--mi-acc-2) !important; }
+.mj-nav button.on { background: var(--mj-acc) !important; }
+.mp-nav button.on { background: #2DB36C !important; }
+.me-nav button.on { background: var(--me-acc) !important; }
+.phone__nav .nav-on { background: #2563EB !important; }
+.px-bottom__btn--on { background: #fff !important; color: #1A1A1A !important; }
 
