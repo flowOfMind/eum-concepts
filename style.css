@@ -11,20 +11,19 @@
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+html, body { height: 100%; }
 body {
   font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
   color: var(--fg);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
-  display: flex; flex-direction: column;
-  min-height: 100vh; min-height: 100dvh;
 }
 button { font-family: inherit; cursor: pointer; }
 a { color: #2563EB; }
 
-/* === Dock (variant nav + page tabs in single sticky container) === */
+/* === Dock (variant nav + page tabs in single fixed bottom container) === */
 .dock {
-  position: sticky; bottom: 0; z-index: 10;
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
   display: flex; flex-direction: column;
 }
 .dock__nav { background: transparent; }
@@ -48,11 +47,13 @@ a { color: #2563EB; }
   display: grid; grid-template-columns: minmax(0, 460px); justify-content: center;
   gap: 32px; padding: 32px 20px 20px; max-width: 1100px; margin: 0 auto;
   align-items: stretch;
-  flex: 1; min-height: 0; width: 100%;
+  width: 100%;
+  min-height: 100vh; min-height: 100dvh;
+  padding-bottom: calc(var(--dock-h, 60px) + env(safe-area-inset-bottom));
 }
 @media (max-width: 880px) {
-  .stage { grid-template-columns: 1fr; gap: 0; padding: 0; }
-  .stage:has(.home) { padding: 20px 16px; }
+  .stage { grid-template-columns: 1fr; gap: 0; padding: 0 0 calc(var(--dock-h, 120px) + env(safe-area-inset-bottom)); }
+  .stage:has(.home) { padding: 20px 16px calc(var(--dock-h, 60px) + env(safe-area-inset-bottom)); }
 }
 
 /* === Home === */
@@ -87,13 +88,14 @@ a { color: #2563EB; }
   overflow: hidden; box-shadow: var(--shadow);
   border: 1px solid rgba(0,0,0,.06);
   display: flex; flex-direction: column;
-  height: 100%; min-height: 0;
+  min-height: calc(100vh - var(--dock-h, 60px) - 60px);
   position: relative;
 }
 @media (max-width: 880px) {
   .phone {
     max-width: none; width: 100%;
     border-radius: 0; border: none; box-shadow: none;
+    min-height: calc(100vh - var(--dock-h, 120px) - env(safe-area-inset-bottom));
   }
 }
 .phone__statusbar {

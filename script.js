@@ -64,4 +64,13 @@ const render = (key) => {
   tabs.forEach(t => t.addEventListener('click', () => render(t.dataset.tab)));
   const initial = (location.hash || '#home').slice(1);
   render(valid.includes(initial) ? initial : 'home');
+
+  const dock = document.getElementById('dock');
+  if (dock && 'ResizeObserver' in window) {
+    const setDockHeight = () => {
+      document.documentElement.style.setProperty('--dock-h', dock.offsetHeight + 'px');
+    };
+    setDockHeight();
+    new ResizeObserver(setDockHeight).observe(dock);
+  }
 })();
