@@ -1523,10 +1523,13 @@ a { color: #2563EB; }
   transition: transform .18s ease, box-shadow .18s ease;
 }
 .m-ai-card--fixed:active { transform: scale(.99); box-shadow: 0 10px 24px rgba(26,26,26,.18); }
-.m-ai-card--fixed .m-ai-card__more {
-  display: inline-block; margin-top: 14px; padding: 10px 18px;
-  background: rgba(255,255,255,.10); color: #fff; border: 1px solid rgba(255,255,255,.18);
-  border-radius: 10px; font-size: 12px; font-weight: 800; letter-spacing: -.01em;
+/* M2 카드 우측 화살표 (시각적 표시 — 별도 버튼 아님) */
+.m-ai-card__arrow {
+  position: absolute; top: 16px; right: 16px;
+  width: 40px; height: 40px; border-radius: 10px;
+  background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.18);
+  display: grid; place-items: center; color: #fff;
+  pointer-events: none;
 }
 .m-ai-card__head { margin-bottom: 10px; }
 .m-ai-card__chip {
