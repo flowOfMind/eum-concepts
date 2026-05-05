@@ -1,7 +1,7 @@
 (() => {
   const stage = document.getElementById('stage');
   const tabs = document.querySelectorAll('.tab');
-  const valid = ['home','M','MA','MB','MC','MD','MQ','MG','MI','MJ','MP','PS','PX','MAF','MBF','MCF','MDF','MGF','MIF','MJF','MF','MPF','MQF','PSF','PXF'];
+  const valid = ['home','M','MA','MB','MC','MD','MQ','MG','MI','MJ','MP','PS','PX'];
 
   const setupPXCarousel = () => {
     const carousel = document.getElementById('px-carousel');
@@ -29,7 +29,7 @@
     });
   };
 
-const navSelectors = '.m-nav, .ma-nav, .mb-nav, .mc-nav, .md-nav, .mg-nav, .mi-nav, .mj-nav, .mp-nav, .me-nav, .phone__nav, .px-bottom, .f-navbar';
+const navSelectors = '.m-nav, .ma-nav, .mb-nav, .mc-nav, .md-nav, .mg-nav, .mi-nav, .mj-nav, .mp-nav, .me-nav, .phone__nav, .px-bottom';
 
 const render = (key) => {
     const tpl = document.getElementById(`${key}-template`);
