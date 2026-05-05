@@ -1508,6 +1508,11 @@ a { color: #2563EB; }
 .m-ai-card:nth-of-type(2) {
   background: linear-gradient(135deg, #1A1A1A 0%, #3D2D55 100%);
 }
+/* M2 — G2 VIBE TIER 스타일 차용 (다크 카드 위) */
+.m-ai-card__tier { margin-bottom: 14px; }
+.m-ai-card__tier small { font-size: 10px; font-weight: 800; letter-spacing: .12em; color: rgba(255,255,255,.55); display: block; margin-bottom: 2px; }
+.m-ai-card__tier h4 { font-size: 18px; font-weight: 800; margin: 0; letter-spacing: -.02em; color: #B5E22F; }
+
 /* M2 first-card 고정 버튼 변형 (M1 두번째 캐러셀 색상) */
 .m-ai-card--fixed {
   display: block; width: 100%; flex: none; text-align: left;
