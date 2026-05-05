@@ -56,17 +56,29 @@
       <div class="topbar__tabs">
         <button class="tab" data-tab="home" aria-selected="true">시안 목록</button>
         <button class="tab" data-tab="MA">A</button>
+        <button class="tab" data-tab="MAF">AF</button>
         <button class="tab" data-tab="MB">B</button>
+        <button class="tab" data-tab="MBF">BF</button>
         <button class="tab" data-tab="MC">C</button>
+        <button class="tab" data-tab="MCF">CF</button>
         <button class="tab" data-tab="MD">D</button>
+        <button class="tab" data-tab="MDF">DF</button>
         <button class="tab" data-tab="MG">G</button>
+        <button class="tab" data-tab="MGF">GF</button>
         <button class="tab" data-tab="MI">I</button>
+        <button class="tab" data-tab="MIF">IF</button>
         <button class="tab" data-tab="MJ">J</button>
+        <button class="tab" data-tab="MJF">JF</button>
         <button class="tab" data-tab="M">M</button>
+        <button class="tab" data-tab="MF">MF</button>
         <button class="tab" data-tab="MP">P</button>
+        <button class="tab" data-tab="MPF">PF</button>
         <button class="tab" data-tab="MQ">Q</button>
+        <button class="tab" data-tab="MQF">QF</button>
         <button class="tab" data-tab="PS">R</button>
+        <button class="tab" data-tab="PSF">RF</button>
         <button class="tab" data-tab="PX">S</button>
+        <button class="tab" data-tab="PXF">SF</button>
       </div>
     </nav>
   </footer>
@@ -1339,6 +1351,435 @@
         <button><span class="me-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span><small>[rank]</small></button>
         <button><span class="me-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span><small>[stat]</small></button>
         <button><span class="me-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>[me]</small></button>
+      </nav>
+    </section>
+  </template>
+
+  <!-- ============================================================ -->
+  <!-- ====   Flutter (Material 3) 마이그레이션 시안 — 12종      ==== -->
+  <!-- ============================================================ -->
+
+  <!-- AF: Human Tech Flutter -->
+  <template id="MAF-template">
+    <section class="phone phone--flutter phone--MAF">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body">
+        <div class="f-appbar">
+          <h1>Human Tech</h1>
+          <button class="f-appbar__action" aria-label="알림">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+          </button>
+          <button class="f-appbar__avatar">D</button>
+        </div>
+        <div class="f-headline"><h2>지호님,<br>오늘도 함께 만들어요</h2><p>AI 시대, 같이 만들 동료가 기다립니다</p></div>
+        <div class="f-chip-row">
+          <span class="f-chip f-chip--selected">전체</span>
+          <span class="f-chip">미션</span>
+          <span class="f-chip">팀</span>
+          <span class="f-chip">멘토</span>
+        </div>
+        <div class="f-section"><h2>오늘의 바이브코딩 미션</h2></div>
+        <div class="f-card f-card--filled">
+          <div class="f-card__head"><span class="f-card__overline">30분</span></div>
+          <h3>ChatGPT로 자기소개 페이지</h3>
+          <p>입문 · 개인</p>
+          <div style="margin-top:12px"><button class="f-btn f-btn--filled f-btn--small">시작</button></div>
+        </div>
+        <div class="f-card f-card--elevated">
+          <div class="f-card__head"><span class="f-card__overline">2시간 · 팀</span></div>
+          <h3>Figma 와이어 → HTML 구현</h3>
+          <p>주니어 · 팀 매칭 필요</p>
+          <div style="margin-top:12px"><button class="f-btn f-btn--filled f-btn--small">시작</button></div>
+        </div>
+        <div class="f-section"><h2>지금 모집 중인 팀</h2></div>
+        <ul class="f-list">
+          <li><div class="f-list__leading">JH</div><div class="f-list__content"><div class="f-list__primary">AI 회의록 요약 앱</div><div class="f-list__secondary">3 / 4명 · 디자이너 모집</div></div><button class="f-btn f-btn--tonal f-btn--small">참가</button></li>
+          <li><div class="f-list__leading">SY</div><div class="f-list__content"><div class="f-list__primary">Cursor + Supabase 투두</div><div class="f-list__secondary">2 / 3명 · 프론트 모집</div></div><button class="f-btn f-btn--tonal f-btn--small">참가</button></li>
+        </ul>
+      </div>
+      <nav class="f-navbar">
+        <button class="on"><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3 4 9v12h6v-7h4v7h6V9z"/></svg></span>홈</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>매칭</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>팀룸</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>미션</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>프로필</button>
+      </nav>
+    </section>
+  </template>
+
+  <!-- BF: Mission Lab Flutter -->
+  <template id="MBF-template">
+    <section class="phone phone--flutter phone--MBF">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body">
+        <div class="f-appbar"><h1>Mission Lab</h1><button class="f-appbar__action" aria-label="알림"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></button></div>
+        <div class="f-headline"><h2>오늘의 퀘스트를<br>클리어하세요</h2><p>시즌 5 · DAY 24 · 🔥 4일 연속</p></div>
+        <div class="f-card f-card--filled">
+          <small style="font-size:11px;font-weight:600;color:var(--m3-on-primary-container)">이번 주 진행</small>
+          <h3 style="margin:6px 0 10px">3 / 5 미션 · +850 XP</h3>
+          <div class="f-progress"><div style="width:62%"></div></div>
+        </div>
+        <div class="f-section"><h2>오늘의 퀘스트</h2></div>
+        <div class="f-card f-card--elevated">
+          <span class="f-card__overline" style="color:#9c27b0">LEGENDARY · +1,200 XP</span>
+          <h3 style="margin:6px 0">AI 챗봇 MVP 만들기</h3>
+          <p>3일 · 팀 4명</p>
+          <div style="margin-top:12px"><button class="f-btn f-btn--filled">시작하기</button></div>
+        </div>
+        <div class="f-card f-card--outlined">
+          <span class="f-card__overline">EPIC · +400 XP</span>
+          <h3 style="margin:6px 0">Figma → HTML</h3>
+          <p>2시간</p>
+        </div>
+        <div class="f-card f-card--outlined">
+          <span class="f-card__overline">RARE · +120 XP</span>
+          <h3 style="margin:6px 0">자기소개 페이지</h3>
+          <p>30분</p>
+        </div>
+        <button class="f-fab f-fab--extended" style="position:fixed;right:16px;bottom:96px"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"/></svg>새 퀘스트</button>
+      </div>
+      <nav class="f-navbar">
+        <button class="on"><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3 4 9v12h6v-7h4v7h6V9z"/></svg></span>홈</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>미션</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span>팀</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/><path d="M4 22h16"/></svg></span>랭킹</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>프로필</button>
+      </nav>
+    </section>
+  </template>
+
+  <!-- CF: AI PM Workspace Flutter -->
+  <template id="MCF-template">
+    <section class="phone phone--flutter phone--MCF">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body">
+        <div class="f-appbar"><h1>AI PM</h1><button class="f-appbar__action" aria-label="알림"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></button></div>
+        <div class="f-headline"><h2>오늘의 칸반</h2><p>AI 챗봇 MVP · 4명 · 마감 D-2</p></div>
+        <div class="f-chip-row"><span class="f-chip f-chip--selected">To do · 3</span><span class="f-chip">In Progress · 2</span><span class="f-chip">Done · 5</span></div>
+        <div class="f-card f-card--filled">
+          <span class="f-card__overline">To do</span>
+          <h3 style="margin:6px 0">로그인 화면 와이어</h3>
+          <p>지호 · 오늘 마감</p>
+        </div>
+        <div class="f-card f-card--filled">
+          <span class="f-card__overline">In Progress</span>
+          <h3 style="margin:6px 0">Supabase 스키마</h3>
+          <p>서연 · 80%</p>
+          <div class="f-progress" style="margin-top:8px"><div style="width:80%"></div></div>
+        </div>
+        <div class="f-card f-card--outlined">
+          <span class="f-card__overline">Decision</span>
+          <h3 style="margin:6px 0">역할 다시 나누기 회의 요약</h3>
+          <p>AI PM이 정리해 둠 · 4분 분량</p>
+          <div style="margin-top:10px"><button class="f-btn f-btn--text">요약 보기 →</button></div>
+        </div>
+      </div>
+      <nav class="f-navbar">
+        <button class="on"><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span>대시</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/></svg></span>보드</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/></svg></span>미션</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>채팅</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg></span>프로필</button>
+      </nav>
+    </section>
+  </template>
+
+  <!-- DF: Local Builder Club Flutter -->
+  <template id="MDF-template">
+    <section class="phone phone--flutter phone--MDF">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body">
+        <div class="f-appbar"><h1>관악 빌더 클럽</h1><button class="f-appbar__action" aria-label="알림"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/></svg></button></div>
+        <div class="f-headline"><h2>오늘 저녁,<br>근처에서 만나요</h2><p>관악 · 동작 · 서초 · 강남</p></div>
+        <div class="f-card f-card--filled" style="height:200px;display:flex;align-items:center;justify-content:center;color:var(--m3-on-surface-variant)">
+          <span style="font-size:13px">📍 지도 영역 (Material 3 Map)</span>
+        </div>
+        <div class="f-section"><h2>이번 주 모각코</h2></div>
+        <ul class="f-list">
+          <li><div class="f-list__leading">오</div><div class="f-list__content"><div class="f-list__primary">관악 AI 모각코</div><div class="f-list__secondary">19:00 · 서울대입구역 카페 · 3/5명</div></div><button class="f-btn f-btn--tonal f-btn--small">참가</button></li>
+          <li><div class="f-list__leading">토</div><div class="f-list__content"><div class="f-list__primary">강남 디자인+코딩</div><div class="f-list__secondary">14:00 · 4/6명 · 디자이너 환영</div></div><button class="f-btn f-btn--tonal f-btn--small">참가</button></li>
+        </ul>
+      </div>
+      <nav class="f-navbar">
+        <button class="on"><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3 4 9v12h6v-7h4v7h6V9z"/></svg></span>홈</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/></svg></span>지도</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/></svg></span>모임</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>채팅</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg></span>나</button>
+      </nav>
+    </section>
+  </template>
+
+  <!-- GF: Vibe Dashboard Flutter -->
+  <template id="MGF-template">
+    <section class="phone phone--flutter phone--MGF">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body">
+        <div class="f-appbar"><h1>Vibe Dashboard</h1><button class="f-appbar__action" aria-label="알림"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/></svg></button></div>
+        <div class="f-headline"><h2>현재 미션</h2><p>로그인 + 요약 배포 · 진행률 62%</p></div>
+        <div class="f-card f-card--filled">
+          <h3>이번 주 미션 진행</h3>
+          <div class="f-progress" style="margin:10px 0"><div style="width:62%"></div></div>
+          <p>3 / 5 완료 · 2개 남음</p>
+        </div>
+        <div class="f-card f-card--elevated" style="text-align:center;padding:24px">
+          <div style="width:96px;height:96px;border-radius:50%;background:var(--m3-primary);color:var(--m3-on-primary);display:grid;place-items:center;margin:0 auto 12px;font-size:32px">◉</div>
+          <h3>Vibe Radar</h3>
+          <p>주변 모각코 탐색 모드</p>
+          <div style="margin-top:12px"><button class="f-btn f-btn--filled">탐색 시작</button></div>
+        </div>
+        <div class="f-card f-card--outlined">
+          <span class="f-card__overline">내 티어</span>
+          <h3 style="margin:6px 0">Lv.3 Crafter</h3>
+          <p>다음 티어 Lv.4 Maker — 미션 2개 남음</p>
+          <div class="f-progress" style="margin-top:8px"><div style="width:40%"></div></div>
+        </div>
+      </div>
+      <nav class="f-navbar">
+        <button class="on"><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3 4 9v12h6v-7h4v7h6V9z"/></svg></span>홈</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 16.9A5 5 0 0 1 7.1 19"/><path d="M2 21a9 9 0 0 1 9-9"/><circle cx="20" cy="4" r="2"/></svg></span>레이더</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>팀룸</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/></svg></span>미션</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg></span>프로필</button>
+      </nav>
+    </section>
+  </template>
+
+  <!-- IF: Mission Eval (B) Flutter -->
+  <template id="MIF-template">
+    <section class="phone phone--flutter phone--MIF">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body">
+        <div class="f-appbar"><h1>오늘의 미션</h1><button class="f-appbar__action"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/></svg></button></div>
+        <div class="f-headline"><h2>5단계로<br>클리어하세요</h2><p>오늘의 미션 · 평가 6항목 · 뱃지 보상</p></div>
+        <div class="f-card f-card--elevated">
+          <span class="f-card__overline">LEVEL 3</span>
+          <h3 style="margin:6px 0;font-size:22px">Cursor로 투두 앱</h3>
+          <p>2시간 · 입문 · +600 XP</p>
+          <div class="f-progress" style="margin-top:12px"><div style="width:60%"></div></div>
+          <p style="margin-top:6px;font-size:12px">3 / 5 단계 완료</p>
+        </div>
+        <div class="f-section"><h2>제출 후 평가</h2></div>
+        <div class="f-card f-card--filled">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0"><span style="color:var(--m3-on-surface-variant);font-size:13px">기능 완성도</span><span style="font-weight:500">4 / 5</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0"><span style="color:var(--m3-on-surface-variant);font-size:13px">코드 정리</span><span style="font-weight:500">3 / 5</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0"><span style="color:var(--m3-on-surface-variant);font-size:13px">설명 명료</span><span style="font-weight:500">4 / 5</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:4px 0"><span style="color:var(--m3-on-surface-variant);font-size:13px">팀 응답</span><span style="font-weight:500">5 / 5</span></div>
+        </div>
+        <div class="f-card f-card--outlined" style="display:flex;align-items:center;gap:12px"><div class="f-list__leading">🏅</div><div class="f-list__content"><div class="f-list__primary">첫 미션 클리어 뱃지</div><div class="f-list__secondary">시즌 5 · 한정</div></div></div>
+      </div>
+      <nav class="f-navbar">
+        <button class="on"><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3 4 9v12h6v-7h4v7h6V9z"/></svg></span>홈</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/></svg></span>미션</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></span>제출</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/></svg></span>피드</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg></span>프로필</button>
+      </nav>
+    </section>
+  </template>
+
+  <!-- JF: Collab Board (C) Flutter -->
+  <template id="MJF-template">
+    <section class="phone phone--flutter phone--MJF">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body">
+        <div class="f-appbar"><h1>협업 보드</h1><button class="f-appbar__action"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/></svg></button></div>
+        <div class="f-headline"><h2>AI 챗봇 MVP</h2><p>4명 · DAY 3 / 14</p></div>
+        <div class="f-card f-card--filled">
+          <span class="f-card__overline">AI PM 능동 질문</span>
+          <h3 style="margin:6px 0;font-size:18px">막힌 부분이 있나요?</h3>
+          <p>3가지 옵션 중 골라 답해 보세요</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px">
+            <button class="f-btn f-btn--tonal f-btn--small">설계 막힘</button>
+            <button class="f-btn f-btn--tonal f-btn--small">구현 막힘</button>
+            <button class="f-btn f-btn--text f-btn--small">다 잘 되고 있어요</button>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 16px">
+          <div class="f-card f-card--outlined" style="margin:0"><span class="f-card__overline">이번 주 목표</span><h3 style="margin:4px 0;font-size:14px">로그인 + 요약 배포</h3></div>
+          <div class="f-card f-card--outlined" style="margin:0"><span class="f-card__overline">오늘 할 일</span><h3 style="margin:4px 0;font-size:14px">3 / 7 완료</h3></div>
+          <div class="f-card f-card--outlined" style="margin:0"><span class="f-card__overline">역할</span><h3 style="margin:4px 0;font-size:14px">4명 / 4역할</h3></div>
+          <div class="f-card f-card--outlined" style="margin:0"><span class="f-card__overline">결정 대기</span><h3 style="margin:4px 0;font-size:14px">2개</h3></div>
+        </div>
+        <div class="f-section"><h2>최근 결정사항</h2></div>
+        <ul class="f-list">
+          <li style="border-left:3px solid var(--m3-primary);margin:0 16px;background:var(--m3-surface-2);border-radius:0 8px 8px 0"><div class="f-list__content"><div class="f-list__primary">Supabase 사용 결정</div><div class="f-list__secondary">DB · 시간 절약 우선</div></div></li>
+          <li style="border-left:3px solid var(--m3-primary);margin:0 16px;background:var(--m3-surface-2);border-radius:0 8px 8px 0"><div class="f-list__content"><div class="f-list__primary">디자인은 Figma 기반</div><div class="f-list__secondary">서연 PM</div></div></li>
+        </ul>
+      </div>
+      <nav class="f-navbar">
+        <button class="on"><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span>대시</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>채팅</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></span>문서</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg></span>나</button>
+      </nav>
+    </section>
+  </template>
+
+  <!-- MF: M (기본) Flutter -->
+  <template id="MF-template">
+    <section class="phone phone--flutter phone--MF">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body">
+        <div class="f-appbar"><h1>이음</h1><button class="f-appbar__action"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/></svg></button></div>
+        <div class="f-headline"><h2>지호님,<br>오늘도 함께 만들어요</h2><p>📍 관악 · 진행 중인 팀 1개</p></div>
+        <div class="f-card f-card--elevated" style="background:#1A1A1A;color:#fff;border-radius:14px">
+          <span class="f-card__overline" style="color:#B5E22F">🤖 AI PM · 오늘 할 일</span>
+          <h3 style="margin:6px 0;font-size:18px;color:#fff">팀 · AI 랜딩 데모데이</h3>
+          <div style="height:6px;background:rgba(255,255,255,.14);border-radius:3px;margin:10px 0;overflow:hidden"><div style="height:100%;width:62%;background:linear-gradient(90deg,#B5E22F,#34E89E);border-radius:3px"></div></div>
+          <p style="color:rgba(255,255,255,.7)">D-2 · 62% 완료</p>
+          <div style="margin-top:12px"><button class="f-btn f-btn--filled" style="background:#fff;color:#1A1A1A">팀룸 열기 →</button></div>
+        </div>
+        <div class="f-section"><h2>오늘의 바이브코딩 미션</h2></div>
+        <div class="f-card f-card--filled">
+          <span class="f-card__overline">30분 · 입문</span>
+          <h3 style="margin:6px 0">ChatGPT로 자기소개 페이지</h3>
+          <div style="margin-top:12px;text-align:right"><button class="f-btn f-btn--filled f-btn--small" style="background:#1A1A1A">시작</button></div>
+        </div>
+        <div class="f-section"><h2>관심사 기반 추천</h2></div>
+        <ul class="f-list">
+          <li><div class="f-list__leading">JH</div><div class="f-list__content"><div class="f-list__primary">지호 · 프론트</div><div class="f-list__secondary">실무자 · React + Supabase</div></div></li>
+          <li><div class="f-list__leading">SY</div><div class="f-list__content"><div class="f-list__primary">서연 · 디자인</div><div class="f-list__secondary">주니어 · Figma + Cursor</div></div></li>
+        </ul>
+      </div>
+      <nav class="f-navbar">
+        <button class="on"><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3 4 9v12h6v-7h4v7h6V9z"/></svg></span>홈</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/></svg></span>매칭</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>팀룸</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/></svg></span>미션</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg></span>프로필</button>
+      </nav>
+    </section>
+  </template>
+
+  <!-- PF: System PM Flutter -->
+  <template id="MPF-template">
+    <section class="phone phone--flutter phone--MPF">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body">
+        <div class="f-appbar"><h1>오늘의 운영</h1><button class="f-appbar__action"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/></svg></button></div>
+        <div class="f-card f-card--filled" style="background:#FFE0B2;color:#5D2E00">
+          <span class="f-card__overline" style="color:#5D2E00">⚠ 지금 필요한 행동</span>
+          <h3 style="margin:6px 0">사이드 프로젝트 방 · 역할 선택 필요</h3>
+          <p style="color:#5D2E00">4명 중 2명이 역할을 골랐습니다</p>
+          <div style="margin-top:12px"><button class="f-btn f-btn--filled" style="background:#5D2E00">역할 선택하기 →</button></div>
+        </div>
+        <div class="f-section"><h2>오늘 해야 할 일</h2></div>
+        <ul class="f-list">
+          <li><div class="f-list__leading">1</div><div class="f-list__content"><div class="f-list__primary">AI 랜딩페이지 팀 · 역할 선택</div><div class="f-list__secondary">⏱ 마감 오늘 오후 6시</div></div><button class="f-btn f-btn--text f-btn--small">이동</button></li>
+          <li><div class="f-list__leading">2</div><div class="f-list__content"><div class="f-list__primary">사당 모각코 · 참석 응답</div><div class="f-list__secondary">📅 내일 오후 2시</div></div><button class="f-btn f-btn--text f-btn--small">이동</button></li>
+          <li><div class="f-list__leading">3</div><div class="f-list__content"><div class="f-list__primary">Cursor 입문 미션</div><div class="f-list__secondary">🏅 첫 미션 뱃지</div></div><button class="f-btn f-btn--text f-btn--small">이동</button></li>
+        </ul>
+        <div class="f-section"><h2>참여 가능한 미션</h2></div>
+        <div class="f-card f-card--outlined">
+          <h3>90분 안에 AI 랜딩페이지 만들기</h3>
+          <p>3 / 4명 · 디자이너 모집중</p>
+          <div style="margin-top:12px"><button class="f-btn f-btn--tonal f-btn--small">참여</button></div>
+        </div>
+      </div>
+      <nav class="f-navbar">
+        <button class="on"><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/></svg></span>오늘</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/></svg></span>매칭</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>방</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9"/><path d="M3 3v5h5"/></svg></span>기록</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/></svg></span>내 정보</button>
+      </nav>
+    </section>
+  </template>
+
+  <!-- QF: ME 복제 (sharp/round) Flutter -->
+  <template id="MQF-template">
+    <section class="phone phone--flutter phone--MQF">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body">
+        <div class="f-appbar" style="background:#0F172A;color:#fff"><h1 style="color:#fff;font-family:monospace">~/eeum/quest$ status</h1><button class="f-appbar__action" style="color:#fff"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/></svg></button></div>
+        <div class="f-card f-card--filled" style="background:#0F172A;color:#fff;border-radius:0">
+          <span style="font-family:monospace;font-size:11px;color:#1565C0;letter-spacing:.1em">QUEST · LV 5</span>
+          <h3 style="margin:8px 0;font-size:18px;color:#fff">Cursor 자기소개 페이지</h3>
+          <p style="color:rgba(255,255,255,.7);font-family:monospace">elapsed: 12m / 30m</p>
+          <div style="height:4px;background:rgba(255,255,255,.2);margin-top:12px;border-radius:2px"><div style="height:100%;width:40%;background:#1565C0;border-radius:2px"></div></div>
+        </div>
+        <div class="f-section"><h2>리워드</h2></div>
+        <div style="padding:0 16px;display:flex;flex-wrap:wrap;gap:8px">
+          <span class="f-chip f-chip--selected" style="border-radius:0;font-family:monospace">+150 XP</span>
+          <span class="f-chip f-chip--selected" style="border-radius:0;font-family:monospace">EEUM 24</span>
+          <span class="f-chip f-chip--selected" style="border-radius:0;font-family:monospace">CRAFTER+1</span>
+        </div>
+        <div class="f-section"><h2>지난 클리어</h2></div>
+        <ul class="f-list">
+          <li style="background:#fff"><div class="f-list__content" style="font-family:monospace"><div class="f-list__primary">Cursor 투두 앱 v0.1</div><div class="f-list__secondary">+250 XP · 2일 전</div></div><span style="font-family:monospace;color:#1565C0">✓</span></li>
+          <li style="background:#fff"><div class="f-list__content" style="font-family:monospace"><div class="f-list__primary">프롬프트 비교</div><div class="f-list__secondary">+180 XP · 4일 전</div></div><span style="font-family:monospace;color:#1565C0">✓</span></li>
+        </ul>
+      </div>
+      <nav class="f-navbar" style="background:#0F172A;color:#fff">
+        <button class="on" style="color:#fff"><span class="f-navbar__pill" style="background:#1565C0"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/></svg></span>quest</button>
+        <button style="color:rgba(255,255,255,.6)"><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/></svg></span>team</button>
+        <button style="color:rgba(255,255,255,.6)"><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span>rank</button>
+        <button style="color:rgba(255,255,255,.6)"><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/></svg></span>stat</button>
+        <button style="color:rgba(255,255,255,.6)"><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/></svg></span>me</button>
+      </nav>
+    </section>
+  </template>
+
+  <!-- RF: Peer Score (커스텀) Flutter -->
+  <template id="PSF-template">
+    <section class="phone phone--flutter phone--PSF">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body">
+        <div class="f-appbar"><h1>Peer Score</h1><button class="f-appbar__action"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/></svg></button></div>
+        <div class="f-headline"><h2>함께 만들어보고,<br>실력을 증명하세요</h2><p>말보다 결과로 · 프로필보다 함께한 기록</p></div>
+        <div class="f-card f-card--elevated">
+          <small style="font-size:11px;font-weight:600;color:var(--m3-on-surface-variant);letter-spacing:.5px">나의 협업 신뢰도</small>
+          <div style="display:flex;align-items:baseline;gap:12px;margin:8px 0"><span style="font-size:48px;font-weight:300;color:var(--m3-primary)">87</span><span style="color:#1B5E20;font-weight:600">▲ +12</span></div>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
+            <div><small style="font-size:12px;color:var(--m3-on-surface-variant)">응답 속도</small><div class="f-progress" style="margin-top:4px"><div style="width:90%"></div></div></div>
+            <div><small style="font-size:12px;color:var(--m3-on-surface-variant)">결과물 기여</small><div class="f-progress" style="margin-top:4px"><div style="width:82%"></div></div></div>
+            <div><small style="font-size:12px;color:var(--m3-on-surface-variant)">커뮤니케이션</small><div class="f-progress" style="margin-top:4px"><div style="width:88%"></div></div></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding:0 16px;margin-top:8px">
+          <button class="f-btn f-btn--filled">협업 매칭 시작</button>
+          <button class="f-btn f-btn--outlined">함께한 기록 보기</button>
+        </div>
+        <div class="f-section"><h2>최근 협업 후기</h2></div>
+        <ul class="f-list">
+          <li><div class="f-list__leading">JH</div><div class="f-list__content"><div class="f-list__primary">지호 · Claude Code · ⭐ 4.9</div><div class="f-list__secondary">"역할 분담 명확, 응답 빠름"</div></div></li>
+          <li><div class="f-list__leading">SY</div><div class="f-list__content"><div class="f-list__primary">서연 · 디자인+코딩 · ⭐ 5.0</div><div class="f-list__secondary">"디자인→코드 빠르게 정리"</div></div></li>
+        </ul>
+      </div>
+      <nav class="f-navbar">
+        <button class="on"><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></span>대시</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/></svg></span>매칭</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9"/><path d="M3 3v5h5"/></svg></span>기록</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/></svg></span>프로필</button>
+      </nav>
+    </section>
+  </template>
+
+  <!-- SF: Pixel Persona Flutter -->
+  <template id="PXF-template">
+    <section class="phone phone--flutter phone--PXF">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body">
+        <div class="f-appbar"><h1>EEUM</h1><button class="f-appbar__action"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/></svg></button></div>
+        <div class="f-headline"><h2>코더 모니카님,<br>오늘도 함께 만들어요!</h2><p>BOATMATE 무드 · 오늘의 페르소나 1/4</p></div>
+        <div class="f-card f-card--elevated">
+          <span style="font-size:32px">🪄</span>
+          <h3 style="margin:8px 0;font-size:22px">바이브 코더</h3>
+          <span class="f-chip f-chip--selected" style="border-radius:8px">Lv.24 · AI CODE MAGE</span>
+          <p style="margin-top:12px">월~금 · 응답 90 · 제작 82 · 커뮤 88</p>
+          <div class="f-progress" style="margin-top:12px"><div style="width:76%;background:#9ACD32"></div></div>
+          <p style="text-align:right;font-size:12px;font-weight:600;margin-top:6px">76%</p>
+        </div>
+        <div class="f-section"><h2>페르소나 목록</h2></div>
+        <ul class="f-list">
+          <li><div class="f-list__leading" style="background:#FFD8E4">🥷</div><div class="f-list__content"><div class="f-list__primary">리뷰어</div><div class="f-list__secondary">월·수·금 3회 활동 ~am 11:00</div></div></li>
+          <li><div class="f-list__leading" style="background:#DCEDC8">🎨</div><div class="f-list__content"><div class="f-list__primary">UX 메이커</div><div class="f-list__secondary">Lv.18 · PIXEL SKETCHER</div></div></li>
+        </ul>
+      </div>
+      <nav class="f-navbar">
+        <button class="on"><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3 4 9v12h6v-7h4v7h6V9z"/></svg></span>홈</button>
+        <button><span class="f-navbar__pill"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg></span>프로필</button>
       </nav>
     </section>
   </template>
