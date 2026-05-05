@@ -1508,11 +1508,12 @@ a { color: #2563EB; }
 .m-ai-card:nth-of-type(2) {
   background: linear-gradient(135deg, #1A1A1A 0%, #3D2D55 100%);
 }
-/* M2 first-card 고정 버튼 변형 */
+/* M2 first-card 고정 버튼 변형 (M1 두번째 캐러셀 색상) */
 .m-ai-card--fixed {
   display: block; width: 100%; flex: none; text-align: left;
   border: none; cursor: pointer; font-family: inherit;
   padding: 18px; border-radius: 20px;
+  background: linear-gradient(135deg, #1A1A1A 0%, #3D2D55 100%);
   box-shadow: 0 16px 36px rgba(26,26,26,.22);
   transition: transform .18s ease, box-shadow .18s ease;
 }
