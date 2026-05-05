@@ -258,54 +258,27 @@
         </div>
         -->
 
-        <!-- Section 1: AI PM 진행 중인 팀 (캐러셀, 참여 팀 수만큼) -->
+        <!-- Section 1: AI PM 진행 중인 팀 (고정 단일 카드 버튼) -->
         <div class="m-section">
-          <!--
-          <div class="m-section__head">
-            <span><span class="m-section__chip">🤖 AI PM</span><span class="m-section__title">오늘 할 일</span></span>
-            <a class="m-section__more">팀 전체 →</a>
-          </div>
-          -->
-          <div class="m-ai-carousel">
-            <div class="m-ai-card">
-              <div class="m-ai-card__head">
-                <span class="m-ai-card__chip">🤖 오늘 데모데이팀 할일</span>
-              </div>
-              <div class="m-ai-card__team">
-                <span class="m-ai-card__team-name">팀 · AI 랜딩 데모데이</span>
-                <span class="m-ai-card__team-day">D-2</span>
-              </div>
-              <div class="m-ai-card__progress">
-                <div class="m-ai-card__bar"><div style="width:62%"></div></div>
-                <em>62%</em>
-              </div>
-              <ul class="m-ai-todo">
-                <li><i></i><span>히어로 카피 2안 정리 후 공유</span><b>14:00</b></li>
-                <li class="m-ai-todo--done"><i class="m-ai-todo__done"></i><span>Figma 와이어 v2 리뷰 코멘트</span><b>완료</b></li>
-                <li><i></i><span>Supabase 로그인 붙이기 (지호)</span><b>오늘</b></li>
-              </ul>
-              <button class="m-ai-card__more">팀룸 열기 →</button>
+          <button class="m-ai-card m-ai-card--fixed">
+            <div class="m-ai-card__head">
+              <span class="m-ai-card__chip">🤖 오늘 데모데이팀 할일</span>
             </div>
-            <div class="m-ai-card">
-              <div class="m-ai-card__head">
-                <span class="m-ai-card__chip">🤖 오늘 회의록팀 할일</span>
-              </div>
-              <div class="m-ai-card__team">
-                <span class="m-ai-card__team-name">팀 · AI 회의록 요약기</span>
-                <span class="m-ai-card__team-day">D-5</span>
-              </div>
-              <div class="m-ai-card__progress">
-                <div class="m-ai-card__bar"><div style="width:34%"></div></div>
-                <em>34%</em>
-              </div>
-              <ul class="m-ai-todo">
-                <li><i></i><span>OpenAI 프롬프트 1차 작성</span><b>오늘</b></li>
-                <li><i></i><span>Whisper 토큰 한도 검토</span><b>D-1</b></li>
-                <li class="m-ai-todo--done"><i class="m-ai-todo__done"></i><span>Notion 클론 와이어</span><b>완료</b></li>
-              </ul>
-              <button class="m-ai-card__more">팀룸 열기 →</button>
+            <div class="m-ai-card__team">
+              <span class="m-ai-card__team-name">팀 · AI 랜딩 데모데이</span>
+              <span class="m-ai-card__team-day">D-2</span>
             </div>
-          </div>
+            <div class="m-ai-card__progress">
+              <div class="m-ai-card__bar"><div style="width:62%"></div></div>
+              <em>62%</em>
+            </div>
+            <ul class="m-ai-todo">
+              <li><i></i><span>히어로 카피 2안 정리 후 공유</span><b>14:00</b></li>
+              <li class="m-ai-todo--done"><i class="m-ai-todo__done"></i><span>Figma 와이어 v2 리뷰 코멘트</span><b>완료</b></li>
+              <li><i></i><span>Supabase 로그인 붙이기 (지호)</span><b>오늘</b></li>
+            </ul>
+            <span class="m-ai-card__more">팀룸 열기 →</span>
+          </button>
         </div>
 
         <!-- Section 2: 오늘의 미션 -->

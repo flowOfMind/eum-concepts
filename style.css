@@ -1508,6 +1508,20 @@ a { color: #2563EB; }
 .m-ai-card:nth-of-type(2) {
   background: linear-gradient(135deg, #1A1A1A 0%, #3D2D55 100%);
 }
+/* M2 first-card 고정 버튼 변형 */
+.m-ai-card--fixed {
+  display: block; width: 100%; flex: none; text-align: left;
+  border: none; cursor: pointer; font-family: inherit;
+  padding: 18px; border-radius: 20px;
+  box-shadow: 0 16px 36px rgba(26,26,26,.22);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.m-ai-card--fixed:active { transform: scale(.99); box-shadow: 0 10px 24px rgba(26,26,26,.18); }
+.m-ai-card--fixed .m-ai-card__more {
+  display: inline-block; margin-top: 14px; padding: 10px 18px;
+  background: rgba(255,255,255,.10); color: #fff; border: 1px solid rgba(255,255,255,.18);
+  border-radius: 10px; font-size: 12px; font-weight: 800; letter-spacing: -.01em;
+}
 .m-ai-card__head { margin-bottom: 10px; }
 .m-ai-card__chip {
   display: inline-block;
