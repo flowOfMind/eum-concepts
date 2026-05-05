@@ -1512,6 +1512,7 @@ a { color: #2563EB; }
 .m-ai-card__tier { margin-bottom: 14px; }
 .m-ai-card__tier small { font-size: 10px; font-weight: 800; letter-spacing: .12em; color: rgba(255,255,255,.55); display: block; margin-bottom: 8px; }
 .m-ai-card__tier h4 { font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -.02em; color: #B5E22F; line-height: 1.28; }
+.m-ai-card__hl { background: #B5E22F; color: #1A1A1A; padding: 0 10px; border-radius: 8px; display: inline-block; line-height: 1.2; }
 
 
 /* M2 first-card 고정 버튼 변형 (M1 두번째 캐러셀 색상) */
