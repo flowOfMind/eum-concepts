@@ -1511,8 +1511,8 @@ a { color: #2563EB; }
 /* M2 — G2 VIBE TIER 스타일 차용 (다크 카드 위) */
 .m-ai-card__tier { margin-bottom: 14px; }
 .m-ai-card__tier small { font-size: 10px; font-weight: 800; letter-spacing: .12em; color: rgba(255,255,255,.55); display: block; margin-bottom: 8px; }
-.m-ai-card__tier h4 { font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -.02em; color: #B5E22F; line-height: 1.35; }
-.m-ai-card__hl { background: #B5E22F; color: #1A1A1A; padding: 0.5px 8px; border-radius: 8px; display: inline-block; line-height: 1.2; }
+.m-ai-card__tier h4 { font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -.02em; color: #B5E22F; line-height: 1.39; }
+.m-ai-card__hl { background: #B5E22F; color: #1A1A1A; padding: 1px 8px; border-radius: 8px; display: inline-block; line-height: 1.2; }
 
 
 /* M2 first-card 고정 버튼 변형 (M1 두번째 캐러셀 색상) */
@@ -1530,7 +1530,7 @@ a { color: #2563EB; }
 /* M2 카드: 게이지 행(왼쪽 progress + 오른쪽 정사각형 화살표) */
 /* M2/M3 카드 하단: 화살표 높이(40px)에 맞춘 컨테이너 - 좌측 라벨+게이지 / 우측 화살표 */
 .m-ai-card__bottom { display: flex; align-items: stretch; gap: 18px; height: 40px; margin-top: 14px; }
-.m-ai-card__bottom-left { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 5px; overflow: hidden; }
+.m-ai-card__bottom-left { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 5px; overflow: hidden; padding-bottom: 2.5px; }
 .m-ai-card__bottom-left .m-ai-card__progress { display: flex; align-items: flex-end; gap: 10px; margin: 0; height: 14px; }
 .m-ai-card__bottom-left .m-ai-card__progress em { font-size: 12px; font-weight: 800; letter-spacing: -.02em; line-height: 1; }
 .m-ai-card__bottom-label { font-size: 12px; font-weight: 700; opacity: .92; color: #fff; display: block; line-height: 1; }
