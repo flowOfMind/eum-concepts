@@ -1518,16 +1518,20 @@ a { color: #2563EB; }
 .m-ai-card--fixed {
   display: block; width: 100%; flex: none; text-align: left;
   border: none; cursor: pointer; font-family: inherit;
-  padding: 22.5px 24px 18.5px; border-radius: 20px;
+  padding: 22.5px 24px 18px; border-radius: 20px;
   background: linear-gradient(135deg, #1A1A1A 0%, #2A2D55 100%);
   box-shadow: 0 14px 26px rgba(26,26,26,.30);
   transition: transform .18s ease, box-shadow .18s ease;
 }
 /* M3 카드 — 캐러셀 안에서도 패딩 확장(상하좌우) + 하단만 축소 */
-.m-ai-card--m3 { padding: 21px 22px 18.5px; }
+.m-ai-card--m3 { padding: 21px 22px 18px; }
 .m-ai-card--fixed:active { transform: scale(.99); box-shadow: 0 10px 24px rgba(26,26,26,.18); }
 /* M2 카드: 게이지 행(왼쪽 progress + 오른쪽 정사각형 화살표) */
 .m-ai-card__row { display: flex; align-items: flex-end; gap: 18px; margin-top: 14px; }
+/* M2/M3 카드 하단 컨테이너 (좌상단 라벨 + 게이지·화살표 행) */
+.m-ai-card__bottom { margin-top: 14px; }
+.m-ai-card__bottom .m-ai-card__row { margin-top: 8px; }
+.m-ai-card__bottom-label { font-size: 13px; font-weight: 700; opacity: .92; color: #fff; display: block; }
 .m-ai-card__row .m-ai-card__progress { flex: 1; min-width: 0; margin-bottom: 0; }
 .m-ai-card__arrow {
   flex: 0 0 auto;
