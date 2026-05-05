@@ -1514,7 +1514,7 @@ a { color: #2563EB; }
   border: none; cursor: pointer; font-family: inherit;
   padding: 18px; border-radius: 20px;
   background: linear-gradient(135deg, #1A1A1A 0%, #3D2D55 100%);
-  box-shadow: 0 16px 36px rgba(26,26,26,.22);
+  box-shadow: 0 16px 36px rgba(26,26,26,.30);
   transition: transform .18s ease, box-shadow .18s ease;
 }
 .m-ai-card--fixed:active { transform: scale(.99); box-shadow: 0 10px 24px rgba(26,26,26,.18); }
