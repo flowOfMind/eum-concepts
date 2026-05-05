@@ -1576,8 +1576,8 @@ a { color: #2563EB; }
   letter-spacing: -.02em;
 }
 .m-ai-todo {
-  list-style: none; padding: 0; margin: 0 0 12.5px;
-  display: flex; flex-direction: column; gap: 9px;
+  list-style: none; padding: 0; margin: 1px 0 13.5px;
+  display: flex; flex-direction: column; gap: 8.5px;
 }
 .m-ai-todo li {
   display: grid;
