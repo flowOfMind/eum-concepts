@@ -1530,7 +1530,7 @@ a { color: #2563EB; }
 /* M2 카드: 게이지 행(왼쪽 progress + 오른쪽 정사각형 화살표) */
 /* M2/M3 카드 하단: 화살표 높이(40px)에 맞춘 컨테이너 - 좌측 라벨+게이지 / 우측 화살표 */
 .m-ai-card__bottom { display: flex; align-items: stretch; gap: 18px; height: 40px; margin-top: 14px; }
-.m-ai-card__bottom-left { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 4px; overflow: hidden; }
+.m-ai-card__bottom-left { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 5px; overflow: hidden; }
 .m-ai-card__bottom-left .m-ai-card__progress { display: flex; align-items: center; gap: 10px; margin: 0; height: 14px; }
 .m-ai-card__bottom-left .m-ai-card__progress em { font-size: 12px; font-weight: 800; letter-spacing: -.02em; line-height: 1; }
 .m-ai-card__bottom-label { font-size: 12px; font-weight: 700; opacity: .92; color: #fff; display: block; line-height: 1; }
