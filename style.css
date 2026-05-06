@@ -1418,7 +1418,7 @@ a { color: #2563EB; }
 /* Topbar */
 .m-topbar {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 4.5px 0 11.5px; gap: 10px;
+  padding: 4.5px 0 10.5px; gap: 10px;
 }
 .m-brand { font-size: 22px; font-weight: 800; letter-spacing: -.03em; }
 .m-loc {
