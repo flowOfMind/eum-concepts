@@ -1605,6 +1605,7 @@ a { color: #2563EB; }
   font-size: 10px; color: #1A1A1A; font-weight: 800;
 }
 .m-ai-todo span { font-size: 13px; opacity: .92; }
+.m-ai-todo li.m-ai-todo--placeholder { display: block; height: 16px; visibility: hidden; }
 .m-ai-todo li.m-ai-todo--done span { text-decoration: line-through; opacity: .55; }
 .m-ai-todo b { font-size: 11px; font-weight: 700; opacity: .7; }
 .m-ai-card__more {
