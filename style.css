@@ -1530,7 +1530,7 @@ a { color: #2563EB; }
 .m-ai-card--fixed:active { transform: scale(.99); box-shadow: 0 10px 24px rgba(26,26,26,.18); }
 /* M2 카드: 게이지 행(왼쪽 progress + 오른쪽 정사각형 화살표) */
 /* M2/M3 카드 하단: 화살표 높이(40px)에 맞춘 컨테이너 - 좌측 라벨+게이지 / 우측 화살표 */
-.m-ai-card__bottom { display: flex; align-items: stretch; gap: 18px; height: 40px; margin-top: 14px; }
+.m-ai-card__bottom { display: flex; align-items: stretch; gap: 15px; height: 40px; margin-top: 14px; }
 .m-ai-card__bottom-left { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 5px; overflow: hidden; padding-bottom: 2.5px; }
 .m-ai-card__bottom-left .m-ai-card__progress { display: flex; align-items: flex-end; gap: 10px; margin: 0; height: 14px; }
 .m-ai-card__bottom-left .m-ai-card__progress em { font-size: 12px; font-weight: 800; letter-spacing: -.02em; line-height: 1; }
@@ -1546,6 +1546,7 @@ a { color: #2563EB; }
   transform: translateX(8px) scale(1.2);
   transform-origin: right bottom;
 }
+.m-ai-card--fixed .m-ai-card__arrow { transform: translateX(7px) scale(1.2); }
 .m-ai-card__head { margin-bottom: 10px; }
 .m-ai-card__chip {
   display: inline-block;
