@@ -2051,7 +2051,7 @@ a { color: #2563EB; }
 /* MD3 (AI 베이스캠프) — 메뉴 버튼 + 타이틀 */
 .phone--MD3 .md-topbar { gap: 14px; justify-content: flex-start; }
 .md-menu { width: 38px; height: 38px; border-radius: 50%; background: #1A1A1A; border: none; color: #fff; display: grid; place-items: center; padding: 0; cursor: pointer; flex-shrink: 0; box-shadow: 0 4px 10px rgba(15,23,42,.18); }
-.md-title { font-size: 18px; font-weight: 800; letter-spacing: -.04em; color: #1A1A1A; flex: 1; font-family: 'Rix', 'Pretendard', sans-serif; }
+.md-title { font-size: 22px; font-weight: 800; letter-spacing: 0; color: #1A1A1A; flex: 1; font-family: 'Rix', 'Pretendard', sans-serif; }
 .phone--MD3 .md-actions { margin-left: auto; }
 .md-brand { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: #2DB36C; padding: 7px 14px; background: #fff; border: 1px solid #2DB36C; border-radius: 99px; box-shadow: 0 4px 12px rgba(15,23,42,.10); cursor: pointer; font-family: inherit; }
 .md-brand b { color: #1A7E4A; font-weight: 800; }
