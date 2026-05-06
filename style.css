@@ -1545,9 +1545,10 @@ a { color: #2563EB; }
   background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.18);
   display: grid; place-items: center; color: #fff;
   pointer-events: none;
-  transform: translateX(8px);
+  transform: translateX(8px) scale(1.05);
+  transform-origin: right bottom;
 }
-.m-ai-card--fixed .m-ai-card__arrow { transform: translateX(7px); }
+.m-ai-card--fixed .m-ai-card__arrow { transform: translateX(7px) scale(1.05); }
 .m-ai-card__head { margin-bottom: 10px; }
 .m-ai-card__chip {
   display: inline-block;
