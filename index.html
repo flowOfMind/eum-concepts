@@ -44,6 +44,13 @@
     font-weight: 600;
     font-display: swap;
   }
+  /* 둥근모 (RoundedFixedsys / DungGeunMo) — noonnu 호스팅 */
+  @font-face {
+    font-family: 'RoundedFixedsys';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+  }
 </style>
 <link rel="stylesheet" href="./style.css">
 </head>
@@ -271,6 +278,7 @@
         <!-- Section 1: AI PM 진행 중인 팀 (고정 단일 카드 버튼) -->
         <div class="m-section">
           <button class="m-ai-card m-ai-card--fixed">
+            <span class="m-ai-card__coin" aria-hidden="true">-1coin</span>
             <div class="m-ai-card__tier">
               <small>VIBE TIER</small>
               <h4>새로운 모임<br><span class="m-ai-card__hl">매칭하기</span></h4>
@@ -482,6 +490,7 @@
         <div class="m-section">
           <div class="m-ai-carousel">
             <div class="m-ai-card m-ai-card--m3">
+              <span class="m-ai-card__coin" aria-hidden="true">-1coin</span>
               <div class="m-ai-card__tier">
                 <small>VIBE TIER</small>
                 <h4>새로운<br><span class="m-ai-card__hl">채팅방 열기</span></h4>
@@ -509,6 +518,7 @@
               </div>
             </div>
             <div class="m-ai-card m-ai-card--m3">
+              <span class="m-ai-card__coin" aria-hidden="true">-1coin</span>
               <div class="m-ai-card__tier">
                 <small>VIBE TIER</small>
                 <h4>새로운 방<br>탐색하기</h4>
