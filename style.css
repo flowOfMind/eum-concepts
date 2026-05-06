@@ -1612,7 +1612,7 @@ a { color: #2563EB; }
 /* 토글 태그 (2:2 / 3:3 / 멘토) — 매칭하기 스타일 축소 + 토글 상태 */
 .m-ai-tag {
   display: inline-flex; align-items: center; gap: 5px;
-  background: rgba(255,255,255,.10);
+  background: transparent;
   border: 2px solid rgba(255,255,255,.30);
   color: rgba(255,255,255,.45);
   font-family: inherit; font-size: 15px; font-weight: 800;
@@ -1620,7 +1620,7 @@ a { color: #2563EB; }
   cursor: pointer; line-height: 1;
   transition: border-color .18s ease, color .18s ease;
 }
-.m-ai-tag.is-on { border-color: #B5E22F; color: #B5E22F; }
+.m-ai-tag.is-on { border-color: #B5E22F; color: #B5E22F; background: rgba(255,255,255,.10); }
 .m-ai-todo li.m-ai-todo--done span { text-decoration: line-through; opacity: .55; }
 .m-ai-todo b { font-size: 11px; font-weight: 700; opacity: .7; }
 .m-ai-card__more {
