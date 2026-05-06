@@ -59,6 +59,13 @@ const render = (key) => {
     });
     if (key === 'PX') setupPXCarousel();
     if (key === 'ME' || key === 'MQ') setupMEThemeToggle();
+    stage.querySelectorAll('.m-ai-tag').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        e.stopPropagation();
+        btn.classList.toggle('is-on');
+      });
+    });
   };
 
   tabs.forEach(t => t.addEventListener('click', () => render(t.dataset.tab)));
