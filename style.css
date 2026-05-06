@@ -1467,6 +1467,7 @@ a { color: #2563EB; }
 
 /* Section common */
 .m-section { margin: 28.5px 0 3.5px; }
+.m-section--gap-3 { margin-top: 31.5px; }
 .m-topbar + .m-section { margin-top: 4px; }
 .m-section__head {
   display: flex; align-items: center; justify-content: space-between;
