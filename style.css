@@ -1533,7 +1533,7 @@ a { color: #2563EB; }
 /* M2 카드: 게이지 행(왼쪽 progress + 오른쪽 정사각형 화살표) */
 /* M2/M3 카드 하단: 화살표 높이(40px)에 맞춘 컨테이너 - 좌측 라벨+게이지 / 우측 화살표 */
 .m-ai-card__bottom { display: flex; align-items: stretch; gap: 15px; height: 40px; margin-top: 14px; }
-.m-ai-card__bottom-left { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; overflow: hidden; padding-bottom: 2.5px; }
+.m-ai-card__bottom-left { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 9px; overflow: hidden; padding-bottom: 2.5px; }
 .m-ai-card__top-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .m-ai-card__bottom-left .m-ai-card__bar { flex: none; width: 100%; }
 .m-ai-card__pct { font-size: 12px; font-weight: 800; letter-spacing: -.02em; line-height: 1; font-style: normal; color: #fff; }
