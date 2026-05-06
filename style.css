@@ -1418,7 +1418,7 @@ a { color: #2563EB; }
 /* Topbar */
 .m-topbar {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 4.5px 0 12.5px; gap: 10px;
+  padding: 4.5px 0 11.5px; gap: 10px;
 }
 .m-brand { font-size: 22px; font-weight: 800; letter-spacing: -.03em; }
 .m-loc {
@@ -1495,7 +1495,7 @@ a { color: #2563EB; }
   display: flex; gap: 14px;
   overflow-x: auto; -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
-  margin: 0 -18px 0 0; padding: 2px 18px 6px 0;
+  margin: 0 -18px 0 0; padding: 0 18px 6px 0;
 }
 .m-ai-carousel::-webkit-scrollbar { display: none; }
 
