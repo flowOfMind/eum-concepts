@@ -1513,7 +1513,7 @@ a { color: #2563EB; }
 /* M2 — G2 VIBE TIER 스타일 차용 (다크 카드 위) */
 .m-ai-card__tier { margin-bottom: 14px; }
 .m-ai-card__tier small { font-size: 10px; font-weight: 800; letter-spacing: .12em; color: rgba(255,255,255,.55); display: block; margin-bottom: 6px; }
-.m-ai-card__tier h4 { font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -.02em; color: #B5E22F; line-height: 1.34; }
+.m-ai-card__tier h4 { font-size: 30px; font-weight: 800; margin: 0; letter-spacing: -.02em; color: #B5E22F; line-height: 1.36; }
 .m-ai-card__hl { background: #B5E22F; color: #1A1A1A; padding: 1px 8px; border-radius: 8px; display: inline-block; line-height: 1.2; }
 .m-ai-card__coin { position: absolute; top: 21px; right: 24px; font-family: 'RoundedFixedsys', 'DotGothic16', monospace; color: #B5E22F; font-size: 36px; letter-spacing: -.02em; line-height: 1; }
 
@@ -1607,7 +1607,7 @@ a { color: #2563EB; }
 }
 .m-ai-todo span { font-size: 13px; opacity: .92; }
 .m-ai-todo li.m-ai-todo--placeholder { display: block; height: 16px; visibility: hidden; }
-.m-ai-todo li.m-ai-todo--tags { display: flex; flex-wrap: wrap; gap: 9px; padding: 0; margin-top: 0; transform: translateY(6px); }
+.m-ai-todo li.m-ai-todo--tags { display: flex; flex-wrap: wrap; gap: 9px; padding: 0; margin-top: 0; transform: translateY(9px); }
 .m-ai-card__hl--sm { font-size: 12px; font-weight: 700; padding: 1px 7px; border-radius: 6px; line-height: 1.3; }
 /* 토글 태그 (2:2 / 3:3 / 멘토) — 매칭하기 스타일 축소 + 토글 상태 */
 .m-ai-tag {
