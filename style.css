@@ -1612,7 +1612,7 @@ a { color: #2563EB; }
 /* 토글 태그 (2:2 / 3:3 / 멘토) — 매칭하기 스타일 축소 + 토글 상태 */
 .m-ai-tag {
   display: inline-flex; align-items: center; gap: 5px;
-  background: transparent;
+  background: rgba(255,255,255,.10);
   border: 3px solid rgba(255,255,255,.30);
   color: rgba(255,255,255,.45);
   font-family: inherit; font-size: 15px; font-weight: 800;
