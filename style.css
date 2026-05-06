@@ -1505,6 +1505,7 @@ a { color: #2563EB; }
   background: linear-gradient(135deg, #1A1A1A 0%, #2A2D55 100%);
   color: #fff; border-radius: 18px; padding: 16px;
   box-shadow: 0 14px 32px rgba(26,26,26,.2);
+  position: relative;
 }
 .m-ai-card:nth-of-type(2) {
   background: linear-gradient(135deg, #1A1A1A 0%, #3D2D55 100%);
@@ -1514,7 +1515,7 @@ a { color: #2563EB; }
 .m-ai-card__tier small { font-size: 10px; font-weight: 800; letter-spacing: .12em; color: rgba(255,255,255,.55); display: block; margin-bottom: 7px; }
 .m-ai-card__tier h4 { font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -.02em; color: #B5E22F; line-height: 1.43; }
 .m-ai-card__hl { background: #B5E22F; color: #1A1A1A; padding: 1px 8px; border-radius: 8px; display: inline-block; line-height: 1.2; }
-.m-ai-card__coin { position: absolute; top: 14px; right: 14px; font-family: 'RoundedFixedsys', 'DotGothic16', monospace; color: #34E89E; font-size: 14px; letter-spacing: 0; line-height: 1; }
+.m-ai-card__coin { position: absolute; top: 14px; right: 14px; font-family: 'RoundedFixedsys', 'DotGothic16', monospace; color: #B5E22F; font-size: 14px; letter-spacing: 0; line-height: 1; }
 
 
 /* M2 first-card 고정 버튼 변형 (M1 두번째 캐러셀 색상) */
@@ -1544,10 +1545,9 @@ a { color: #2563EB; }
   background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.18);
   display: grid; place-items: center; color: #fff;
   pointer-events: none;
-  transform: translateX(8px) scale(1.2);
-  transform-origin: right bottom;
+  transform: translateX(8px);
 }
-.m-ai-card--fixed .m-ai-card__arrow { transform: translateX(7px) scale(1.2); }
+.m-ai-card--fixed .m-ai-card__arrow { transform: translateX(7px); }
 .m-ai-card__head { margin-bottom: 10px; }
 .m-ai-card__chip {
   display: inline-block;
