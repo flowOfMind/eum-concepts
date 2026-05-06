@@ -1515,7 +1515,7 @@ a { color: #2563EB; }
 .m-ai-card__tier small { font-size: 10px; font-weight: 800; letter-spacing: .12em; color: rgba(255,255,255,.55); display: block; margin-bottom: 7px; }
 .m-ai-card__tier h4 { font-size: 28px; font-weight: 800; margin: 0; letter-spacing: -.02em; color: #B5E22F; line-height: 1.43; }
 .m-ai-card__hl { background: #B5E22F; color: #1A1A1A; padding: 1px 8px; border-radius: 8px; display: inline-block; line-height: 1.2; }
-.m-ai-card__coin { position: absolute; top: 14px; right: 14px; font-family: 'RoundedFixedsys', 'DotGothic16', monospace; color: #B5E22F; font-size: 14px; letter-spacing: 0; line-height: 1; }
+.m-ai-card__coin { position: absolute; top: 22.5px; right: 24px; font-family: 'RoundedFixedsys', 'DotGothic16', monospace; color: #B5E22F; font-size: 34px; letter-spacing: 0; line-height: 1; }
 
 
 /* M2 first-card 고정 버튼 변형 (M1 두번째 캐러셀 색상) */
