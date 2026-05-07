@@ -2057,8 +2057,8 @@ a { color: #2563EB; }
 .phone--MD4 .md-actions { margin-left: auto; }
 .phone--MD3 .md-bell, .phone--MD3 .md-profile,
 .phone--MD4 .md-bell, .phone--MD4 .md-profile { width: 38px; height: 38px; }
-/* MD4 — 햄버거 제거, 타이틀이 그 자리에 (검은 하이라이트 + 흰 글씨) */
-.phone--MD4 .md-title { flex: 0 1 auto; margin-left: 0; padding: 0 14px; height: 38px; line-height: 38px; background: #1A1A1A; color: #fff; border-radius: 10px; box-shadow: 0 4px 10px rgba(15,23,42,.18); }
+/* MD4 — 햄버거 제거, 타이틀이 그 자리에 (검은 하이라이트 + 흰 글씨, 라운드/그림자 없음) */
+.phone--MD4 .md-title { flex: 0 1 auto; margin-left: 0; padding: 0 6px; height: 38px; line-height: 38px; background: #1A1A1A; color: #fff; border-radius: 0; box-shadow: none; }
 .md-brand { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: #2DB36C; padding: 7px 14px; background: #fff; border: 1px solid #2DB36C; border-radius: 99px; box-shadow: 0 4px 12px rgba(15,23,42,.10); cursor: pointer; font-family: inherit; }
 .md-brand b { color: #1A7E4A; font-weight: 800; }
 .md-brand__caret { font-size: 10px; color: #2DB36C; margin-left: 2px; line-height: 1; }
