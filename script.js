@@ -1,7 +1,7 @@
 (() => {
   const stage = document.getElementById('stage');
   const tabs = document.querySelectorAll('.tab');
-  const valid = ['home','M','MA','MB','MC','MD','MQ','MG','MI','MJ','MP','PS','PX','MD2','M2','MG2','MA2','M3','MD3'];
+  const valid = ['home','M','MA','MB','MC','MD','MQ','MG','MI','MJ','MP','PS','PX','MD2','M2','MG2','MA2','M3','MD3','MD4'];
 
   const setupPXCarousel = () => {
     const carousel = document.getElementById('px-carousel');
