@@ -1515,7 +1515,7 @@ a { color: #2563EB; }
 .m-ai-card__tier small { font-size: 10px; font-weight: 800; letter-spacing: .12em; color: rgba(255,255,255,.55); display: block; margin-bottom: 5px; font-family: 'RoundedFixedsys', 'DotGothic16', monospace; }
 .m-ai-card__tier h4 { font-size: 29px; font-weight: 800; margin: 0; letter-spacing: -.02em; color: #B5E22F; line-height: 1.36; }
 .m-ai-card__hl { background: #B5E22F; color: #1A1A1A; padding: 1px 8px; border-radius: 8px; display: inline-block; line-height: 1.2; }
-.m-ai-card__coin { position: absolute; top: 21px; right: 24px; font-family: 'RoundedFixedsys', 'DotGothic16', monospace; color: #B5E22F; font-size: 35.5px; letter-spacing: -.02em; line-height: 1; }
+.m-ai-card__coin { position: absolute; top: 21px; right: 24px; font-family: 'RoundedFixedsys', 'DotGothic16', monospace; color: #B5E22F; font-size: 36.5px; letter-spacing: -.02em; line-height: 1; }
 
 
 /* M2 first-card 고정 버튼 변형 (M1 두번째 캐러셀 색상) */
@@ -1583,7 +1583,7 @@ a { color: #2563EB; }
   letter-spacing: -.02em;
 }
 .m-ai-todo {
-  list-style: none; padding: 0; margin: 6px 0 3.5px;
+  list-style: none; padding: 0; margin: 5.5px 0 3.5px;
   display: flex; flex-direction: column; gap: 8px;
 }
 .m-ai-todo li {
