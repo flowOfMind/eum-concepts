@@ -89,13 +89,12 @@
     <nav class="topbar topbar--bottom" id="tabs">
       <div class="topbar__tabs">
         <button class="tab" data-tab="home" aria-selected="true">시안 목록</button>
-        <button class="tab" data-tab="TH">쓰레드</button>
         <button class="tab" data-tab="MD3">AI</button>
         <button class="tab" data-tab="MD4">AI2</button>
         <span class="tab__divider" aria-hidden="true"></span>
         <button class="tab" data-tab="MA2">A2</button>
         <button class="tab" data-tab="MD2">D</button>
-        <button class="tab" data-tab="M2">M</button>
+        <button class="tab" data-tab="M2">M2</button>
         <button class="tab" data-tab="M3">M3</button>
         <button class="tab" data-tab="MG2">G</button>
         <span class="tab__divider" aria-hidden="true"></span>
@@ -121,10 +120,6 @@
       <p class="home__sub">카드 클릭으로 이동.</p>
 
       <div class="home__grid home__grid--featured home__grid--ai">
-        <button class="card-button" data-tab="TH" style="--accent:#1F1611">
-          <span class="badge">TH</span>
-          <h3>픽셀 쓰레드 · AI BASECAMP</h3>
-        </button>
         <button class="card-button" data-tab="MD3" style="--accent:#92400E">
           <span class="badge">MD</span>
           <h3>AI 베이스캠프</h3>
@@ -148,7 +143,7 @@
         </button>
         <button class="card-button" data-tab="M2" style="--accent:#1A1A1A">
           <span class="badge">M</span>
-          <h3>M. 기본</h3>
+          <h3>M2. 기본</h3>
         </button>
         <button class="card-button" data-tab="M3" style="--accent:#1A1A1A">
           <span class="badge">M</span>
@@ -1491,72 +1486,6 @@
     </section>
   </template>
 
-
-  <!-- TH: 픽셀 쓰레드 — 모노 텍스트 + 픽셀 폰트만 -->
-  <template id="TH-template">
-    <section class="phone phone--TH">
-      <div class="phone__statusbar">9:41</div>
-      <div class="phone__body th-body">
-
-        <header class="th-head">
-          <h1 class="th-head__title">AI BASECAMP</h1>
-          <p class="th-head__sub">쓰레드 · 12 ACTIVE · 8 NEW</p>
-        </header>
-
-        <nav class="th-tabs" role="tablist">
-          <button class="on">전체</button>
-          <button>HOT</button>
-          <button>새 글</button>
-          <button>후기</button>
-          <button>모집</button>
-          <button>잡담</button>
-        </nav>
-
-        <ul class="th-list">
-          <li class="pin">
-            <p class="th-meta">[PIN] 일정 · 운영진 · 30분 전</p>
-            <h4>8주차 모각코 · 일요일 19시 블루보틀 서울대입구</h4>
-            <p class="th-excerpt">이번 주는 따뜻한 라떼 한 잔 옆에 두고, MVP 데모 30초씩 돌려봐요. 노트북 충전기 챙기는 거 잊지 마세요.</p>
-            <p class="th-foot">♥ 28　＋ 14　◉ 312</p>
-          </li>
-          <li>
-            <p class="th-meta">후기 · 지호 · 봉천 · 2시간 전</p>
-            <h4>오늘 새벽 3시, 첫 PR 머지했어요</h4>
-            <p class="th-excerpt">커서 닫고 창밖 보다가 왠지 울컥하더라구요. 5번 리젝당한 그 함수가 드디어 통과… 새벽 카페인의 힘.</p>
-            <p class="th-foot">♥ 41　＋ 9　◉ 208</p>
-          </li>
-          <li>
-            <p class="th-meta">정보 · 서윤 · 사당 · 5시간 전</p>
-            <h4>Whisper 한국어, 추임새도 잘 잡네요</h4>
-            <p class="th-excerpt">"솔직히", "그러니까" 같은 말까지 정확하게 따옵니다. medium 모델로도 충분 — 비교표는 댓글에.</p>
-            <p class="th-foot">♥ 22　＋ 6　◉ 147</p>
-          </li>
-          <li>
-            <p class="th-meta">[HOT] 모집 · 도경 · 신림 · 어제</p>
-            <h4>동네 '시간표 인쇄소' 같이 굴릴 사람</h4>
-            <p class="th-excerpt">관악 청년정책 앱처럼 — 캘린더 동기화 → A4 한 장 PDF. 디자이너 1, 백엔드 1 자리 남았습니다.</p>
-            <p class="th-foot">♥ 35　＋ 18　◉ 421</p>
-          </li>
-          <li>
-            <p class="th-meta">잡담 · 하린 · 신림 · 어제</p>
-            <h4>관악 카페 베니, 와이파이 진짜 좋아요</h4>
-            <p class="th-excerpt">5명이 동시에 npm install 돌려도 안 끊깁니다. 콜드브루도 단단해요. 사당역 5번 출구.</p>
-            <p class="th-foot">♥ 17　＋ 4　◉ 89</p>
-          </li>
-        </ul>
-
-        <p class="th-end">─── END OF LIST ───</p>
-      </div>
-
-      <nav class="th-nav">
-        <button class="on">홈</button>
-        <button>HOT</button>
-        <button>＋ 글쓰기</button>
-        <button>알림</button>
-        <button>나</button>
-      </nav>
-    </section>
-  </template>
 
   <!-- GF: Vibe Dashboard Flutter -->
   <template id="MG-template">
