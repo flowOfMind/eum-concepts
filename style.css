@@ -1529,7 +1529,7 @@ a { color: #2563EB; }
 }
 /* M3 카드 — 캐러셀 안에서도 패딩 확장(상하좌우) + 하단만 축소 */
 .m-ai-card--m3 { padding: 22.5px 24px 19px; }
-.m-ai-card--fixed:active { transform: scale(.99); box-shadow: 0 10px 24px rgba(26,26,26,.18); }
+.m-ai-card--fixed:active:not(:has(.m-ai-tag:active)) { transform: scale(.99); box-shadow: 0 10px 24px rgba(26,26,26,.18); }
 /* M2 카드: 게이지 행(왼쪽 progress + 오른쪽 정사각형 화살표) */
 /* M2/M3 카드 하단: 화살표 높이(40px)에 맞춘 컨테이너 - 좌측 라벨+게이지 / 우측 화살표 */
 .m-ai-card__bottom { display: flex; align-items: stretch; gap: 15px; height: 40px; margin-top: 14px; }
@@ -1542,7 +1542,7 @@ a { color: #2563EB; }
 .m-ai-card__row .m-ai-card__progress { flex: 1; min-width: 0; margin-bottom: 0; }
 .m-ai-card__arrow {
   flex: 0 0 auto;
-  width: 42px; height: 42px; border-radius: 10px;
+  width: 44px; height: 44px; border-radius: 10px;
   background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.18);
   display: grid; place-items: center; color: #fff;
   pointer-events: none;
@@ -1584,7 +1584,7 @@ a { color: #2563EB; }
   letter-spacing: -.02em;
 }
 .m-ai-todo {
-  list-style: none; padding: 0; margin: 5.5px 0 3.5px;
+  list-style: none; padding: 0; margin: 4.5px 0 3.5px;
   display: flex; flex-direction: column; gap: 8px;
 }
 .m-ai-todo li {
