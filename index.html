@@ -89,6 +89,7 @@
     <nav class="topbar topbar--bottom" id="tabs">
       <div class="topbar__tabs">
         <button class="tab" data-tab="home" aria-selected="true">시안 목록</button>
+        <button class="tab" data-tab="TH">쓰레드</button>
         <button class="tab" data-tab="MD3">AI</button>
         <button class="tab" data-tab="MD4">AI2</button>
         <span class="tab__divider" aria-hidden="true"></span>
@@ -120,6 +121,10 @@
       <p class="home__sub">카드 클릭으로 이동.</p>
 
       <div class="home__grid home__grid--featured home__grid--ai">
+        <button class="card-button" data-tab="TH" style="--accent:#D97706">
+          <span class="badge">TH</span>
+          <h3>따뜻한 쓰레드 · 모닥불 앞 커피</h3>
+        </button>
         <button class="card-button" data-tab="MD3" style="--accent:#92400E">
           <span class="badge">MD</span>
           <h3>AI 베이스캠프</h3>
@@ -1485,6 +1490,136 @@
         <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><small>모임</small></button>
         <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>채팅</small></button>
         <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>나</small></button>
+      </nav>
+    </section>
+  </template>
+
+  <!-- TH: 따뜻한 쓰레드 — AI 베이스캠프 (모닥불 앞 커피 무드) -->
+  <template id="TH-template">
+    <section class="phone phone--TH">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body th-body">
+        <div class="th-topbar">
+          <span class="th-logo" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2c1.5 3 5 5 5 9a5 5 0 0 1-10 0c0-2 1-3 1-3"/>
+              <path d="M9 22h6"/>
+              <path d="M8 18h8"/>
+            </svg>
+          </span>
+          <span class="th-title">따뜻한 쓰레드</span>
+          <div class="th-actions">
+            <button aria-label="검색">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </button>
+            <button aria-label="알림">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="th-hero">
+          <small>AI 베이스캠프 · 둥근 테이블</small>
+          <h1>모닥불 앞 커피처럼,<br>느긋하게 코드 얘기 나눠요.</h1>
+          <span class="th-hero__stats">🔥 지금 둘러앉은 빌더 <em>12</em>명 · 새 글 <em>8</em></span>
+        </div>
+
+        <div class="th-chips" role="tablist">
+          <button class="on">전체</button>
+          <button>🔥 HOT</button>
+          <button>새 글</button>
+          <button>후기</button>
+          <button>모집</button>
+          <button>잡담</button>
+        </div>
+
+        <ul class="th-list">
+          <li class="pin">
+            <div class="th-meta">
+              <span class="th-meta__pin">📌 공지</span>
+              <span class="th-meta__tag">일정</span>
+            </div>
+            <h4>🔥 8주차 모각코 — 일요일 19시, 블루보틀 서울대입구</h4>
+            <p>이번 주는 따뜻한 라떼 한 잔 옆에 두고, MVP 데모 30초씩 돌려봐요. 노트북 충전기 챙기는 거 잊지 마세요.</p>
+            <div class="th-foot">
+              <span class="th-foot__author">
+                <span class="th-foot__avt" style="background:#92400E">운</span>
+                <b>운영진</b><span class="th-foot__time">· 30분 전</span>
+              </span>
+              <span class="th-foot__react"><span>💬 14</span><span>❤ 28</span></span>
+            </div>
+          </li>
+
+          <li>
+            <div class="th-meta">
+              <span class="th-meta__tag">후기</span>
+            </div>
+            <h4>오늘 새벽 3시, 첫 PR 머지했어요 ☕</h4>
+            <p>커서 닫고 창밖 보는데 왠지 울컥하더라구요. 5번 리젝당한 그 함수가 드디어 통과… 새벽 카페인의 힘.</p>
+            <div class="th-foot">
+              <span class="th-foot__author">
+                <span class="th-foot__avt" style="background:#2DB36C">JH</span>
+                <b>지호 · 봉천</b><span class="th-foot__time">· 2시간 전</span>
+              </span>
+              <span class="th-foot__react"><span>💬 9</span><span>❤ 41</span></span>
+            </div>
+          </li>
+
+          <li>
+            <div class="th-meta">
+              <span class="th-meta__tag">정보</span>
+            </div>
+            <h4>Whisper 한국어, 의외로 어색한 부사도 잘 잡네요</h4>
+            <p>"솔직히", "그러니까" 같은 추임새까지 정확하게 따옵니다. medium 모델로도 충분 — 자세한 비교표는 댓글에.</p>
+            <div class="th-foot">
+              <span class="th-foot__author">
+                <span class="th-foot__avt" style="background:#3B82F6">SY</span>
+                <b>서윤 · 사당</b><span class="th-foot__time">· 5시간 전</span>
+              </span>
+              <span class="th-foot__react"><span>💬 6</span><span>❤ 22</span></span>
+            </div>
+          </li>
+
+          <li>
+            <div class="th-meta">
+              <span class="th-meta__tag">모집</span>
+            </div>
+            <h4>💡 동네 '시간표 인쇄소' 만들어볼래요? 같이 굴릴 사람</h4>
+            <p>관악구 청년정책 앱처럼 — 캘린더 동기화 → A4 한 장 PDF. 디자이너 1, 백엔드 1 자리 남았습니다.</p>
+            <div class="th-foot">
+              <span class="th-foot__author">
+                <span class="th-foot__avt" style="background:#6C5CE7">DK</span>
+                <b>도경 · 신림</b><span class="th-foot__time">· 어제</span>
+              </span>
+              <span class="th-foot__react"><span>💬 18</span><span>❤ 35</span></span>
+            </div>
+          </li>
+
+          <li>
+            <div class="th-meta">
+              <span class="th-meta__tag">잡담</span>
+            </div>
+            <h4>관악 카페 베니, 와이파이 진짜 좋아요</h4>
+            <p>5명이 동시에 npm install 돌려도 안 끊깁니다. 콜드브루도 단단해요. 사당역 5번 출구.</p>
+            <div class="th-foot">
+              <span class="th-foot__author">
+                <span class="th-foot__avt" style="background:#F59E0B">HR</span>
+                <b>하린 · 신림</b><span class="th-foot__time">· 어제</span>
+              </span>
+              <span class="th-foot__react"><span>💬 4</span><span>❤ 17</span></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="th-nav">
+        <button class="on"><span class="th-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
+        <button><span class="th-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2c1.5 3 5 5 5 9a5 5 0 0 1-10 0c0-2 1-3 1-3"/></svg></span><small>HOT</small></button>
+        <button class="th-nav__write" aria-label="글쓰기">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <button><span class="th-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></span><small>알림</small></button>
+        <button><span class="th-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>나</small></button>
       </nav>
     </section>
   </template>
