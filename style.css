@@ -1551,6 +1551,8 @@ a { color: #2563EB; }
   transform-origin: right bottom;
 }
 .m-ai-card--fixed .m-ai-card__arrow { transform: translateX(7px) scale(1.05); }
+/* 체크박스가 모두 비었을 때 화살표 컨테이너 검게 */
+.m-ai-card--fixed:not(:has(.m-ai-tag.is-on)) .m-ai-card__arrow { background: #000; border-color: #000; }
 .m-ai-card__head { margin-bottom: 10px; }
 .m-ai-card__chip {
   display: inline-block;
