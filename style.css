@@ -1622,6 +1622,12 @@ a { color: #2563EB; }
   transition: border-color .18s ease, color .18s ease;
 }
 .m-ai-tag.is-on { border-color: #B5E22F; color: #B5E22F; background: rgba(255,255,255,.10); }
+/* 체크박스 토글 픽토그램 — off: 닫힌 박스 / on: 박스 우상단 통과해 빠져나가는 체크 */
+.m-ai-tag__chk { flex-shrink: 0; overflow: visible; vertical-align: middle; }
+.m-ai-tag__chk-box-cut, .m-ai-tag__chk-mark { display: none; }
+.m-ai-tag.is-on .m-ai-tag__chk-box-full { display: none; }
+.m-ai-tag.is-on .m-ai-tag__chk-box-cut,
+.m-ai-tag.is-on .m-ai-tag__chk-mark { display: inline; }
 .m-ai-todo li.m-ai-todo--done span { text-decoration: line-through; opacity: .55; }
 .m-ai-todo b { font-size: 11px; font-weight: 700; opacity: .7; }
 .m-ai-card__more {
