@@ -89,8 +89,9 @@
     <nav class="topbar topbar--bottom" id="tabs">
       <div class="topbar__tabs">
         <button class="tab" data-tab="home" aria-selected="true">시안 목록</button>
-        <button class="tab" data-tab="MD3">AI</button>
+        <button class="tab" data-tab="MD3">AI1</button>
         <button class="tab" data-tab="MD4">AI2</button>
+        <button class="tab" data-tab="MD5">AI3</button>
         <span class="tab__divider" aria-hidden="true"></span>
         <button class="tab" data-tab="MA2">A2</button>
         <button class="tab" data-tab="MD2">D</button>
@@ -122,11 +123,15 @@
       <div class="home__grid home__grid--featured home__grid--ai">
         <button class="card-button" data-tab="MD3" style="--accent:#92400E">
           <span class="badge">MD</span>
-          <h3>AI 베이스캠프</h3>
+          <h3>AI1. 베이스캠프</h3>
         </button>
         <button class="card-button" data-tab="MD4" style="--accent:#1A1A1A">
           <span class="badge">MD</span>
-          <h3>AI 베이스캠프 · 다크 타이틀</h3>
+          <h3>AI2. 베이스캠프 · 다크 타이틀</h3>
+        </button>
+        <button class="card-button" data-tab="MD5" style="--accent:#92400E">
+          <span class="badge">MD</span>
+          <h3>AI3. 베이스캠프 · 좌측 타이틀</h3>
         </button>
       </div>
 
@@ -1430,6 +1435,86 @@
   <!-- MD4: AI 베이스캠프 다크 타이틀 (MD3 복제, 햄버거 제거 + 타이틀이 그 자리 + 검은 하이라이트/흰 글씨) -->
   <template id="MD4-template">
     <section class="phone phone--MD phone--MD4">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body md-body">
+        <div class="md-topbar">
+          <span class="md-title">AI베이스캠프</span>
+          <div class="md-actions">
+            <button class="md-bell" aria-label="알림">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+                <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
+              </svg>
+            </button>
+            <button class="md-profile" aria-label="내 프로필">D</button>
+          </div>
+        </div>
+        <div class="md-hero">
+          <small>오늘 저녁, 근처에서</small>
+          <h1>같이 코딩할 사람이 있어요.</h1>
+        </div>
+        <div class="md-map" aria-hidden="true">
+          <div class="md-map__pin md-map__pin--1" style="top:30%;left:25%"><span>3</span></div>
+          <div class="md-map__pin md-map__pin--2" style="top:55%;left:60%"><span>2</span></div>
+          <div class="md-map__pin md-map__pin--3" style="top:40%;left:78%"><span>5</span></div>
+          <div class="md-map__here" style="top:48%;left:48%"></div>
+          <div class="md-map__lbl">
+            <span>활동 중인 모각코 4곳 · 1.2km 이내</span>
+            <button class="md-map__go" aria-label="이동하기">→</button>
+          </div>
+        </div>
+        <div class="md-section">
+          <h3>오늘 저녁 가능한 모각코</h3>
+          <ul class="md-cafe">
+            <li>
+              <div class="md-cafe__time"><em>오늘</em><small>19:00</small></div>
+              <div class="md-cafe__body">
+                <h4>관악 AI 모각코</h4>
+                <small>☕ 서울대입구역 BLUEBOTTLE · 3 / 5명</small>
+                <small>👣 800m · 도보 11분</small>
+              </div>
+              <button class="md-cafe__join">참여</button>
+            </li>
+            <li>
+              <div class="md-cafe__time"><em>오늘</em><small>20:30</small></div>
+              <div class="md-cafe__body">
+                <h4>동작 빌더 야학</h4>
+                <small>☕ 사당역 카페 베니 · 4 / 6명</small>
+                <small>👣 1.2km · 버스 9분</small>
+              </div>
+              <button class="md-cafe__join">참여</button>
+            </li>
+          </ul>
+        </div>
+        <div class="md-section">
+          <h3>이번 주 빌더 모임</h3>
+          <ul class="md-event">
+            <li><span class="md-event__d">토</span><div><b>강남 디자인+코딩</b><small>14:00 · 디자이너 환영</small></div><button class="md-event__go" aria-label="이동">→</button></li>
+            <li><span class="md-event__d">일</span><div><b>서초 사이드 프로젝트 데이</b><small>10:00 · 1일 MVP</small></div><button class="md-event__go" aria-label="이동">→</button></li>
+          </ul>
+        </div>
+        <div class="md-section">
+          <h3>오늘의 동네 빌더</h3>
+          <div class="md-people">
+            <div class="md-p"><div class="md-p__avt" style="background:#2DB36C">JH</div><b>지호 · 봉천동</b><small>0.4km</small></div>
+            <div class="md-p"><div class="md-p__avt" style="background:#92400E">SY</div><b>서윤 · 사당</b><small>1.0km</small></div>
+            <div class="md-p"><div class="md-p__avt" style="background:#3B82F6">HR</div><b>하린 · 신림</b><small>0.7km</small></div>
+          </div>
+        </div>
+      </div>
+      <nav class="md-nav">
+        <button class="on"><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
+        <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></span><small>지도</small></button>
+        <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><small>모임</small></button>
+        <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>채팅</small></button>
+        <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>나</small></button>
+      </nav>
+    </section>
+  </template>
+
+  <!-- MD5: AI 베이스캠프 좌측 타이틀 (MD3 복제, 햄버거 제거 + 타이틀이 그 자리. 다크 하이라이트 없음) -->
+  <template id="MD5-template">
+    <section class="phone phone--MD phone--MD5">
       <div class="phone__statusbar">9:41</div>
       <div class="phone__body md-body">
         <div class="md-topbar">
