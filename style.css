@@ -2103,6 +2103,7 @@ a { color: #2563EB; }
 /* MD2 — 맵 컨테이너 위에 '관악 · 빌더 클럽' 칩(좌상단) + '방만들기/참여하기' 거대 버튼 한 쌍(하단 좌우, 각 50% 미만) */
 .phone--MD2 .md-map { height: 252px; }
 .phone--MD2 .md-brand--on-map { position: absolute; top: 10px; left: 14px; z-index: 2; }
+.phone--MD2 .md-map__pin { transform: translate(-50%, calc(-50% + 12px)); }
 .phone--MD2 .md-map__btns { position: absolute; bottom: 12px; left: 14px; right: 14px; display: flex; justify-content: space-between; gap: 14px; z-index: 2; }
 .phone--MD2 .md-map__btn { width: calc(50% - 7px); padding: 12px 0; border-radius: 14px; font-size: 17px; font-weight: 800; cursor: pointer; font-family: inherit; line-height: 1; text-align: center; }
 .phone--MD2 .md-map__btn--make { background: #fff; color: #111827; border: 1px solid #2DB36C; box-shadow: 0 4px 12px rgba(15,23,42,.10); }
