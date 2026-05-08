@@ -2102,7 +2102,9 @@ a { color: #2563EB; }
 .md-map__lbl { position: absolute; bottom: 10px; left: 14px; right: 14px; background: #fff; padding: 6px 6px 6px 12px; border-radius: 99px; font-size: 11px; font-weight: 700; color: #111827; border: 1px solid #2DB36C; box-shadow: 0 4px 12px rgba(15,23,42,.10); display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 /* MD2 — 맵 컨테이너 위에 '관악 · 빌더 클럽' 칩(좌상단) + '방만들기/참여하기' 거대 버튼 한 쌍(하단 좌우, 각 50% 미만) */
 .phone--MD2 .md-map { height: 252px; }
-.phone--MD2 .md-brand--on-map { position: absolute; top: 10px; left: 14px; z-index: 2; }
+.phone--MD2 .md-brand--on-map { position: absolute; top: 10px; left: 14px; z-index: 2; color: #5B8CFF; border-color: #5B8CFF; }
+.phone--MD2 .md-brand--on-map b { color: #5B8CFF; }
+.phone--MD2 .md-brand--on-map .md-brand__caret { color: #5B8CFF; }
 .phone--MD2 .md-map__pin { transform: translate(-50%, calc(-50% + 12px)); }
 .phone--MD2 .md-map__btns { position: absolute; bottom: 12px; left: 14px; right: 14px; display: flex; justify-content: space-between; gap: 14px; z-index: 2; }
 .phone--MD2 .md-map__btn { width: calc(50% - 7px); padding: 14px 0; border-radius: 14px; font-size: 15px; font-weight: 800; cursor: pointer; font-family: inherit; line-height: 1; text-align: center; }
