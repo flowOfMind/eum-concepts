@@ -2102,7 +2102,10 @@ a { color: #2563EB; }
 .md-map__pin--3 { background: #F59E0B; box-shadow: 0 6px 16px rgba(245,158,11,.3); }
 .md-map__here { position: absolute; transform: translate(-50%, -50%); width: 14px; height: 14px; border-radius: 50%; background: #E11D48; border: 3px solid #fff; box-shadow: 0 0 0 4px rgba(225,29,72,.18); }
 .md-map__lbl { position: absolute; bottom: 10px; left: 14px; right: 14px; background: #fff; padding: 6px 6px 6px 12px; border-radius: 99px; font-size: 11px; font-weight: 700; color: #111827; border: 1px solid #2DB36C; box-shadow: 0 4px 12px rgba(15,23,42,.10); display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-.phone--MD2 .md-map__lbl { bottom: auto; top: 10px; }
+/* MD2 — 맵 내부의 '활동 중인 모각코' 버튼: 그린 솔리드 + 흰 글씨 + 보더 제거, 맵 height는 버튼 증가분만큼 +18px */
+.phone--MD2 .md-map { height: 218px; }
+.phone--MD2 .md-map__lbl { background: #2DB36C; color: #FFFFFF; border: 0; font-size: 14px; padding: 12px 12px 12px 18px; box-shadow: 0 6px 18px rgba(45,179,108,.30); }
+.phone--MD2 .md-map__go { color: #FFFFFF; font-size: 22px; width: 26px; height: 26px; }
 .md-map__go { width: 20px; height: 20px; border-radius: 0; background: transparent; color: #111827; border: none; font-size: 16px; font-weight: 800; display: grid; place-items: center; padding: 0; cursor: pointer; font-family: inherit; line-height: 1; flex-shrink: 0; }
 .md-section { margin: 24px 0 14px; }
 .md-section h3 { font-size: 14px; font-weight: 800; margin: 0 0 10px; letter-spacing: -.01em; color: #111827; }
