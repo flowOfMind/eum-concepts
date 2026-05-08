@@ -1528,6 +1528,11 @@ a { color: #2563EB; }
   transition: transform .18s ease, box-shadow .18s ease;
 }
 .m-ai-card--fixed:active:not(:has(.m-ai-tag:active)) { transform: scale(.99); box-shadow: 0 10px 24px rgba(26,26,26,.18); }
+/* M3 카드 변형: 체크박스 상단 / 타이틀+화살표 가운데 정렬 행 (-1pt와 게이지 박스 없음) */
+.m-ai-card--m3 .m-ai-todo { margin: 0 0 14px 0; }
+.m-ai-card--m3 .m-ai-card__main { display: flex; align-items: center; gap: 14px; }
+.m-ai-card--m3 .m-ai-card__main .m-ai-card__tier { flex: 1; min-width: 0; margin-bottom: 0; }
+.m-ai-card--m3 .m-ai-card__main .m-ai-card__arrow { align-self: center; }
 /* M2 카드: 게이지 행(왼쪽 progress + 오른쪽 정사각형 화살표) */
 /* M2/M3 카드 하단: 화살표 높이(40px)에 맞춘 컨테이너 - 좌측 라벨+게이지 / 우측 화살표 */
 .m-ai-card__bottom { display: flex; align-items: stretch; gap: 15px; height: 40px; margin-top: 14px; }
