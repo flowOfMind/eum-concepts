@@ -1421,6 +1421,8 @@ a { color: #2563EB; }
   padding: 4.5px 0 10.5px; gap: 10px;
 }
 .m-brand { font-size: 22px; font-weight: 800; letter-spacing: -.03em; }
+.m-brand--eeum { font-family: 'Aggravo', 'Pretendard', sans-serif; font-size: 26px; font-weight: 700; letter-spacing: 0; color: #000; line-height: 1; }
+.m-bell--lg { width: 38px; height: 38px; }
 .m-loc {
   flex: 1;
   font-size: 12px; font-weight: 700;
