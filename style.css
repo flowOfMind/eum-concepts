@@ -1533,9 +1533,6 @@ a { color: #2563EB; }
 .m-ai-todo--row .m-ai-todo--tags { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0; margin: 0; }
 .m-ai-todo--row .m-ai-tag { background: linear-gradient(135deg, #1A1A1A 0%, #2A2D55 100%); border-color: rgba(255,255,255,.30); color: rgba(255,255,255,.45); box-shadow: 0 6px 16px rgba(26,26,26,.18); }
 .m-ai-todo--row .m-ai-tag.is-on { background: linear-gradient(135deg, #1A1A1A 0%, #2A2D55 100%); border-color: #B5E22F; color: #B5E22F; box-shadow: 0 8px 18px rgba(26,26,26,.22); }
-/* M3 단순화 카드: VIBE TIER + 매칭하기 좌측 / 화살표 우하단 — h4 마지막 줄 바닥과 일치 */
-.m-ai-card--m3 .m-ai-card__main { display: flex; align-items: flex-end; gap: 14px; }
-.m-ai-card--m3 .m-ai-card__main .m-ai-card__tier { flex: 1; min-width: 0; margin-bottom: 0; }
 /* M2 카드: 게이지 행(왼쪽 progress + 오른쪽 정사각형 화살표) */
 /* M2/M3 카드 하단: 화살표 높이(40px)에 맞춘 컨테이너 - 좌측 라벨+게이지 / 우측 화살표 */
 .m-ai-card__bottom { display: flex; align-items: stretch; gap: 15px; height: 40px; margin-top: 14px; }
