@@ -95,8 +95,8 @@
         <span class="tab__divider" aria-hidden="true"></span>
         <button class="tab" data-tab="MA2">A2</button>
         <button class="tab" data-tab="MD2">D2</button>
+        <button class="tab" data-tab="MD6">D3</button>
         <button class="tab" data-tab="M2">M2</button>
-        <button class="tab" data-tab="M3">M3</button>
         <button class="tab" data-tab="MG2">G2</button>
         <span class="tab__divider" aria-hidden="true"></span>
         <button class="tab" data-tab="MA">A1</button>
@@ -146,13 +146,13 @@
           <span class="badge">MD</span>
           <h3>D. 로컬 빌더 클럽</h3>
         </button>
+        <button class="card-button" data-tab="MD6" style="--accent:#92400E">
+          <span class="badge">MD</span>
+          <h3>D3. 로컬 빌더 클럽 (D1 복제)</h3>
+        </button>
         <button class="card-button" data-tab="M2" style="--accent:#1A1A1A">
           <span class="badge">M</span>
           <h3>M2. 기본</h3>
-        </button>
-        <button class="card-button" data-tab="M3" style="--accent:#1A1A1A">
-          <span class="badge">M</span>
-          <h3>M3. 기본 (M2 복제)</h3>
         </button>
         <button class="card-button" data-tab="MG2" style="--accent:#2DB36C">
           <span class="badge">MG</span>
@@ -377,218 +377,6 @@
 
               <span class="m-ai-card__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg></span>
 
-            </div>
-          </div>
-        </div>
-
-        <!-- Section 2: 오늘의 미션 -->
-        <div class="m-section m-section--gap-3">
-          <div class="m-section__head">
-            <span class="m-section__title">오늘의 바이브코딩 미션</span>
-            <a class="m-section__more">전체 →</a>
-          </div>
-          <div class="m-mission-row">
-            <div class="m-mission-card m-mission-card--30">
-              <span class="m-mission-card__time">30분</span>
-              <h4>ChatGPT로 자기소개 페이지 만들기</h4>
-              <small>입문 · 개인</small>
-              <div class="m-mission-card__foot">시작</div>
-            </div>
-            <div class="m-mission-card m-mission-card--2h">
-              <span class="m-mission-card__time">2시간</span>
-              <h4>Figma 와이어 → HTML 구현</h4>
-              <small>주니어 · 팀</small>
-              <div class="m-mission-card__foot">시작</div>
-            </div>
-            <div class="m-mission-card m-mission-card--3d">
-              <span class="m-mission-card__time">3일</span>
-              <h4>AI 챗봇 MVP 만들기</h4>
-              <small>실무자 · 팀</small>
-              <div class="m-mission-card__foot">시작</div>
-            </div>
-            <div class="m-mission-card m-mission-card--7d">
-              <span class="m-mission-card__time">7일</span>
-              <h4>실배포 미니 서비스 + 유저 5명 피드백</h4>
-              <small>실무자 · 팀</small>
-              <div class="m-mission-card__foot">시작</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Section 4: 내 주변 모각코 -->
-        <div class="m-section">
-          <div class="m-section__head">
-            <span class="m-section__title">내 주변 모각코</span>
-            <a class="m-section__more">지도 →</a>
-          </div>
-          <div class="m-loc-chips">
-            <span class="m-chip m-chip--on">관악</span>
-            <span class="m-chip">동작</span>
-            <span class="m-chip">서초</span>
-            <span class="m-chip">강남</span>
-          </div>
-          <ul class="m-mogak-list">
-            <li>
-              <div class="m-mogak-list__time"><em>오늘</em><small>19:00</small></div>
-              <div class="m-mogak-list__body">
-                <h4>관악 AI 모각코 · 서울대입구역 카페</h4>
-                <small>3 / 5명 · 시즌 5</small>
-              </div>
-              <button class="m-mogak-list__join">참여</button>
-            </li>
-            <li>
-              <div class="m-mogak-list__time"><em>토</em><small>14:00</small></div>
-              <div class="m-mogak-list__body">
-                <h4>강남 디자인+코딩 모각코</h4>
-                <small>4 / 6명 · 디자이너 환영</small>
-              </div>
-              <button class="m-mogak-list__join">참여</button>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Section 5: 추천 팀원 / 멘토 -->
-        <div class="m-section">
-          <div class="m-section__head">
-            <span class="m-section__title">관심사 기반 추천 팀원</span>
-            <a class="m-section__more">전체 →</a>
-          </div>
-          <div class="m-people-row">
-            <div class="m-person">
-              <div class="m-person__avt" style="background:linear-gradient(135deg,#7C8BFF,#FFA864)">JH</div>
-              <b>지호</b>
-              <small>실무자 · 프론트</small>
-              <div class="m-person__tags"><span>AI 도구</span><span>오픈소스</span></div>
-              <button class="m-person__btn">함께하기</button>
-            </div>
-            <div class="m-person">
-              <div class="m-person__avt" style="background:linear-gradient(135deg,#FFD4DD,#FF8C7A)">SY</div>
-              <b>서연</b>
-              <small>주니어 · 디자인</small>
-              <div class="m-person__tags"><span>디자인+코딩</span><span>사이드</span></div>
-              <button class="m-person__btn">함께하기</button>
-            </div>
-            <div class="m-person m-person--mentor">
-              <span class="m-person__mentor-tag">멘토</span>
-              <div class="m-person__avt" style="background:linear-gradient(135deg,#34E89E,#2563EB)">MJ</div>
-              <b>민재</b>
-              <small>시니어 · 테크리드</small>
-              <div class="m-person__tags"><span>아키텍처</span><span>코드리뷰</span></div>
-              <button class="m-person__btn m-person__btn--mentor">멘토링 신청</button>
-            </div>
-            <div class="m-person">
-              <div class="m-person__avt" style="background:linear-gradient(135deg,#FFE7B5,#F2C946)">HR</div>
-              <b>하린</b>
-              <small>주니어 · UI/UX</small>
-              <div class="m-person__tags"><span>디자인+코딩</span><span>스타트업</span></div>
-              <button class="m-person__btn">함께하기</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Section: 지금 모집 중인 팀 (이동됨) -->
-        <div class="m-section">
-          <div class="m-section__head">
-            <span class="m-section__title">지금 모집 중인 팀</span>
-            <a class="m-section__more">전체 →</a>
-          </div>
-          <ul class="m-team-list">
-            <li>
-              <div class="m-team-list__top">
-                <span class="m-tag m-tag--side">사이드 프로젝트</span>
-                <span class="m-team-list__day">D-1</span>
-              </div>
-              <h4>AI 회의록 요약 앱 — 1주 MVP</h4>
-              <div class="m-team-list__roles">
-                <span class="m-role">프론트 1</span>
-                <span class="m-role">백엔드 1</span>
-                <span class="m-role m-role--on">디자이너 모집중</span>
-              </div>
-              <div class="m-team-list__foot">
-                <small>3 / 4명 · 서윤 외 2명</small>
-                <button class="m-join">합류 신청</button>
-              </div>
-            </li>
-            <li>
-              <div class="m-team-list__top">
-                <span class="m-tag m-tag--ai">AI 도구</span>
-                <span class="m-team-list__day">D-3</span>
-              </div>
-              <h4>Cursor + Supabase 투두앱 만들기</h4>
-              <div class="m-team-list__roles">
-                <span class="m-role">백엔드 1</span>
-                <span class="m-role m-role--on">프론트 모집중</span>
-              </div>
-              <div class="m-team-list__foot">
-                <small>2 / 3명 · 도현 외 1명</small>
-                <button class="m-join">합류 신청</button>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-      <!-- Bottom nav (5 items per IA) -->
-      <nav class="m-nav">
-        <button class="m-nav__item m-nav__item--on"><span class="m-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
-        <button class="m-nav__item"><span class="m-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span><small>매칭</small></button>
-        <button class="m-nav__item"><span class="m-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>팀룸</small></button>
-        <button class="m-nav__item"><span class="m-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><small>미션</small></button>
-        <button class="m-nav__item"><span class="m-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
-      </nav>
-    </section>
-  </template>
-
-  <!-- M3: M2의 복제본 -->
-  <template id="M3-template">
-    <section class="phone phone--M">
-      <div class="phone__statusbar">9:41</div>
-      <div class="phone__body m-body">
-        <!-- Topbar -->
-        <div class="m-topbar">
-          <span class="m-brand">이음</span>
-          <button class="m-loc" aria-label="지역 변경">📍 관악 <span class="m-loc__caret">▾</span></button>
-          <button class="m-bell" aria-label="알림"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="m-bell-dot"></span></button>
-        </div>
-
-        <!-- Greeting + CTA (주석 처리) -->
-        <!--
-        <div class="m-hero">
-          <h1 class="m-hero__title">도현님,<br>오늘 2시간,<br>같이 만들 사람을 찾아볼까요?</h1>
-          <div class="m-hero__cta-row">
-            <button class="m-cta m-cta--p">팀 매칭 시작</button>
-            <button class="m-cta m-cta--s">오늘의 미션</button>
-          </div>
-        </div>
-        -->
-
-        <!-- Section 1: 체크박스 행(카드 외부, 각각 BG) + 격리된 실행 카드 -->
-        <div class="m-section">
-          <ul class="m-ai-todo m-ai-todo--row">
-            <li class="m-ai-todo--tags">
-              <span class="m-ai-tags__label">설정:</span>
-              <button class="m-ai-tag is-on" type="button">
-                <span class="m-ai-tag__dot" aria-hidden="true"></span>
-                <span>2:2</span>
-              </button>
-              <button class="m-ai-tag is-on" type="button">
-                <span class="m-ai-tag__dot" aria-hidden="true"></span>
-                <span>3:3</span>
-              </button>
-              <button class="m-ai-tag" type="button">
-                <span class="m-ai-tag__dot" aria-hidden="true"></span>
-                <span>멘토</span>
-              </button>
-            </li>
-          </ul>
-
-          <div class="m-ai-card m-ai-card--fixed m-ai-card--m3" role="button" tabindex="0">
-            <div class="m-ai-card__tier">
-              <small>VIBE TIER</small>
-              <h4>새로운 모임<br>매칭하기</h4>
-            </div>
-            <div class="m-ai-card__bottom">
-              <span class="m-ai-card__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg></span>
             </div>
           </div>
         </div>
@@ -1328,6 +1116,89 @@
       </nav>
     </section>
   </template>
+
+  <!-- MD6: MD(D1) 복제 → D3 -->
+  <template id="MD6-template">
+    <section class="phone phone--MD phone--MD6">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body md-body">
+        <div class="md-topbar">
+          <button class="md-brand" aria-label="지역 변경">
+            <span><b>관악</b> · 빌더 클럽</span>
+            <span class="md-brand__caret">▾</span>
+          </button>
+          <div class="md-actions">
+            <button class="md-bell" aria-label="알림">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+                <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
+              </svg>
+            </button>
+            <button class="md-profile" aria-label="내 프로필">D</button>
+          </div>
+        </div>
+        <div class="md-hero">
+          <small>오늘 저녁, 근처에서</small>
+          <h1>같이 코딩할 사람이 있어요.</h1>
+        </div>
+        <div class="md-map" aria-hidden="true">
+          <div class="md-map__pin md-map__pin--1" style="top:30%;left:25%"><span>3</span></div>
+          <div class="md-map__pin md-map__pin--2" style="top:55%;left:60%"><span>2</span></div>
+          <div class="md-map__pin md-map__pin--3" style="top:40%;left:78%"><span>5</span></div>
+          <div class="md-map__here" style="top:48%;left:48%"></div>
+          <div class="md-map__lbl">
+            <span>활동 중인 모각코 4곳 · 1.2km 이내</span>
+            <button class="md-map__go" aria-label="이동하기">→</button>
+          </div>
+        </div>
+        <div class="md-section">
+          <h3>오늘 저녁 가능한 모각코</h3>
+          <ul class="md-cafe">
+            <li>
+              <div class="md-cafe__time"><em>오늘</em><small>19:00</small></div>
+              <div class="md-cafe__body">
+                <h4>관악 AI 모각코</h4>
+                <small>☕ 서울대입구역 BLUEBOTTLE · 3 / 5명</small>
+                <small>👣 800m · 도보 11분</small>
+              </div>
+              <button class="md-cafe__join">참여</button>
+            </li>
+            <li>
+              <div class="md-cafe__time"><em>오늘</em><small>20:30</small></div>
+              <div class="md-cafe__body">
+                <h4>동작 빌더 야학</h4>
+                <small>☕ 사당역 카페 베니 · 4 / 6명</small>
+                <small>👣 1.2km · 버스 9분</small>
+              </div>
+              <button class="md-cafe__join">참여</button>
+            </li>
+          </ul>
+        </div>
+        <div class="md-section">
+          <h3>이번 주 빌더 모임</h3>
+          <ul class="md-event">
+            <li><span class="md-event__d">토</span><div><b>강남 디자인+코딩</b><small>14:00 · 디자이너 환영</small></div><button class="md-event__go" aria-label="이동">→</button></li>
+            <li><span class="md-event__d">일</span><div><b>서초 사이드 프로젝트 데이</b><small>10:00 · 1일 MVP</small></div><button class="md-event__go" aria-label="이동">→</button></li>
+          </ul>
+        </div>
+        <div class="md-section">
+          <h3>오늘의 동네 빌더</h3>
+          <div class="md-people">
+            <div class="md-p"><div class="md-p__avt" style="background:#2DB36C">JH</div><b>지호 · 봉천동</b><small>0.4km</small></div>
+            <div class="md-p"><div class="md-p__avt" style="background:#92400E">SY</div><b>서윤 · 사당</b><small>1.0km</small></div>
+            <div class="md-p"><div class="md-p__avt" style="background:#3B82F6">HR</div><b>하린 · 신림</b><small>0.7km</small></div>
+          </div>
+        </div>
+      </div>
+      <nav class="md-nav">
+        <button class="on"><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
+        <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></span><small>지도</small></button>
+        <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><small>모임</small></button>
+        <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>채팅</small></button>
+        <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>나</small></button>
+      </nav>
+    </section>
+  </template>
   <!-- MD3: AI 베이스캠프 (D 복제) -->
   <template id="MD3-template">
     <section class="phone phone--MD phone--MD3">
@@ -1570,7 +1441,6 @@
       </nav>
     </section>
   </template>
-
 
   <!-- GF: Vibe Dashboard Flutter -->
   <template id="MG-template">
