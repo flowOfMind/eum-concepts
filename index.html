@@ -223,10 +223,10 @@
       <div class="phone__statusbar">9:41</div>
       <div class="phone__body md-body">
         <div class="md-topbar">
-          <button class="md-brand" aria-label="지역 변경">
-            <span><b>관악</b> · 빌더 클럽</span>
-            <span class="md-brand__caret">▾</span>
-          </button>
+          <div class="ma-brand">
+            <span class="ma-brand__dots"><i></i><i></i></span>
+            <span>이음</span>
+          </div>
           <div class="md-actions">
             <button class="md-bell" aria-label="알림">
               <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -241,14 +241,18 @@
           <small>오늘 저녁, 근처에서</small>
           <h1>같이 코딩할 사람이 있어요.</h1>
         </div>
-        <div class="md-map" aria-hidden="true">
-          <div class="md-map__pin md-map__pin--1" style="top:30%;left:25%"><span>3</span></div>
-          <div class="md-map__pin md-map__pin--2" style="top:55%;left:60%"><span>2</span></div>
-          <div class="md-map__pin md-map__pin--3" style="top:40%;left:78%"><span>5</span></div>
-          <div class="md-map__here" style="top:48%;left:48%"></div>
-          <div class="md-map__lbl">
-            <span>활동 중인 모각코 4곳 · 1.2km 이내</span>
-            <button class="md-map__go" aria-label="이동하기">→</button>
+        <div class="md-map">
+          <button class="md-brand md-brand--on-map" aria-label="지역 변경">
+            <span><b>관악</b> · 빌더 클럽</span>
+            <span class="md-brand__caret">▾</span>
+          </button>
+          <div class="md-map__pin md-map__pin--1" style="top:30%;left:25%" aria-hidden="true"><span>3</span></div>
+          <div class="md-map__pin md-map__pin--2" style="top:55%;left:60%" aria-hidden="true"><span>2</span></div>
+          <div class="md-map__pin md-map__pin--3" style="top:40%;left:78%" aria-hidden="true"><span>5</span></div>
+          <div class="md-map__here" style="top:48%;left:48%" aria-hidden="true"></div>
+          <div class="md-map__btns">
+            <button class="md-map__btn md-map__btn--make" type="button">방만들기</button>
+            <button class="md-map__btn md-map__btn--join" type="button">참여하기</button>
           </div>
         </div>
         <div class="md-section">
