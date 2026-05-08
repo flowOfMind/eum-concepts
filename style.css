@@ -2099,6 +2099,9 @@ a { color: #2563EB; }
 .md-map__pin--3 { background: #F59E0B; box-shadow: 0 6px 16px rgba(245,158,11,.3); }
 .md-map__here { position: absolute; transform: translate(-50%, -50%); width: 14px; height: 14px; border-radius: 50%; background: #E11D48; border: 3px solid #fff; box-shadow: 0 0 0 4px rgba(225,29,72,.18); }
 .md-map__lbl { position: absolute; bottom: 10px; left: 14px; right: 14px; background: #fff; padding: 6px 6px 6px 12px; border-radius: 99px; font-size: 11px; font-weight: 700; color: #111827; border: 1px solid #2DB36C; box-shadow: 0 4px 12px rgba(15,23,42,.10); display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+/* MD2 — '활동 중인 모각코' 버튼 텍스트만 키움, 그 만큼 맵 height도 +3 */
+.phone--MD2 .md-map { height: 203px; }
+.phone--MD2 .md-map__lbl { font-size: 14px; }
 .md-map__go { width: 20px; height: 20px; border-radius: 0; background: transparent; color: #111827; border: none; font-size: 16px; font-weight: 800; display: grid; place-items: center; padding: 0; cursor: pointer; font-family: inherit; line-height: 1; flex-shrink: 0; }
 .md-section { margin: 24px 0 14px; }
 .md-section h3 { font-size: 14px; font-weight: 800; margin: 0 0 10px; letter-spacing: -.01em; color: #111827; }
