@@ -97,7 +97,7 @@
         <button class="tab" data-tab="MD2">D2</button>
         <button class="tab" data-tab="M2">M2</button>
         <button class="tab" data-tab="M3">M3</button>
-        <button class="tab" data-tab="MG2">G</button>
+        <button class="tab" data-tab="MG2">G2</button>
         <span class="tab__divider" aria-hidden="true"></span>
         <button class="tab" data-tab="MA">A1</button>
         <button class="tab" data-tab="MB">B1</button>
@@ -760,7 +760,7 @@
 
   <!-- MG2: MG의 복제본 (앞단 고정) -->
   <template id="MG2-template">
-    <section class="phone phone--MG">
+    <section class="phone phone--MG phone--MG2">
       <div class="phone__statusbar">9:41</div>
       <div class="phone__body mg-body">
         <div class="mg-topbar">
@@ -776,6 +776,7 @@
 
         <!-- Tier card (상단) -->
         <div class="mg-tier">
+          <span class="mg-tier__info" role="button" tabindex="0" aria-label="정보">(i)</span>
           <div class="mg-tier__lvl">
             <small>VIBE TIER</small>
             <h4>Lv.3 Builder</h4>
