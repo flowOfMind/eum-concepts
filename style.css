@@ -1527,8 +1527,6 @@ a { color: #2563EB; }
   box-shadow: 0 14px 26px rgba(26,26,26,.30);
   transition: transform .18s ease, box-shadow .18s ease;
 }
-/* M3 카드 — 캐러셀 안에서도 패딩 확장(상하좌우) + 하단만 축소 */
-.m-ai-card--m3 { padding: 22.5px 24px 19px; }
 .m-ai-card--fixed:active:not(:has(.m-ai-tag:active)) { transform: scale(.99); box-shadow: 0 10px 24px rgba(26,26,26,.18); }
 /* M2 카드: 게이지 행(왼쪽 progress + 오른쪽 정사각형 화살표) */
 /* M2/M3 카드 하단: 화살표 높이(40px)에 맞춘 컨테이너 - 좌측 라벨+게이지 / 우측 화살표 */
