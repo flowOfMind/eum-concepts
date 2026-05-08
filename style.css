@@ -2108,7 +2108,7 @@ a { color: #2563EB; }
 .phone--MD2 .md-map__lbl { top: 10px; bottom: auto; }
 .phone--MD2 .md-map__pin { transform: translate(-50%, calc(-50% + 12px)); }
 .phone--MD2 .md-map__btns { position: absolute; bottom: 12px; left: 14px; right: 14px; display: flex; justify-content: space-between; gap: 14px; z-index: 2; }
-.phone--MD2 .md-map__btn { width: calc(50% - 7px); padding: 13px 0; border-radius: 12px; font-size: 16px; font-weight: 800; cursor: pointer; font-family: inherit; line-height: 1; text-align: center; }
+.phone--MD2 .md-map__btn { width: calc(50% - 7px); padding: 13px 0; border-radius: 12px; font-size: 16.5px; font-weight: 800; cursor: pointer; font-family: inherit; line-height: 1; text-align: center; }
 .phone--MD2 .md-map__btn--make { background: #fff; color: #1F2937; border: 1px solid #2DB36C; box-shadow: 0 4px 12px rgba(15,23,42,.10); }
 .phone--MD2 .md-map__btn--join { background: #2DB36C; color: #fff; border: 0; box-shadow: 0 6px 16px rgba(45,179,108,.30); }
 .md-map__go { width: 20px; height: 20px; border-radius: 0; background: transparent; color: #111827; border: none; font-size: 16px; font-weight: 800; display: grid; place-items: center; padding: 0; cursor: pointer; font-family: inherit; line-height: 1; flex-shrink: 0; }
