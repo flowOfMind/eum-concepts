@@ -93,6 +93,7 @@
         <button class="tab" data-tab="MD2">D2</button>
         <button class="tab" data-tab="M2">M2</button>
         <button class="tab" data-tab="MG2">G2</button>
+        <button class="tab" data-tab="MV">Vibe</button>
         <span class="tab__divider" aria-hidden="true"></span>
         <button class="tab" data-tab="MA">A1</button>
         <button class="tab" data-tab="MB">B1</button>
@@ -131,6 +132,10 @@
         <button class="card-button" data-tab="MG2" style="--accent:#2DB36C">
           <span class="badge">MG</span>
           <h3>G. 작업실 + 레이더</h3>
+        </button>
+        <button class="card-button" data-tab="MV" style="--accent:#2DB36C">
+          <span class="badge">MV</span>
+          <h3>오늘의 바이브 코딩 · 풀스크린 그라디언트</h3>
         </button>
       </div>
 
@@ -550,7 +555,7 @@
           <div class="mg-radar__rings" aria-hidden="true">
             <span></span><span></span><span></span>
           </div>
-          <button class="mg-radar__btn" type="button">
+          <button class="mg-radar__btn" type="button" data-tab="MV">
             <span class="mg-radar__icon">◉</span>
             <span class="mg-radar__lbl">오늘의<br>바이브 코딩</span>
           </button>
@@ -1088,6 +1093,34 @@
         <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>채팅</small></button>
         <button><span class="md-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>나</small></button>
       </nav>
+    </section>
+  </template>
+
+
+  <!-- MV: 오늘의 바이브 코딩 — 풀스크린 그린→블루 그라디언트 (G2 라디어에서 진입) -->
+  <template id="MV-template">
+    <section class="phone phone--MV">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mv-body">
+        <button class="mv-back" type="button" data-tab="MG2" aria-label="뒤로">←</button>
+        <div class="mv-hero">
+          <div class="mv-rings" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="mv-pulse" aria-hidden="true">◉</div>
+        </div>
+        <div class="mv-text">
+          <small>VIBE RADAR</small>
+          <h1>오늘의<br>바이브 코딩</h1>
+          <p>지금 근처에서 같이 빌드 중인<br><em>12</em>명의 빌더와 매칭해드려요.</p>
+        </div>
+        <div class="mv-meta">
+          <span>📍 관악 · 1.2km 이내</span>
+          <span aria-hidden="true">·</span>
+          <span>평균 매칭 25초</span>
+        </div>
+        <button class="mv-cta" type="button">지금 매칭하기 →</button>
+      </div>
     </section>
   </template>
 
