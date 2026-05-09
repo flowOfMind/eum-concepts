@@ -59,7 +59,7 @@ const render = (key) => {
     });
     if (key === 'PX') setupPXCarousel();
     if (key === 'ME' || key === 'MQ') setupMEThemeToggle();
-    stage.querySelectorAll('.m-ai-tag').forEach(btn => {
+    stage.querySelectorAll('.m-ai-tag, .mv-chip').forEach(btn => {
       btn.addEventListener('click', e => {
         e.preventDefault();
         e.stopPropagation();

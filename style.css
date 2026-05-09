@@ -2667,6 +2667,7 @@ a { color: #2563EB; }
 /* MV — 체크박스 칩 셋, 두 줄(매칭 / 지역). 각 줄은 가로, D2의 .md-map__lbl 톤 */
 .mv-pick { margin: 20px auto 0; display: flex; flex-direction: column; align-items: center; gap: 10px; }
 .mv-pick__row { display: inline-flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.mv-pick__sep { width: 4px; height: 4px; border-radius: 50%; background: #2DB36C; opacity: .55; }
 .mv-chip { background: #fff; border: 1px solid #2DB36C; border-radius: 99px; padding: 7px 14px 7px 11px; font-size: 12.5px; font-weight: 700; color: #6B7280; cursor: pointer; font-family: inherit; line-height: 1; box-shadow: 0 4px 12px rgba(15,23,42,.10); display: inline-flex; align-items: center; gap: 7px; transition: color .15s ease, border-color .15s ease; }
 .mv-chip.is-on { color: #2DB36C; border-color: #2DB36C; }
 .mv-chip__dot { width: 9px; height: 9px; border-radius: 50%; border: 2px solid currentColor; background: transparent; box-sizing: border-box; flex-shrink: 0; transition: background .15s ease; }
