@@ -2658,7 +2658,7 @@ a { color: #2563EB; }
 
 .mv-text { text-align: center; margin: 32px 0 28px; }
 .mv-text small { display: block; font-size: 11px; font-weight: 800; letter-spacing: .26em; color: #2DB36C; margin-bottom: 12px; }
-.mv-text h1 { font-size: 30px; font-weight: 900; line-height: 1.22; margin: 0 0 14px; letter-spacing: -.02em; color: #111827; }
+.mv-text h1 { font-size: 32px; font-weight: 900; line-height: 1.22; margin: 0 0 14px; letter-spacing: -.02em; color: #111827; }
 .mv-text p { font-size: 14px; color: #4B5563; line-height: 1.6; margin: 0; }
 .mv-text p em { font-style: normal; font-weight: 800; color: #2DB36C; }
 
