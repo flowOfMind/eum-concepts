@@ -2635,8 +2635,8 @@ a { color: #2563EB; }
 /* ============================================================ */
 .phone--MV {
   background:
-    radial-gradient(circle at center, rgba(45,179,108,.18) 0%, transparent 55%),
-    linear-gradient(180deg, #F0FFF7 0%, #FAFAF7 100%);
+    radial-gradient(ellipse at 50% 100%, rgba(45,179,108,.32) 0%, transparent 60%),
+    linear-gradient(180deg, #FFFFFF 0%, #F0FFF7 45%, #B5E2C7 100%);
   color: #111827;
   min-height: 920px;
   font-family: 'Pretendard', sans-serif;
