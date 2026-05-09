@@ -2664,11 +2664,8 @@ a { color: #2563EB; }
 
 .mv-meta { display: inline-flex; gap: 6px; align-items: center; font-size: 12px; color: #6B7280; margin-bottom: 28px; font-weight: 700; }
 
-/* MV — 화면 가운데 픽 영역 (활동 캡슐 + 체크박스 칩 셋, 모두 D2의 .md-map__lbl 톤) */
-.mv-pick { margin: 24px auto; display: flex; flex-direction: column; align-items: center; gap: 12px; max-width: 100%; }
-.mv-pick__main { background: #fff; border: 1px solid #2DB36C; border-radius: 99px; padding: 4.5px 8px 4.5px 16px; font-size: 12.5px; font-weight: 700; color: #111827; box-shadow: 0 4px 12px rgba(15,23,42,.10); display: inline-flex; align-items: center; gap: 8px; }
-.mv-pick__main .md-map__go { color: #2DB36C; }
-.mv-pick__chips { display: inline-flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+/* MV — 체크박스 칩 셋 (2:2 / 3:3 / 멘토), 세로 stack, D2의 .md-map__lbl 톤 */
+.mv-pick { margin: 20px auto 0; display: flex; flex-direction: column; align-items: center; gap: 8px; }
 .mv-chip { background: #fff; border: 1px solid #2DB36C; border-radius: 99px; padding: 7px 14px 7px 11px; font-size: 12.5px; font-weight: 700; color: #6B7280; cursor: pointer; font-family: inherit; line-height: 1; box-shadow: 0 4px 12px rgba(15,23,42,.10); display: inline-flex; align-items: center; gap: 7px; transition: color .15s ease, border-color .15s ease; }
 .mv-chip.is-on { color: #2DB36C; border-color: #2DB36C; }
 .mv-chip__dot { width: 9px; height: 9px; border-radius: 50%; border: 2px solid currentColor; background: transparent; box-sizing: border-box; flex-shrink: 0; transition: background .15s ease; }
