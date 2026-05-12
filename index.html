@@ -90,6 +90,7 @@
       <div class="topbar__tabs">
         <button class="tab" data-tab="home" aria-selected="true">시안 목록</button>
         <button class="tab" data-tab="MA2">A2</button>
+        <button class="tab" data-tab="MB2">B2</button>
         <button class="tab" data-tab="MD2">D2</button>
         <button class="tab" data-tab="M2">M2</button>
         <button class="tab" data-tab="MG2">G2</button>
@@ -120,6 +121,10 @@
         <button class="card-button" data-tab="MA2" style="--accent:#2DB36C">
           <span class="badge">MA</span>
           <h3>A2. 휴먼테크</h3>
+        </button>
+        <button class="card-button" data-tab="MB2" style="--accent:#6C5CE7">
+          <span class="badge">MB</span>
+          <h3>B2. 미션랩</h3>
         </button>
         <button class="card-button" data-tab="MD2" style="--accent:#92400E">
           <span class="badge">MD</span>
@@ -884,6 +889,69 @@
   <!-- BF: Mission Lab Flutter -->
   <template id="MB-template">
     <section class="phone phone--MB">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mb-body">
+        <div class="mb-topbar">
+          <span class="mb-brand">EEUM</span>
+          <span class="mb-streak">🔥 4일 연속</span>
+        </div>
+        <div class="mb-hero">
+          <span class="mb-tag">시즌 5 · DAY 24</span>
+          <h1>오늘의 퀘스트를 클리어하세요.</h1>
+          <div class="mb-progress">
+            <div class="mb-progress__bar"><div style="width:62%"></div></div>
+            <small>이번 주 미션 <em>3</em>/<em>5</em> · 합계 <em>+850 XP</em></small>
+          </div>
+        </div>
+        <div class="mb-section">
+          <h3>오늘의 퀘스트</h3>
+          <div class="mb-quest">
+            <div class="mb-quest__rarity">LEGENDARY</div>
+            <h4>AI 챗봇 MVP 만들기</h4>
+            <div class="mb-quest__meta"><span>3일 · 팀 4명</span><span>+1,200 XP</span></div>
+            <button class="mb-quest__cta">시작하기 →</button>
+          </div>
+          <div class="mb-quest-row">
+            <div class="mb-q mb-q--epic"><span>EPIC</span><h5>Figma → HTML</h5><small>2시간 · +400 XP</small></div>
+            <div class="mb-q mb-q--rare"><span>RARE</span><h5>자기소개 페이지</h5><small>30분 · +120 XP</small></div>
+          </div>
+        </div>
+        <div class="mb-section">
+          <h3>이번 주 클리어</h3>
+          <ul class="mb-clear">
+            <li><span>✓</span><span class="mb-clear__t">Cursor 투두앱 만들기</span><b>+250 XP</b></li>
+            <li><span>✓</span><span class="mb-clear__t">프롬프트 개선 실험</span><b>+180 XP</b></li>
+            <li><span>✓</span><span class="mb-clear__t">모각코 1회 참여</span><b>+100 XP</b></li>
+          </ul>
+        </div>
+        <div class="mb-section">
+          <h3>같이 클리어할 팀</h3>
+          <ul class="mb-teams">
+            <li>
+              <h4>AI 회의록 요약 앱</h4>
+              <small>1주 MVP · 3 / 4명 · 디자이너 모집</small>
+              <button>합류</button>
+            </li>
+            <li>
+              <h4>Cursor + Supabase 투두</h4>
+              <small>3일 · 2 / 3명 · 프론트 모집</small>
+              <button>합류</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="mb-nav">
+        <button class="on"><span class="mb-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
+        <button><span class="mb-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><small>미션</small></button>
+        <button><span class="mb-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><small>팀</small></button>
+        <button><span class="mb-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span><small>랭킹</small></button>
+        <button><span class="mb-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
+      </nav>
+    </section>
+  </template>
+
+  <template id="MB2-template">
+    <section class="phone phone--MB phone--MB2">
       <div class="phone__statusbar">9:41</div>
       <div class="phone__body mb-body">
         <div class="mb-topbar">
