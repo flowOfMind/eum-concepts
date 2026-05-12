@@ -1958,7 +1958,7 @@ a { color: #2563EB; }
 .mb-brand { font-family: 'Aggravo', 'Pretendard', sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 0; color: #2563EB; line-height: 1; margin-left: 4px; }
 .phone--MB2 .mb-brand { display: inline-block; position: relative; background: none; -webkit-text-fill-color: initial; color: #0F172A; margin-left: 0; font-size: inherit; line-height: 1; }
 .phone--MB2 .mb-brand .ma-brand__dots { position: absolute; top: -11px; left: 0; gap: 3px; }
-.phone--MB2 .mb-brand__bar { position: absolute; top: -8px; left: 0; width: 16px; height: 3px; border-radius: 2px; background: linear-gradient(90deg, #2DB36C 0%, #2563EB 100%); }
+.phone--MB2 .mb-brand__bar { position: absolute; top: -6px; left: 0; width: 16px; height: 4px; border-radius: 2px; background: linear-gradient(90deg, #2DB36C 0%, #2563EB 100%); }
 .phone--MB2 .mb-brand__text { font-family: 'Aggravo', 'Pretendard', sans-serif; font-size: 22px; font-weight: 700; letter-spacing: -.02em; color: #0F172A; line-height: 1; }
 .mb-streak { font-size: 12px; font-weight: 800; padding: 6px 12px; background: #fff; color: #64748B; border-radius: 99px; border: 1px solid #E2E8F0; line-height: 1; margin-top: -1.5px; }
 .mb-hero { padding: 9px 2px 12px; }
