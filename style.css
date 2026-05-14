@@ -2338,6 +2338,8 @@ a { color: #2563EB; }
 .phone--MG2 .mg-tier { position: relative; }
 .phone--MG2 .mg-tier__info { position: absolute; top: 14px; right: 14px; padding: 0; background: transparent; border: 0; font-family: inherit; font-size: 16px; color: var(--mg-muted); cursor: pointer; line-height: 1; letter-spacing: 0; user-select: none; }
 .phone--MG2 .mg-tier__info:hover { color: var(--mg-fg); }
+/* MG3 — stats / bar / next 블록을 각주 처리한 상태라 Lv.3 Builder 하단 마진 제거 */
+.phone--MG3 .mg-tier__lvl { margin-bottom: 0; }
 .mg-tier__lvl { margin-bottom: 12px; }
 .mg-tier__lvl small { font-size: 10px; font-weight: 800; letter-spacing: .12em; color: var(--mg-muted); display: block; margin-bottom: 2px; }
 .mg-tier__lvl h4 { font-size: 18px; font-weight: 800; margin: 0; letter-spacing: -.02em; color: var(--mg-acc); }
