@@ -2340,7 +2340,7 @@ a { color: #2563EB; }
 .phone--MG2 .mg-tier__info:hover { color: var(--mg-fg); }
 /* MG3 — Tier card가 비활성(각주 처리)된 상태에서만 greeting↔Radar 간격을 약 40%로 축소.
    .mg-tier가 다시 노출되면 :has() 조건이 깨져 자동으로 원래 마진으로 복귀. */
-.phone--MG3 .mg-body:not(:has(.mg-tier)) .mg-radar { margin-top: 4px; }
+.phone--MG3 .mg-body:not(:has(.mg-tier)) .mg-radar { margin-top: 2px; }
 /* MG3 — Current Mission이 비활성(각주)일 때만 Radar↔첫 .mg-section 간격을 약 40%로 축소.
    .mg-mission이 노출되면 `.mg-radar + .mg-section` 인접 셀렉터가 깨져 자동 원복. */
 .phone--MG3 .mg-radar + .mg-section { margin-top: -8px; }
