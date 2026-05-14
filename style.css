@@ -2344,6 +2344,9 @@ a { color: #2563EB; }
 /* MG3 — Current Mission이 비활성(각주)일 때만 Radar↔첫 .mg-section 간격을 약 40%로 축소.
    .mg-mission이 노출되면 `.mg-radar + .mg-section` 인접 셀렉터가 깨져 자동 원복. */
 .phone--MG3 .mg-radar + .mg-section { margin-top: 26px; }
+/* MG3 — 모임 규모 라벨(소규모/중규모)이 mg-sched__t 자리에 들어가는데,
+   mute 행에선 폰트가 10px로 작아지므로 12px로 맞춰 두 라벨 크기를 동일하게 함. */
+.phone--MG3 .mg-sched--mute .mg-sched__t { font-size: 12px; }
 .mg-tier__lvl { margin-bottom: 12px; }
 .mg-tier__lvl small { font-size: 10px; font-weight: 800; letter-spacing: .12em; color: var(--mg-muted); display: block; margin-bottom: 2px; }
 .mg-tier__lvl h4 { font-size: 18px; font-weight: 800; margin: 0; letter-spacing: -.02em; color: var(--mg-acc); }
