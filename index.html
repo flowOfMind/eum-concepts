@@ -89,6 +89,8 @@
     <nav class="topbar topbar--bottom" id="tabs">
       <div class="topbar__tabs">
         <button class="tab" data-tab="home" aria-selected="true">시안 목록</button>
+        <button class="tab" data-tab="MG3">G3</button>
+        <span class="tab__divider" aria-hidden="true"></span>
         <button class="tab" data-tab="M2">M2</button>
         <button class="tab" data-tab="MG2">G2</button>
         <button class="tab" data-tab="MV">Vibe</button>
@@ -114,6 +116,15 @@
     <section class="home">
       <h1 class="home__title">이음 · 디자인 시안 인덱스</h1>
       <p class="home__sub">카드 클릭으로 이동.</p>
+
+      <div class="home__grid home__grid--featured">
+        <button class="card-button" data-tab="MG3" style="--accent:#2DB36C">
+          <span class="badge">MG</span>
+          <h3>G3. 작업실 + 레이더</h3>
+        </button>
+      </div>
+
+      <hr class="home__divider">
 
       <div class="home__grid home__grid--featured">
         <button class="card-button" data-tab="M2" style="--accent:#1A1A1A">
@@ -531,6 +542,113 @@
       </nav>
     </section>
   </template>
+
+  <!-- MG3: MG2의 복제본 (G3) -->
+  <template id="MG3-template">
+    <section class="phone phone--MG phone--MG2 phone--MG3">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mg-body">
+        <div class="mg-topbar">
+          <div class="mg-greet">
+            <small>안녕하세요, 도현님</small>
+            <h2>오늘도 1시간만 만들어볼까요?</h2>
+          </div>
+          <div class="mg-actions">
+            <button class="mg-bell" aria-label="알림"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></button>
+            <button class="mg-profile" aria-label="내 프로필">D</button>
+          </div>
+        </div>
+
+        <!-- Tier card (상단) -->
+        <div class="mg-tier">
+          <button class="mg-tier__info" type="button" aria-label="정보">ⓘ</button>
+          <div class="mg-tier__lvl">
+            <small>VIBE TIER</small>
+            <h4>Lv.3 Builder</h4>
+          </div>
+          <div class="mg-tier__stats">
+            <div><em>2/5</em><small>이번 주 미션</small></div>
+            <div><em>4일</em><small>연속 작업</small></div>
+            <div><em>12</em><small>완료 미션</small></div>
+          </div>
+          <div class="mg-tier__bar"><div style="width:40%"></div></div>
+          <small class="mg-tier__next">다음 티어 Lv.4 Maker — 미션 <em>2</em>개 남음</small>
+        </div>
+
+        <!-- Vibe Radar CTA -->
+        <div class="mg-radar">
+          <div class="mg-radar__rings" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <button class="mg-radar__btn" type="button" data-tab="MV">
+            <span class="mg-radar__icon">◉</span>
+            <span class="mg-radar__lbl">오늘의<br>바이브 코딩</span>
+          </button>
+          <div class="mg-radar__sub">Vibe Radar</div>
+          <div class="mg-radar__meta">
+            <small>📍 관악구 · 반경 1.2km</small>
+            <small>대기 중인 빌더 <em>12</em>명</small>
+          </div>
+        </div>
+
+        <!-- Current Mission -->
+        <div class="mg-mission">
+          <div class="mg-mission__head">
+            <span class="mg-mission__chip">현재 미션</span>
+            <span class="mg-mission__day">D-2</span>
+          </div>
+          <h3>AI 랜딩페이지 만들기</h3>
+          <div class="mg-mission__bar"><div style="width:42%"></div></div>
+          <div class="mg-mission__row">
+            <small>진행률 <em>42%</em></small>
+            <small>오늘 할 일 <em>3</em>개</small>
+          </div>
+          <ul class="mg-mission__todo">
+            <li>· 카피 초안 작성</li>
+            <li>· Hero 섹션 구현</li>
+            <li>· 배포 링크 만들기</li>
+          </ul>
+        </div>
+
+        <!-- Today's schedule -->
+        <div class="mg-section">
+          <h3 class="mg-section__title">오늘의 일정</h3>
+          <ul class="mg-sched">
+            <li>
+              <span class="mg-sched__t">19:30</span>
+              <div><b>AI 사이드 프로젝트 팀룸</b><small>도현 외 3명 · 줌</small></div>
+            </li>
+            <li>
+              <span class="mg-sched__t">21:00</span>
+              <div><b>강남 모각코 후보</b><small>4 / 6명 · 미참여</small></div>
+              <button class="mg-sched__join">참여</button>
+            </li>
+            <li class="mg-sched--mute">
+              <span class="mg-sched__t">D+1<br>10:00</span>
+              <div><b>미션 마감</b><small>AI 랜딩페이지</small></div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Recommendation -->
+        <div class="mg-section">
+          <h3 class="mg-section__title">추천 미션 / 팀</h3>
+          <ul class="mg-rec">
+            <li><span>30M</span><b>ChatGPT로 PRD 작성</b><small>+120 XP</small></li>
+            <li><span>3D</span><b>AI 회의록 요약 앱 팀 합류</b><small>3 / 4명</small></li>
+          </ul>
+        </div>
+      </div>
+      <nav class="mg-nav">
+        <button class="on"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
+        <button><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16.9A5 5 0 0 1 7.1 19"/><path d="M2 21a9 9 0 0 1 9-9"/><path d="M2 14a13 13 0 0 1 13-13"/><circle cx="20" cy="4" r="2"/></svg></span><small>레이더</small></button>
+        <button><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>팀룸</small></button>
+        <button><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><small>미션</small></button>
+        <button><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
+      </nav>
+    </section>
+  </template>
+
 
   <!-- ============================================================ -->
   <!-- ====   Flutter (Material 3) 마이그레이션 시안 — 12종      ==== -->
