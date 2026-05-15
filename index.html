@@ -859,55 +859,55 @@
         </header>
         <section class="mg3cc-sec">
           <h3 class="mg3cc-sec__title">모임 이름</h3>
-          <div class="mg3cc-input">
+          <label class="mg3cc-input">
             <span class="mg3cc-input__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4z"/></svg></span>
-            <span class="mg3cc-input__ph">예: 5월 둘째주 정기 모각코</span>
-          </div>
+            <input class="mg3cc-input__field" type="text" placeholder="예: 5월 둘째주 정기 모각코" aria-label="모임 이름 입력">
+          </label>
         </section>
         <section class="mg3cc-sec">
           <h3 class="mg3cc-sec__title">모임 일시</h3>
           <div class="mg3cc-card">
-            <div class="mg3cc-row">
+            <label class="mg3cc-row">
               <span class="mg3cc-row__ico mg3cc-row__ico--green" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
-              <div class="mg3cc-row__txt"><small>날짜</small><b>날짜를 선택하세요</b></div>
+              <div class="mg3cc-row__txt"><small>날짜</small><input type="date" class="mg3cc-row__input" aria-label="모임 날짜"></div>
               <em class="mg3cc-row__caret">›</em>
-            </div>
-            <div class="mg3cc-row mg3cc-row--bordertop">
+            </label>
+            <label class="mg3cc-row mg3cc-row--bordertop">
               <span class="mg3cc-row__ico mg3cc-row__ico--blue" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
-              <div class="mg3cc-row__txt"><small>시간</small><b>시간을 선택하세요</b></div>
+              <div class="mg3cc-row__txt"><small>시간</small><input type="time" class="mg3cc-row__input" aria-label="모임 시간"></div>
               <em class="mg3cc-row__caret">›</em>
-            </div>
+            </label>
           </div>
         </section>
         <section class="mg3cc-sec">
           <h3 class="mg3cc-sec__title">모임 장소 <small class="mg3cc-sec__opt">선택</small></h3>
-          <div class="mg3cc-input mg3cc-input--soft">
+          <label class="mg3cc-input mg3cc-input--soft">
             <span class="mg3cc-input__ico mg3cc-input__ico--red" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <span class="mg3cc-input__ph">예: 강남역 스타벅스 2층</span>
-          </div>
+            <input class="mg3cc-input__field" type="text" placeholder="예: 강남역 스타벅스 2층" aria-label="모임 장소 입력">
+          </label>
         </section>
         <section class="mg3cc-sec">
           <h3 class="mg3cc-sec__title">참석 신청 기한</h3>
           <div class="mg3cc-card">
-            <div class="mg3cc-row">
+            <label class="mg3cc-row">
               <span class="mg3cc-row__ico mg3cc-row__ico--amber" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 14 11 16 15 12"/></svg></span>
-              <div class="mg3cc-row__txt"><small>날짜</small><b>날짜를 선택하세요</b></div>
+              <div class="mg3cc-row__txt"><small>날짜</small><input type="date" class="mg3cc-row__input" aria-label="참석 신청 마감 날짜"></div>
               <em class="mg3cc-row__caret">›</em>
-            </div>
-            <div class="mg3cc-row mg3cc-row--bordertop">
+            </label>
+            <label class="mg3cc-row mg3cc-row--bordertop">
               <span class="mg3cc-row__ico mg3cc-row__ico--coral" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><polyline points="12 9 12 13 14.5 15"/><path d="M5 3 2 6"/><path d="M19 3l3 3"/></svg></span>
-              <div class="mg3cc-row__txt"><small>마감 시간</small><b>시간을 선택하세요</b></div>
+              <div class="mg3cc-row__txt"><small>마감 시간</small><input type="time" class="mg3cc-row__input" aria-label="참석 신청 마감 시간"></div>
               <em class="mg3cc-row__caret">›</em>
-            </div>
+            </label>
           </div>
           <small class="mg3cc-hint">모임 시작 전으로 설정해주세요</small>
         </section>
         <section class="mg3cc-sec">
           <h3 class="mg3cc-sec__title">메모 및 안내사항 <small class="mg3cc-sec__opt">선택</small></h3>
-          <div class="mg3cc-memo">
-            <p>모임에 대한 추가 정보를 입력해주세요</p>
+          <label class="mg3cc-memo">
+            <textarea class="mg3cc-memo__field" placeholder="모임에 대한 추가 정보를 입력해주세요" rows="3" aria-label="메모 및 안내사항 입력"></textarea>
             <span class="mg3cc-memo__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>
-          </div>
+          </label>
         </section>
         <aside class="mg3cc-info">
           <h4><span aria-hidden="true">ⓘ</span> 모임 안내</h4>

@@ -2915,11 +2915,13 @@ a { color: #2563EB; }
 .mg3cc-sec { padding: 14px 18px 6px; display: flex; flex-direction: column; gap: 8px; }
 .mg3cc-sec__title { font-size: 15px; font-weight: 800; letter-spacing: -.01em; color: var(--mg-fg); margin: 0; }
 .mg3cc-sec__opt { font-size: 12px; font-weight: 600; color: var(--mg-muted); margin-left: 6px; }
-.mg3cc-input { background: #F3F4F6; border-radius: 14px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
+.mg3cc-input { background: #F3F4F6; border-radius: 14px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; cursor: text; transition: box-shadow .15s ease; }
 .mg3cc-input--soft { background: #F9FAFB; border: 1px solid var(--mg-line); }
+.mg3cc-input:focus-within { box-shadow: 0 0 0 1.5px var(--mg-acc); }
 .mg3cc-input__ico { color: #8B5CF6; font-size: 18px; flex-shrink: 0; display: inline-flex; }
 .mg3cc-input__ico--red { color: #EF4444; }
-.mg3cc-input__ph { font-size: 13.5px; color: #9CA3AF; font-weight: 600; letter-spacing: -.01em; }
+.mg3cc-input__field { flex: 1; background: transparent; border: 0; outline: none; font-family: inherit; font-size: 13.5px; font-weight: 600; color: var(--mg-fg); letter-spacing: -.01em; padding: 0; min-width: 0; }
+.mg3cc-input__field::placeholder { color: #9CA3AF; font-weight: 600; }
 .mg3cc-card { background: #fff; border: 1px solid var(--mg-line); border-radius: 16px; box-shadow: 0 2px 10px rgba(15,23,42,.04); overflow: hidden; }
 .mg3cc-row { display: grid; grid-template-columns: 44px 1fr 20px; align-items: center; gap: 14px; padding: 14px 16px; }
 .mg3cc-row--bordertop { border-top: 1px solid var(--mg-line); }
@@ -2931,11 +2933,18 @@ a { color: #2563EB; }
 .mg3cc-row__txt { display: flex; flex-direction: column; gap: 2px; }
 .mg3cc-row__txt small { font-size: 12px; font-weight: 700; color: var(--mg-fg); letter-spacing: -.01em; }
 .mg3cc-row__txt b { font-size: 13.5px; font-weight: 600; color: #9CA3AF; letter-spacing: -.01em; }
+.mg3cc-row__input { background: transparent; border: 0; outline: none; font-family: inherit; font-size: 13.5px; font-weight: 600; color: var(--mg-fg); letter-spacing: -.01em; padding: 2px 0 0; width: 100%; }
+.mg3cc-row__input::-webkit-calendar-picker-indicator { opacity: 0; width: 0; height: 0; padding: 0; }
+.mg3cc-row__input:invalid { color: #9CA3AF; }
+.mg3cc-row { cursor: pointer; }
+.mg3cc-row:focus-within { background: rgba(45,179,108,.04); }
 .mg3cc-row__caret { font-style: normal; color: #9CA3AF; font-size: 18px; justify-self: end; font-weight: 600; }
 .mg3cc-hint { font-size: 11.5px; color: var(--mg-muted); font-weight: 600; }
-.mg3cc-memo { background: #F9FAFB; border: 1px solid var(--mg-line); border-radius: 14px; padding: 22px 18px; position: relative; min-height: 96px; }
-.mg3cc-memo p { font-size: 13.5px; color: #9CA3AF; font-weight: 600; margin: 0 0 22px; letter-spacing: -.01em; text-align: center; }
-.mg3cc-memo__ico { position: absolute; left: 18px; bottom: 16px; color: #D1D5DB; font-size: 18px; display: inline-flex; }
+.mg3cc-memo { background: #F9FAFB; border: 1px solid var(--mg-line); border-radius: 14px; padding: 14px 16px 16px 44px; position: relative; min-height: 96px; display: block; transition: box-shadow .15s ease; cursor: text; }
+.mg3cc-memo:focus-within { box-shadow: 0 0 0 1.5px var(--mg-acc); }
+.mg3cc-memo__field { width: 100%; background: transparent; border: 0; outline: none; font-family: inherit; font-size: 13.5px; font-weight: 600; color: var(--mg-fg); letter-spacing: -.01em; line-height: 1.55; resize: vertical; min-height: 64px; padding: 0; }
+.mg3cc-memo__field::placeholder { color: #9CA3AF; font-weight: 600; }
+.mg3cc-memo__ico { position: absolute; left: 16px; top: 14px; color: #D1D5DB; font-size: 18px; display: inline-flex; }
 .mg3cc-info { margin: 14px 18px 0; background: rgba(45,179,108,.08); border: 1px solid rgba(45,179,108,.30); border-radius: 14px; padding: 14px 16px; }
 .mg3cc-info h4 { font-size: 13.5px; font-weight: 800; color: var(--mg-acc); margin: 0 0 8px; letter-spacing: -.01em; display: inline-flex; align-items: center; gap: 6px; }
 .mg3cc-info ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px; }
