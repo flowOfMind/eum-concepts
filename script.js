@@ -81,13 +81,24 @@ const render = (key) => {
     if (key === 'PX') setupPXCarousel();
     if (key === 'ME' || key === 'MQ') setupMEThemeToggle();
     if (key === 'MG3M') setupMG3MTabs();
-    stage.querySelectorAll('.m-ai-tag, .mv-chip').forEach(btn => {
+    const updateMvCta = () => {
+      const phone = stage.querySelector('.phone--MV3');
+      if (!phone) return;
+      const cta = phone.querySelector('.mv-cta');
+      const wantOn = phone.querySelector('.mv-want__item.is-on');
+      const row = phone.querySelector('.mv-pick__row');
+      const rowOn = row ? row.querySelector('.mv-chip.is-on') : null;
+      if (cta) cta.disabled = !(wantOn && rowOn);
+    };
+    stage.querySelectorAll('.m-ai-tag, .mv-chip, .mv-want__item').forEach(btn => {
       btn.addEventListener('click', e => {
         e.preventDefault();
         e.stopPropagation();
         btn.classList.toggle('is-on');
+        updateMvCta();
       });
     });
+    updateMvCta();
   };
 
   tabs.forEach(t => t.addEventListener('click', () => render(t.dataset.tab)));
