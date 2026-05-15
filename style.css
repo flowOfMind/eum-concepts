@@ -60,6 +60,17 @@ a { color: #2563EB; }
 .home { grid-column: 1 / -1; max-width: 880px; margin: 0 auto; }
 .home__title { font-size: 34px; font-weight: 800; letter-spacing: -.03em; margin: 8px 0 12px; }
 .home__sub { color: var(--muted); line-height: 1.6; margin-bottom: 28px; }
+.home__brand { display: inline-flex; align-items: center; margin: 4px 0 16px; }
+.eum-logo { display: inline-flex; align-items: center; gap: 16px; }
+.eum-logo__venn { position: relative; width: 68px; height: 44px; flex-shrink: 0; isolation: isolate; }
+.eum-logo__c { position: absolute; top: 0; width: 44px; height: 44px; border-radius: 50%; mix-blend-mode: multiply; }
+.eum-logo__c--g { left: 0; background: #2DB36C; }
+.eum-logo__c--b { right: 0; background: #3B82F6; }
+.eum-logo__txt { font-size: 34px; font-weight: 900; letter-spacing: -.04em; color: #111827; line-height: 1; }
+@supports not (mix-blend-mode: multiply) {
+  .eum-logo__c { mix-blend-mode: normal; opacity: .92; }
+  .eum-logo__c--b { background: #2563EB; }
+}
 .home__section { font-size: 14px; font-weight: 800; letter-spacing: -.01em; color: var(--muted); margin: 28px 0 12px; padding-top: 18px; border-top: 1px solid var(--line); text-transform: uppercase; }
 .home__section:first-of-type { padding-top: 0; border-top: none; margin-top: 8px; }
 .home__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
