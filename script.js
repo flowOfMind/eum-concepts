@@ -1,7 +1,7 @@
 (() => {
   const stage = document.getElementById('stage');
   const tabs = document.querySelectorAll('.tab');
-  const valid = ['home','M','MA','MB','MC','MD','MQ','MG','MI','MJ','MP','PS','PX','M2','MG2','MG3','MB2','MV'];
+  const valid = ['home','M','MA','MB','MC','MD','MQ','MG','MI','MJ','MP','PS','PX','M2','MG2','MG3','MG3M','MG3C','MG3K','MG3P','MB2','MV','MV3'];
 
   const setupPXCarousel = () => {
     const carousel = document.getElementById('px-carousel');
@@ -54,8 +54,12 @@ const render = (key) => {
     tabs.forEach(t => t.setAttribute('aria-selected', t.dataset.tab === key ? 'true' : 'false'));
     if (location.hash !== `#${key}`) history.replaceState(null, '', `#${key}`);
     window.scrollTo({ top: 0, behavior: 'instant' });
-    stage.querySelectorAll('[data-tab]').forEach(el => {
-      el.addEventListener('click', () => render(el.dataset.tab));
+    const dockNavLive = document.getElementById('dock-nav-slot');
+    [stage, dockNavLive].forEach(root => {
+      if (!root) return;
+      root.querySelectorAll('[data-tab]').forEach(el => {
+        el.addEventListener('click', () => render(el.dataset.tab));
+      });
     });
     if (key === 'PX') setupPXCarousel();
     if (key === 'ME' || key === 'MQ') setupMEThemeToggle();

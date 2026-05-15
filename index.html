@@ -588,7 +588,7 @@
           <div class="mg-radar__rings" aria-hidden="true">
             <span></span><span></span><span></span>
           </div>
-          <button class="mg-radar__btn" type="button" data-tab="MV">
+          <button class="mg-radar__btn" type="button" data-tab="MV3">
             <span class="mg-radar__icon">◉</span>
             <span class="mg-radar__lbl">오늘의<br>바이브 코딩</span>
           </button>
@@ -660,12 +660,174 @@
         </div>
         -->
       </div>
-      <nav class="mg-nav">
-        <button class="on"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
-        <button><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16.9A5 5 0 0 1 7.1 19"/><path d="M2 21a9 9 0 0 1 9-9"/><path d="M2 14a13 13 0 0 1 13-13"/><circle cx="20" cy="4" r="2"/></svg></span><small>레이더</small></button>
-        <button><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>팀룸</small></button>
-        <button><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><small>미션</small></button>
-        <button><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
+      <nav class="mg-nav mg-nav--g3">
+        <button class="on" data-tab="MG3"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
+        <button data-tab="MG3M"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><small>매칭</small></button>
+        <button data-tab="MG3C"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>채팅</small></button>
+        <button data-tab="MG3K"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></span><small>커뮤니티</small></button>
+        <button data-tab="MG3P"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
+      </nav>
+    </section>
+  </template>
+
+
+  <!-- MG3M: G3 매칭 목록 (전체 / 대기 중 / 확정 탭) -->
+  <template id="MG3M-template">
+    <section class="phone phone--MG phone--MG2 phone--MG3 phone--MG3M">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mg3m-body">
+        <div class="mg3m-topbar">
+          <h2 class="mg3m-title">매칭 목록</h2>
+          <button class="mg-bell" aria-label="알림"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></button>
+        </div>
+        <div class="mg3m-tabs" role="tablist">
+          <button class="mg3m-tab is-on" type="button">전체</button>
+          <button class="mg3m-tab" type="button">대기 중</button>
+          <button class="mg3m-tab" type="button">확정</button>
+        </div>
+        <ul class="mg3m-list">
+          <li class="mg3m-card mg3m-card--wait">
+            <div class="mg3m-card__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div class="mg3m-card__body">
+              <div class="mg3m-card__head"><b>모임</b><span class="mg3m-tag">소규모</span></div>
+              <small class="mg3m-card__meta">신청일 5월 14일 16:50</small>
+              <small class="mg3m-card__sub">이음이 사람을 찾고 있어요 · 남은 약 5시간</small>
+            </div>
+            <span class="mg3m-card__pill mg3m-card__pill--wait">대기 중</span>
+          </li>
+          <li class="mg3m-card mg3m-card--done">
+            <div class="mg3m-card__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div class="mg3m-card__body">
+              <div class="mg3m-card__head"><b>담담님과의 모임</b><span class="mg3m-tag">소규모</span></div>
+              <small class="mg3m-card__meta">종료 5월 10일 13:50</small>
+              <small class="mg3m-card__sub">지난 모임이에요</small>
+            </div>
+            <span class="mg3m-card__pill mg3m-card__pill--done">채팅 종료</span>
+          </li>
+          <li class="mg3m-card mg3m-card--done">
+            <div class="mg3m-card__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div class="mg3m-card__body">
+              <div class="mg3m-card__head"><b>프렌즈·담담 모임</b><span class="mg3m-tag">중규모</span></div>
+              <small class="mg3m-card__meta">종료 5월 14일 03:00</small>
+              <small class="mg3m-card__sub">지난 모임이에요</small>
+            </div>
+            <span class="mg3m-card__pill mg3m-card__pill--done">채팅 종료</span>
+          </li>
+          <li class="mg3m-card mg3m-card--done">
+            <div class="mg3m-card__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div class="mg3m-card__body">
+              <div class="mg3m-card__head"><b>담담님과의 모임</b><span class="mg3m-tag">소규모</span></div>
+              <small class="mg3m-card__meta">종료 5월 10일 13:30</small>
+              <small class="mg3m-card__sub">지난 모임이에요</small>
+            </div>
+            <span class="mg3m-card__pill mg3m-card__pill--done">채팅 종료</span>
+          </li>
+        </ul>
+        <button class="mg3m-fab" type="button" aria-label="대기 중인 매칭">
+          <span class="mg3m-fab__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2v6a6 6 0 0 0 12 0V2"/><path d="M6 22v-6a6 6 0 0 1 12 0v6"/><line x1="4" y1="2" x2="20" y2="2"/><line x1="4" y1="22" x2="20" y2="22"/></svg></span>
+          <span>대기 중</span>
+        </button>
+      </div>
+      <nav class="mg-nav mg-nav--g3">
+        <button data-tab="MG3"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
+        <button class="on" data-tab="MG3M"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><small>매칭</small></button>
+        <button data-tab="MG3C"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>채팅</small></button>
+        <button data-tab="MG3K"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></span><small>커뮤니티</small></button>
+        <button data-tab="MG3P"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
+      </nav>
+    </section>
+  </template>
+
+
+  <!-- MG3C: G3 채팅 빈 상태 -->
+  <template id="MG3C-template">
+    <section class="phone phone--MG phone--MG2 phone--MG3 phone--MG3C">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mg3c-body">
+        <div class="mg3m-topbar">
+          <h2 class="mg3m-title">채팅</h2>
+          <button class="mg-bell" aria-label="알림"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></button>
+        </div>
+        <div class="mg3c-empty">
+          <div class="mg3c-empty__circle" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>아직 채팅이 없어요</h3>
+          <p>매칭이 확정되면 채팅방이<br>자동으로 생성됩니다</p>
+          <button class="mg3c-cta" type="button" data-tab="MG3M">매칭하러 가기</button>
+        </div>
+      </div>
+      <nav class="mg-nav mg-nav--g3">
+        <button data-tab="MG3"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
+        <button data-tab="MG3M"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><small>매칭</small></button>
+        <button class="on" data-tab="MG3C"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>채팅</small></button>
+        <button data-tab="MG3K"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></span><small>커뮤니티</small></button>
+        <button data-tab="MG3P"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
+      </nav>
+    </section>
+  </template>
+
+
+  <!-- MG3K: G3 커뮤니티 (placeholder) -->
+  <template id="MG3K-template">
+    <section class="phone phone--MG phone--MG2 phone--MG3 phone--MG3K">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mg3c-body">
+        <div class="mg3m-topbar">
+          <h2 class="mg3m-title">커뮤니티</h2>
+          <button class="mg-bell" aria-label="알림"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></button>
+        </div>
+        <div class="mg3c-empty">
+          <div class="mg3c-empty__circle" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+          </div>
+          <h3>곧 만나요</h3>
+          <p>모임 후기·동네 소식 피드를<br>준비하고 있어요</p>
+        </div>
+      </div>
+      <nav class="mg-nav mg-nav--g3">
+        <button data-tab="MG3"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
+        <button data-tab="MG3M"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><small>매칭</small></button>
+        <button data-tab="MG3C"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>채팅</small></button>
+        <button class="on" data-tab="MG3K"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></span><small>커뮤니티</small></button>
+        <button data-tab="MG3P"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
+      </nav>
+    </section>
+  </template>
+
+
+  <!-- MG3P: G3 프로필 (placeholder) -->
+  <template id="MG3P-template">
+    <section class="phone phone--MG phone--MG2 phone--MG3 phone--MG3P">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mg3p-body">
+        <div class="mg3m-topbar">
+          <h2 class="mg3m-title">프로필</h2>
+          <button class="mg-bell" aria-label="알림"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></button>
+        </div>
+        <div class="mg3p-card">
+          <div class="mg3p-card__avatar">D</div>
+          <div class="mg3p-card__info">
+            <b>도현</b>
+            <small>관악구 · 1998년생 · 빌더</small>
+          </div>
+          <button class="mg3p-card__edit" type="button">편집</button>
+        </div>
+        <ul class="mg3p-menu">
+          <li><span>내 모임</span><em>4</em></li>
+          <li><span>매너 점수</span><em>92</em></li>
+          <li><span>토큰</span><em>3</em></li>
+          <li><span>차단·신고</span><em>관리</em></li>
+          <li><span>알림 설정</span><em>›</em></li>
+          <li><span>로그아웃</span><em>›</em></li>
+        </ul>
+      </div>
+      <nav class="mg-nav mg-nav--g3">
+        <button data-tab="MG3"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
+        <button data-tab="MG3M"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><small>매칭</small></button>
+        <button data-tab="MG3C"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>채팅</small></button>
+        <button data-tab="MG3K"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></span><small>커뮤니티</small></button>
+        <button class="on" data-tab="MG3P"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
       </nav>
     </section>
   </template>
@@ -1092,6 +1254,45 @@
       <div class="phone__statusbar">9:41</div>
       <div class="phone__body mv-body">
         <button class="mv-back" type="button" data-tab="MG2" aria-label="뒤로">←</button>
+        <div class="mv-hero">
+          <div class="mv-rings" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="mv-text">
+          <small>VIBE RADAR</small>
+          <h1>오늘의<br>바이브 코딩</h1>
+          <p>지금 근처에서 같이 빌드 중인<br><em>12</em>명의 빌더와 매칭해드려요.</p>
+        </div>
+        <div class="mv-meta">
+          <span>📍 관악 · 1.2km 이내</span>
+          <span aria-hidden="true">·</span>
+          <span>평균 매칭 25초</span>
+        </div>
+        <div class="mv-pick">
+          <div class="mv-pick__row">
+            <button class="mv-chip is-on" type="button"><span class="mv-chip__dot" aria-hidden="true"></span>2:2</button>
+            <button class="mv-chip is-on" type="button"><span class="mv-chip__dot" aria-hidden="true"></span>3:3</button>
+            <button class="mv-chip" type="button"><span class="mv-chip__dot" aria-hidden="true"></span>멘토</button>
+          </div>
+          <span class="mv-pick__sep" aria-hidden="true"></span>
+          <div class="mv-pick__row">
+            <button class="mv-chip is-on" type="button"><span class="mv-chip__dot" aria-hidden="true"></span>관악</button>
+            <button class="mv-chip" type="button"><span class="mv-chip__dot" aria-hidden="true"></span>사당</button>
+            <button class="mv-chip" type="button"><span class="mv-chip__dot" aria-hidden="true"></span>강남</button>
+          </div>
+        </div>
+        <button class="mv-cta" type="button">지금 매칭하기 →</button>
+      </div>
+    </section>
+  </template>
+
+  <!-- MV3: MV의 복제본 (VIBE3, G3 라더에서 진입) -->
+  <template id="MV3-template">
+    <section class="phone phone--MV phone--MV3">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mv-body">
+        <button class="mv-back" type="button" data-tab="MG3" aria-label="뒤로">←</button>
         <div class="mv-hero">
           <div class="mv-rings" aria-hidden="true">
             <span></span><span></span><span></span>
