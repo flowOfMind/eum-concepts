@@ -71,10 +71,10 @@ a { color: #2563EB; }
   .eum-logo__c { mix-blend-mode: normal; opacity: .92; }
   .eum-logo__c--b { background: #2563EB; }
 }
-.eum-logo--sm { gap: 6px; }
-.eum-logo--sm .eum-logo__venn { width: 26px; height: 17px; }
-.eum-logo--sm .eum-logo__c { width: 17px; height: 17px; }
-.eum-logo--sm .eum-logo__txt { font-size: 14px; font-weight: 800; }
+.eum-logo--sm { gap: 7px; }
+.eum-logo--sm .eum-logo__venn { width: 22px; height: 14px; }
+.eum-logo--sm .eum-logo__c { width: 14px; height: 14px; }
+.eum-logo--sm .eum-logo__txt { font-size: 17px; font-weight: 800; }
 /* MG4: 로고 좌상단 + 인사말 분리 */
 .mg-topbar--g4 { align-items: center; padding: 16px 0 2px; }
 .mg-greet--g4 { padding: 0 0 14px; }
