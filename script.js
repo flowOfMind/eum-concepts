@@ -1,7 +1,7 @@
 (() => {
   const stage = document.getElementById('stage');
   const tabs = document.querySelectorAll('.tab');
-  const valid = ['home','M','MA','MB','MC','MD','MQ','MG','MI','MJ','MP','PS','PX','M2','MG2','MG3','MG3M','MG3C','MG3K','MG3P','MG3PA','MB2','MV','MV3'];
+  const valid = ['home','M','MA','MB','MC','MD','MQ','MG','MI','MJ','MP','PS','PX','M2','MG2','MG3','MG3M','MG3C','MG3CD','MG3CC','MG3CP','MG3CN','MG3K','MG3P','MG3PA','MB2','MV','MV3'];
 
   const setupPXCarousel = () => {
     const carousel = document.getElementById('px-carousel');
@@ -102,6 +102,25 @@ const render = (key) => {
       });
     });
     updateMvCta();
+    stage.querySelectorAll('[data-open-sheet]').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        e.stopPropagation();
+        const name = btn.dataset.openSheet;
+        const sheet = stage.querySelector(`.mg3cd-sheet[data-sheet="${name}"]`);
+        if (sheet) { sheet.hidden = false; requestAnimationFrame(() => sheet.classList.add('is-open')); }
+      });
+    });
+    stage.querySelectorAll('[data-close-sheet]').forEach(el => {
+      el.addEventListener('click', e => {
+        e.preventDefault();
+        e.stopPropagation();
+        const sheet = el.closest('.mg3cd-sheet');
+        if (!sheet) return;
+        sheet.classList.remove('is-open');
+        setTimeout(() => { sheet.hidden = true; }, 220);
+      });
+    });
   };
 
   tabs.forEach(t => t.addEventListener('click', () => render(t.dataset.tab)));

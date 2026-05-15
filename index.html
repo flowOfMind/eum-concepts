@@ -769,6 +769,249 @@
   </template>
 
 
+  <!-- MG3CD: G3 채팅방 상세 (담담님과의 모임) -->
+  <template id="MG3CD-template">
+    <section class="phone phone--MG phone--MG2 phone--MG3 phone--MG3CD">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mg3cd-body">
+        <header class="mg3cd-topbar">
+          <button class="mg3cd-back" type="button" data-tab="MG3C" aria-label="뒤로"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></button>
+          <div class="mg3cd-title">
+            <h2>담담님과의 모임</h2>
+            <small>2명 참여 중</small>
+          </div>
+          <div class="mg3cd-actions">
+            <button class="mg3cd-act" type="button" data-tab="MG3CC" aria-label="모임 만들기"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></button>
+            <button class="mg3cd-act" type="button" data-tab="MG3CP" aria-label="멤버"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></button>
+            <button class="mg3cd-act" type="button" data-tab="MG3CN" aria-label="더보기"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg></button>
+          </div>
+        </header>
+        <div class="mg3cd-thread">
+          <div class="mg3cd-datepill">2026.05.15</div>
+          <article class="mg3cd-ai">
+            <h4><span class="mg3cd-ai__spark" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.6 4.6L18 9l-4.4 1.4L12 15l-1.6-4.6L6 9l4.4-1.4z"/><path d="M19 14l.7 1.8 1.8.7-1.8.7L19 19l-.7-1.8-1.8-.7 1.8-.7z"/><path d="M5 16l.55 1.45L7 18l-1.45.55L5 20l-.55-1.45L3 18l1.45-.55z"/></svg></span> 이음AI의 첫 인사</h4>
+            <p>AI 도구와 사이드 프로젝트에 대한 열정으로 모인 여러분, 진심으로 환영하며 즐거운 시작이 되기를 바랍니다.</p>
+          </article>
+          <div class="mg3cd-msg mg3cd-msg--in">
+            <button class="mg3cd-msg__avt" type="button" data-open-sheet="member" aria-label="담담 프로필 보기">담</button>
+            <div class="mg3cd-msg__body">
+              <small class="mg3cd-msg__name">담담</small>
+              <div class="mg3cd-bubble mg3cd-bubble--in">안녕하세요ㅋㅋ</div>
+            </div>
+            <small class="mg3cd-msg__t">11:32</small>
+          </div>
+          <div class="mg3cd-msg mg3cd-msg--out">
+            <small class="mg3cd-msg__t">11:32</small>
+            <div class="mg3cd-bubble mg3cd-bubble--out">노션에 적어두겠습니다ㅠ</div>
+          </div>
+          <div class="mg3cd-msg mg3cd-msg--out">
+            <small class="mg3cd-msg__t">11:32</small>
+            <div class="mg3cd-bubble mg3cd-bubble--out">ㅎㅎㅎㅎ</div>
+          </div>
+        </div>
+        <form class="mg3cd-compose" onsubmit="return false;">
+          <button class="mg3cd-attach" type="button" aria-label="사진 첨부"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" ry="3"/><circle cx="8.5" cy="9" r="1.5"/><path d="M21 15l-5-5L5 21"/><line x1="18" y1="6" x2="18" y2="10"/><line x1="20" y1="8" x2="16" y2="8"/></svg></button>
+          <input type="text" class="mg3cd-input" placeholder="메시지를 입력하세요" aria-label="메시지 입력">
+          <button class="mg3cd-send" type="submit" aria-label="전송"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+        </form>
+      </div>
+      <div class="mg3cd-sheet" data-sheet="member" hidden>
+        <div class="mg3cd-sheet__scrim" data-close-sheet></div>
+        <div class="mg3cd-sheet__panel">
+          <span class="mg3cd-sheet__grab" aria-hidden="true"></span>
+          <div class="mg3cd-sheet__hero">
+            <div class="mg3cd-sheet__avt" aria-hidden="true">담</div>
+            <h3 class="mg3cd-sheet__name">담담</h3>
+            <p class="mg3cd-sheet__loc"><span aria-hidden="true">📍</span> 서울 서초구</p>
+            <div class="mg3cd-sheet__tags">
+              <span>AI 도구·프롬프트</span>
+              <span>사이드 프로젝트</span>
+              <span>스타트업·창업</span>
+            </div>
+            <span class="mg3cd-sheet__badge"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg> 모임 3회 참석</span>
+          </div>
+          <button class="mg3cd-sheet__act mg3cd-sheet__act--block" type="button">
+            <span class="mg3cd-sheet__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></span>
+            <span class="mg3cd-sheet__txt"><b>차단하기</b><small>이 사람과 다음 매칭에서 연결되지 않아요</small></span>
+          </button>
+          <button class="mg3cd-sheet__act mg3cd-sheet__act--report" type="button">
+            <span class="mg3cd-sheet__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+            <span class="mg3cd-sheet__txt"><b>신고하기</b><small>운영팀이 검토 후 조치합니다</small></span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </template>
+
+
+  <!-- MG3CC: G3 채팅방 > 모임 만들기 (📅 진입) -->
+  <template id="MG3CC-template">
+    <section class="phone phone--MG phone--MG2 phone--MG3 phone--MG3CC">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mg3cc-body">
+        <header class="mg3cc-topbar">
+          <button class="mg3cc-back" type="button" data-tab="MG3CD" aria-label="뒤로"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></button>
+          <h2 class="mg3cc-title">모임 만들기</h2>
+        </header>
+        <section class="mg3cc-sec">
+          <h3 class="mg3cc-sec__title">모임 이름</h3>
+          <div class="mg3cc-input">
+            <span class="mg3cc-input__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4z"/></svg></span>
+            <span class="mg3cc-input__ph">예: 5월 둘째주 정기 모각코</span>
+          </div>
+        </section>
+        <section class="mg3cc-sec">
+          <h3 class="mg3cc-sec__title">모임 일시</h3>
+          <div class="mg3cc-card">
+            <div class="mg3cc-row">
+              <span class="mg3cc-row__ico mg3cc-row__ico--green" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+              <div class="mg3cc-row__txt"><small>날짜</small><b>날짜를 선택하세요</b></div>
+              <em class="mg3cc-row__caret">›</em>
+            </div>
+            <div class="mg3cc-row mg3cc-row--bordertop">
+              <span class="mg3cc-row__ico mg3cc-row__ico--blue" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+              <div class="mg3cc-row__txt"><small>시간</small><b>시간을 선택하세요</b></div>
+              <em class="mg3cc-row__caret">›</em>
+            </div>
+          </div>
+        </section>
+        <section class="mg3cc-sec">
+          <h3 class="mg3cc-sec__title">모임 장소 <small class="mg3cc-sec__opt">선택</small></h3>
+          <div class="mg3cc-input mg3cc-input--soft">
+            <span class="mg3cc-input__ico mg3cc-input__ico--red" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span class="mg3cc-input__ph">예: 강남역 스타벅스 2층</span>
+          </div>
+        </section>
+        <section class="mg3cc-sec">
+          <h3 class="mg3cc-sec__title">참석 신청 기한</h3>
+          <div class="mg3cc-card">
+            <div class="mg3cc-row">
+              <span class="mg3cc-row__ico mg3cc-row__ico--amber" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 14 11 16 15 12"/></svg></span>
+              <div class="mg3cc-row__txt"><small>날짜</small><b>날짜를 선택하세요</b></div>
+              <em class="mg3cc-row__caret">›</em>
+            </div>
+            <div class="mg3cc-row mg3cc-row--bordertop">
+              <span class="mg3cc-row__ico mg3cc-row__ico--coral" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><polyline points="12 9 12 13 14.5 15"/><path d="M5 3 2 6"/><path d="M19 3l3 3"/></svg></span>
+              <div class="mg3cc-row__txt"><small>마감 시간</small><b>시간을 선택하세요</b></div>
+              <em class="mg3cc-row__caret">›</em>
+            </div>
+          </div>
+          <small class="mg3cc-hint">모임 시작 전으로 설정해주세요</small>
+        </section>
+        <section class="mg3cc-sec">
+          <h3 class="mg3cc-sec__title">메모 및 안내사항 <small class="mg3cc-sec__opt">선택</small></h3>
+          <div class="mg3cc-memo">
+            <p>모임에 대한 추가 정보를 입력해주세요</p>
+            <span class="mg3cc-memo__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+          </div>
+        </section>
+        <aside class="mg3cc-info">
+          <h4><span aria-hidden="true">ⓘ</span> 모임 안내</h4>
+          <ul>
+            <li>채팅방 멤버들에게 모임 알림이 전송됩니다</li>
+            <li>참석 신청 기한까지 참석 여부를 받습니다</li>
+            <li>모임 생성 후 수정 및 취소가 가능합니다</li>
+          </ul>
+        </aside>
+        <button class="mg3cc-cta" type="button" disabled>모임 만들기</button>
+      </div>
+    </section>
+  </template>
+
+
+  <!-- MG3CP: G3 채팅방 > 멤버 (👥 진입) -->
+  <template id="MG3CP-template">
+    <section class="phone phone--MG phone--MG2 phone--MG3 phone--MG3CP">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mg3cp-body">
+        <header class="mg3cp-topbar">
+          <button class="mg3cp-back" type="button" data-tab="MG3CD" aria-label="뒤로"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></button>
+          <h2 class="mg3cp-title">멤버 <span>2</span></h2>
+        </header>
+        <h3 class="mg3cp-section">멤버 <span>2</span></h3>
+        <ul class="mg3cp-list">
+          <li class="mg3cp-card">
+            <div class="mg3cp-card__avt mg3cp-card__avt--text">삼<span class="mg3cp-card__badge" aria-label="본인"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-3.3 0-10 1.65-10 5v3h20v-3c0-3.35-6.7-5-10-5z"/></svg></span></div>
+            <b>삼쩜삼</b>
+            <small>강남구</small>
+          </li>
+          <li class="mg3cp-card">
+            <div class="mg3cp-card__avt mg3cp-card__avt--art" aria-hidden="true">담</div>
+            <b>담담</b>
+            <small>서초구</small>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </template>
+
+
+  <!-- MG3CN: G3 채팅방 > 알림 (⋮ 진입) -->
+  <template id="MG3CN-template">
+    <section class="phone phone--MG phone--MG2 phone--MG3 phone--MG3CN">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mg3cn-body">
+        <header class="mg3cn-topbar">
+          <button class="mg3cn-back" type="button" data-tab="MG3CD" aria-label="뒤로"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></button>
+          <h2 class="mg3cn-title">알림</h2>
+        </header>
+        <div class="mg3cn-group">
+          <h3 class="mg3cn-group__t">오늘</h3>
+          <ul class="mg3cn-list">
+            <li class="mg3cn-item">
+              <span class="mg3cn-item__ico mg3cn-item__ico--blue" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+              <div class="mg3cn-item__body">
+                <div class="mg3cn-item__head"><b>담담</b><time>1분 전</time></div>
+                <small>안녕하세요ㅋㅋ</small>
+              </div>
+            </li>
+            <li class="mg3cn-item">
+              <span class="mg3cn-item__ico mg3cn-item__ico--green" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+              <div class="mg3cn-item__body">
+                <div class="mg3cn-item__head"><b>매칭이 완료되었어요!</b><time>1분 전</time></div>
+                <small>새로운 모임이 생겼어요. 지금 바로 인사해보세요.</small>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="mg3cn-group">
+          <h3 class="mg3cn-group__t">이전</h3>
+          <ul class="mg3cn-list">
+            <li class="mg3cn-item">
+              <span class="mg3cn-item__ico mg3cn-item__ico--green" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+              <div class="mg3cn-item__body">
+                <div class="mg3cn-item__head"><b>매칭이 종료되었습니다</b><time>3일 전</time></div>
+                <small>대기 중이던 매칭이 종료되었어요. 다시 매칭을 신청해주세요.</small>
+              </div>
+            </li>
+            <li class="mg3cn-item">
+              <span class="mg3cn-item__ico mg3cn-item__ico--blue" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+              <div class="mg3cn-item__body">
+                <div class="mg3cn-item__head"><b>담담</b><time>4일 전</time></div>
+                <small>ㄱㄴㅅ</small>
+              </div>
+            </li>
+            <li class="mg3cn-item">
+              <span class="mg3cn-item__ico mg3cn-item__ico--blue" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+              <div class="mg3cn-item__body">
+                <div class="mg3cn-item__head"><b>프렌즈</b><time>4일 전</time></div>
+                <small>ㅏㅏㅏ</small>
+              </div>
+            </li>
+            <li class="mg3cn-item">
+              <span class="mg3cn-item__ico mg3cn-item__ico--amber" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+              <div class="mg3cn-item__body">
+                <div class="mg3cn-item__head"><b>새 모임: 모임</b><time>4일 전</time></div>
+                <small>참석 응답을 남겨주세요 (모임장소)</small>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </template>
+
+
   <!-- MG3C: G3 채팅 빈 상태 -->
   <template id="MG3C-template">
     <section class="phone phone--MG phone--MG2 phone--MG3 phone--MG3C">
@@ -785,6 +1028,7 @@
           <h3>아직 채팅이 없어요</h3>
           <p>매칭이 확정되면 채팅방이<br>자동으로 생성됩니다</p>
           <button class="mg3c-cta" type="button" data-tab="MG3M">매칭하러 가기</button>
+          <button class="mg3c-cta mg3c-cta--ghost" type="button" data-tab="MG3CD">데모 채팅방 보기</button>
         </div>
       </div>
       <nav class="mg-nav mg-nav--g3">
