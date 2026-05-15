@@ -2424,16 +2424,49 @@ a { color: #2563EB; }
 .mg3c-cta { background: var(--mg-acc); color: #fff; border: 0; font-family: inherit; font-size: 15px; font-weight: 800; padding: 14px 28px; border-radius: 99px; cursor: pointer; box-shadow: 0 10px 24px rgba(45,179,108,.30); }
 .mg3c-cta:active { transform: scale(.98); }
 
-/* 프로필 — 카드 + 메뉴 */
-.mg3p-card { display: grid; grid-template-columns: 56px 1fr auto; align-items: center; gap: 14px; background: var(--mg-card); border-radius: 16px; padding: 16px; box-shadow: 0 2px 10px rgba(15,23,42,.04); margin-bottom: 18px; }
-.mg3p-card__avatar { width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #2DB36C 0%, #5B8CFF 100%); color: #fff; display: grid; place-items: center; font-size: 20px; font-weight: 800; }
-.mg3p-card__info b { font-size: 16px; font-weight: 800; display: block; margin-bottom: 4px; }
-.mg3p-card__info small { font-size: 12px; color: var(--mg-muted); font-weight: 600; }
-.mg3p-card__edit { background: transparent; color: var(--mg-acc); border: 1px solid rgba(45,179,108,.30); border-radius: 99px; padding: 6px 14px; font-family: inherit; font-size: 12px; font-weight: 800; cursor: pointer; }
-.mg3p-menu { list-style: none; padding: 0; margin: 0; background: var(--mg-card); border-radius: 16px; overflow: hidden; box-shadow: 0 2px 10px rgba(15,23,42,.04); }
-.mg3p-menu li { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; font-size: 14px; font-weight: 700; border-bottom: 1px solid var(--mg-line); }
-.mg3p-menu li:last-child { border-bottom: 0; }
-.mg3p-menu em { font-style: normal; font-size: 13px; color: var(--mg-muted); font-weight: 700; }
+/* 커뮤니티 — 빌더 뉴스 피드 */
+.mg3k-body { padding: 6px 18px 24px; }
+.mg3k-hero { padding: 4px 0 12px; }
+.mg3k-hero__title { font-size: 16px; font-weight: 800; letter-spacing: -.01em; display: inline-flex; align-items: center; gap: 6px; color: var(--mg-fg); }
+.mg3k-hero__spark { font-size: 15px; }
+.mg3k-hero__sub { font-size: 12.5px; color: var(--mg-muted); font-weight: 600; margin: 4px 0 14px; }
+.mg3k-hero__date { display: block; font-size: 13px; font-weight: 800; color: var(--mg-fg); letter-spacing: -.01em; margin-bottom: 8px; }
+.mg3k-feed { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+.mg3k-card { background: var(--mg-card); border-radius: 16px; padding: 14px 16px; box-shadow: 0 2px 10px rgba(15,23,42,.04); }
+.mg3k-card__tags { display: flex; flex-wrap: wrap; gap: 8px 10px; font-size: 11.5px; font-weight: 800; color: var(--mg-acc); margin-bottom: 6px; }
+.mg3k-card__tags span { letter-spacing: -.01em; }
+.mg3k-card__title { font-size: 14.5px; font-weight: 800; letter-spacing: -.01em; line-height: 1.42; margin: 4px 0 8px; color: var(--mg-fg); }
+.mg3k-card__body { font-size: 12.5px; color: #4B5563; line-height: 1.55; margin: 0 0 10px; font-weight: 500; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.mg3k-card__foot { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+.mg3k-card__src { font-size: 11.5px; color: var(--mg-muted); font-weight: 700; }
+.mg3k-card__like { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; color: var(--mg-muted); font-weight: 700; }
+.mg3k-card__like em { font-style: normal; }
+.mg3k-card__badge { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 800; color: #B45309; background: #FEF3C7; padding: 5px 10px; border-radius: 99px; letter-spacing: -.01em; margin-bottom: 8px; }
+.mg3k-card__badge--meet { color: var(--mg-acc); background: rgba(45,179,108,.12); }
+.mg3k-card__by { display: inline-flex; align-items: center; gap: 8px; margin: 4px 0 8px; }
+.mg3k-card__by small { font-size: 12px; color: var(--mg-muted); font-weight: 700; }
+.mg3k-card__by-ico { width: 22px; height: 22px; border-radius: 4px; background: #0F62FE; color: #fff; font-size: 9px; font-weight: 800; display: grid; place-items: center; letter-spacing: -.02em; }
+.mg3k-card__by-ico--mine { background: linear-gradient(135deg, #2DB36C 0%, #5B8CFF 100%); border-radius: 50%; font-size: 11px; }
+
+/* 프로필 — 아바타 + 관심 태그 + 메뉴 */
+.mg3p-hero { display: flex; flex-direction: column; align-items: center; padding: 14px 0 22px; }
+.mg3p-hero__avatar { position: relative; width: 112px; height: 112px; border-radius: 50%; background: rgba(45,179,108,.12); display: grid; place-items: center; margin-bottom: 14px; }
+.mg3p-hero__avatar > span { font-size: 44px; font-weight: 800; color: var(--mg-acc); letter-spacing: -.02em; }
+.mg3p-hero__cam { position: absolute; right: 4px; bottom: 4px; width: 30px; height: 30px; border-radius: 50%; background: var(--mg-acc); color: #fff; border: 3px solid var(--mg-bg); display: grid; place-items: center; padding: 0; font-size: 14px; cursor: pointer; box-shadow: 0 4px 10px rgba(45,179,108,.30); }
+.mg3p-hero__name { font-size: 22px; font-weight: 800; letter-spacing: -.02em; margin: 4px 0 12px; }
+.mg3p-hero__tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-bottom: 12px; }
+.mg3p-hero__tags span { font-size: 12px; font-weight: 700; color: var(--mg-acc); background: rgba(45,179,108,.10); padding: 6px 12px; border-radius: 99px; letter-spacing: -.01em; }
+.mg3p-hero__meta { font-size: 13px; color: var(--mg-muted); font-weight: 600; margin-bottom: 16px; }
+.mg3p-hero__edit { background: #FFA94D; color: #fff; border: 0; border-radius: 99px; padding: 12px 36px; font-family: inherit; font-size: 14px; font-weight: 800; cursor: pointer; box-shadow: 0 8px 20px rgba(255,169,77,.30); letter-spacing: -.01em; }
+.mg3p-hero__edit:active { transform: scale(.98); }
+
+.mg3p-menu { list-style: none; padding: 0; margin: 0 -18px; background: var(--mg-card); border-top: 1px solid var(--mg-line); }
+.mg3p-menu li { display: grid; grid-template-columns: 36px 1fr auto; align-items: center; gap: 12px; padding: 16px 18px; font-size: 14.5px; font-weight: 700; border-bottom: 1px solid var(--mg-line); color: var(--mg-fg); }
+.mg3p-menu li:last-child { border-bottom: 1px solid var(--mg-line); }
+.mg3p-menu__ico { width: 24px; height: 24px; display: grid; place-items: center; font-size: 20px; color: #4B5563; }
+.mg3p-menu b { font-weight: 700; }
+.mg3p-menu em { font-style: normal; font-size: 16px; color: #9CA3AF; font-weight: 600; justify-self: end; }
+.mg3p-logout { display: block; margin: 18px 0 4px; background: transparent; border: 0; color: #DC2626; font-family: inherit; font-size: 14px; font-weight: 800; cursor: pointer; padding: 0; letter-spacing: -.01em; text-align: left; }
 
 /* ============================================================ */
 /* === MI: 미션·평가 (Storyboard B)                         === */
