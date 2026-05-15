@@ -76,10 +76,10 @@ a { color: #2563EB; }
 .eum-logo--sm .eum-logo__c { width: 12px; height: 12px; }
 .eum-logo--sm .eum-logo__txt { font-size: 18px; font-weight: 800; }
 /* MG4: 로고 좌상단 + 인사말 분리 */
-.mg-topbar--g4 { align-items: center; padding: 5px 0 0; }
-.mg-greet--g4 { padding: 0 0 5px; }
+.mg-topbar--g4 { align-items: center; padding: 2px 0 0; }
+.mg-greet--g4 { padding: 0 0 12px; }
 .phone--MG4 .mg-radar__sub { margin-bottom: 14px; }
-.mg-greet--g4 small { color: var(--mg-muted); font-size: 12.5px; font-weight: 600; letter-spacing: -.01em; }
+.mg-greet--g4 small { color: var(--mg-muted); font-size: 14.5px; font-weight: 700; letter-spacing: -.01em; }
 .mg-greet--g4 h2 { font-size: 19px; font-weight: 800; letter-spacing: -.02em; color: var(--mg-fg); margin: 4px 0 0; line-height: 1.32; }
 .home__section { font-size: 14px; font-weight: 800; letter-spacing: -.01em; color: var(--muted); margin: 28px 0 12px; padding-top: 18px; border-top: 1px solid var(--line); text-transform: uppercase; }
 .home__section:first-of-type { padding-top: 0; border-top: none; margin-top: 8px; }
