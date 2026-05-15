@@ -94,6 +94,7 @@
         <button class="tab" data-tab="MG3C">G3·채팅</button>
         <button class="tab" data-tab="MG3K">G3·커뮤니티</button>
         <button class="tab" data-tab="MG3P">G3·프로필</button>
+        <button class="tab" data-tab="MG3PA">G3·업적</button>
         <button class="tab" data-tab="MV3">Vibe3</button>
         <span class="tab__divider" aria-hidden="true"></span>
         <button class="tab" data-tab="M2">M2</button>
@@ -142,6 +143,10 @@
         <button class="card-button" data-tab="MG3P" style="--accent:#2DB36C">
           <span class="badge">MG</span>
           <h3>G3·프로필. 카드+메뉴</h3>
+        </button>
+        <button class="card-button" data-tab="MG3PA" style="--accent:#2DB36C">
+          <span class="badge">MG</span>
+          <h3>G3·업적. 내 업적 16종</h3>
         </button>
         <button class="card-button" data-tab="MV3" style="--accent:#2DB36C">
           <span class="badge">MV</span>
@@ -889,7 +894,7 @@
           <button class="mg3p-hero__edit" type="button">프로필 수정</button>
         </div>
         <ul class="mg3p-menu">
-          <li>
+          <li data-tab="MG3PA">
             <span class="mg3p-menu__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg></span>
             <b>내 업적</b>
             <em>›</em>
@@ -939,6 +944,178 @@
         <button data-tab="MG3K"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></span><small>커뮤니티</small></button>
         <button class="on" data-tab="MG3P"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
       </nav>
+    </section>
+  </template>
+
+
+  <!-- MG3PA: G3 프로필 > 내 업적 (스택 푸시 페이지) -->
+  <template id="MG3PA-template">
+    <section class="phone phone--MG phone--MG2 phone--MG3 phone--MG3PA">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mg3pa-body">
+        <div class="mg3pa-topbar">
+          <button class="mg3pa-back" type="button" data-tab="MG3P" aria-label="뒤로"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></button>
+          <h2 class="mg3pa-title">내 업적</h2>
+        </div>
+
+        <div class="mg3pa-summary">
+          <div class="mg3pa-summary__row">
+            <div class="mg3pa-summary__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6V2h12v2h1.5a2.5 2.5 0 0 1 0 5H18v.34A6 6 0 0 1 14 15v2h3v2H7v-2h3v-2a6 6 0 0 1-4-5.66V9zM6 7V6H4.5a.5.5 0 0 0 0 1H6zm12 0h1.5a.5.5 0 0 0 0-1H18v1z"/></svg></div>
+            <div class="mg3pa-summary__text">
+              <small>나의 업적</small>
+              <h3><em>3</em><span>/ 16 달성</span></h3>
+            </div>
+          </div>
+          <div class="mg3pa-summary__bar"><div style="width:19%"></div></div>
+          <small class="mg3pa-summary__pct">19% 진행 중</small>
+        </div>
+
+        <section class="mg3pa-section mg3pa-section--green">
+          <div class="mg3pa-section__head"><span class="mg3pa-section__bar" aria-hidden="true"></span><h4>활동</h4><small>2 / 10</small></div>
+          <ul class="mg3pa-list">
+            <li class="mg3pa-ach is-done">
+              <div class="mg3pa-ach__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 11V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div>
+              <div class="mg3pa-ach__body">
+                <div class="mg3pa-ach__head"><b>첫 연결</b><span class="mg3pa-pill mg3pa-pill--green">✓ 달성</span></div>
+                <small>처음으로 새로운 인연을 만들었어요</small>
+                <small class="mg3pa-ach__date">2026.05.15 달성</small>
+              </div>
+            </li>
+            <li class="mg3pa-ach">
+              <div class="mg3pa-ach__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <div class="mg3pa-ach__body">
+                <b>네트워크 확장 중</b>
+                <small>5번의 새로운 만남을 이어갔어요</small>
+                <div class="mg3pa-ach__bar"><div class="mg3pa-ach__bar__t"><i style="width:60%"></i></div><span>3 / 5</span></div>
+              </div>
+            </li>
+            <li class="mg3pa-ach">
+              <div class="mg3pa-ach__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <div class="mg3pa-ach__body">
+                <b>인연 수집가</b>
+                <small>10번의 만남을 꾸준히 만들어갔어요</small>
+                <div class="mg3pa-ach__bar"><div class="mg3pa-ach__bar__t"><i style="width:30%"></i></div><span>3 / 10</span></div>
+              </div>
+            </li>
+            <li class="mg3pa-ach">
+              <div class="mg3pa-ach__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <div class="mg3pa-ach__body">
+                <b>커넥터</b>
+                <small>30번의 인연을 이어왔어요</small>
+                <div class="mg3pa-ach__bar"><div class="mg3pa-ach__bar__t"><i style="width:10%"></i></div><span>3 / 30</span></div>
+              </div>
+            </li>
+            <li class="mg3pa-ach">
+              <div class="mg3pa-ach__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <div class="mg3pa-ach__body">
+                <b>네트워크 허브</b>
+                <small>100번의 만남으로 허브가 되었어요</small>
+                <div class="mg3pa-ach__bar"><div class="mg3pa-ach__bar__t"><i style="width:3%"></i></div><span>3 / 100</span></div>
+              </div>
+            </li>
+            <li class="mg3pa-ach is-done">
+              <div class="mg3pa-ach__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 16 11 18 16 13"/></svg></div>
+              <div class="mg3pa-ach__body">
+                <div class="mg3pa-ach__head"><b>첫 미팅</b><span class="mg3pa-pill mg3pa-pill--green">✓ 달성</span></div>
+                <small>처음으로 모임에 참석했어요</small>
+                <small class="mg3pa-ach__date">2026.05.15 달성</small>
+              </div>
+            </li>
+            <li class="mg3pa-ach">
+              <div class="mg3pa-ach__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <div class="mg3pa-ach__body">
+                <b>정기 멤버</b>
+                <small>5번의 모임에 함께했어요</small>
+                <div class="mg3pa-ach__bar"><div class="mg3pa-ach__bar__t"><i style="width:20%"></i></div><span>1 / 5</span></div>
+              </div>
+            </li>
+            <li class="mg3pa-ach">
+              <div class="mg3pa-ach__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <div class="mg3pa-ach__body">
+                <b>모임 단골</b>
+                <small>20번의 모임을 함께했어요</small>
+                <div class="mg3pa-ach__bar"><div class="mg3pa-ach__bar__t"><i style="width:5%"></i></div><span>1 / 20</span></div>
+              </div>
+            </li>
+            <li class="mg3pa-ach">
+              <div class="mg3pa-ach__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <div class="mg3pa-ach__body">
+                <b>첫 런칭</b>
+                <small>처음으로 모임을 직접 열었어요</small>
+                <div class="mg3pa-ach__bar"><div class="mg3pa-ach__bar__t"><i style="width:0%"></i></div><span>0 / 1</span></div>
+              </div>
+            </li>
+            <li class="mg3pa-ach">
+              <div class="mg3pa-ach__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <div class="mg3pa-ach__body">
+                <b>모임 메이커</b>
+                <small>5번의 모임을 직접 만들었어요</small>
+                <div class="mg3pa-ach__bar"><div class="mg3pa-ach__bar__t"><i style="width:0%"></i></div><span>0 / 5</span></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="mg3pa-section mg3pa-section--orange">
+          <div class="mg3pa-section__head"><span class="mg3pa-section__bar" aria-hidden="true"></span><h4>관심 분야</h4><small>0 / 3</small></div>
+          <ul class="mg3pa-list">
+            <li class="mg3pa-ach">
+              <div class="mg3pa-ach__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <div class="mg3pa-ach__body">
+                <b>분야 탐험가</b>
+                <small>3가지 다른 분야에서 사람들을 만났어요</small>
+                <div class="mg3pa-ach__bar"><div class="mg3pa-ach__bar__t"><i style="width:0%"></i></div><span>0 / 3</span></div>
+              </div>
+            </li>
+            <li class="mg3pa-ach">
+              <div class="mg3pa-ach__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <div class="mg3pa-ach__body">
+                <b>멀티 플레이어</b>
+                <small>5가지 분야에서 활발하게 활동했어요</small>
+                <div class="mg3pa-ach__bar"><div class="mg3pa-ach__bar__t"><i style="width:0%"></i></div><span>0 / 5</span></div>
+              </div>
+            </li>
+            <li class="mg3pa-ach">
+              <div class="mg3pa-ach__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <div class="mg3pa-ach__body">
+                <b>올라운더</b>
+                <small>10가지 분야를 모두 경험했어요</small>
+                <div class="mg3pa-ach__bar"><div class="mg3pa-ach__bar__t"><i style="width:0%"></i></div><span>0 / 10</span></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="mg3pa-section mg3pa-section--purple">
+          <div class="mg3pa-section__head"><span class="mg3pa-section__bar" aria-hidden="true"></span><h4>특별</h4><small>1 / 3</small></div>
+          <ul class="mg3pa-list">
+            <li class="mg3pa-ach is-done">
+              <div class="mg3pa-ach__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
+              <div class="mg3pa-ach__body">
+                <div class="mg3pa-ach__head"><b>얼리 멤버</b><span class="mg3pa-pill mg3pa-pill--purple">✓ 달성</span></div>
+                <small>이음의 초기 멤버로 함께해주셨어요</small>
+                <small class="mg3pa-ach__date">2026.05.15 달성</small>
+              </div>
+            </li>
+            <li class="mg3pa-ach">
+              <div class="mg3pa-ach__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <div class="mg3pa-ach__body">
+                <b>첫 초대</b>
+                <small>처음으로 동료를 이음에 초대했어요</small>
+                <div class="mg3pa-ach__bar"><div class="mg3pa-ach__bar__t"><i style="width:0%"></i></div><span>0 / 1</span></div>
+              </div>
+            </li>
+            <li class="mg3pa-ach">
+              <div class="mg3pa-ach__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <div class="mg3pa-ach__body">
+                <b>커뮤니티 빌더</b>
+                <small>5명의 동료를 이음으로 이끌었어요</small>
+                <div class="mg3pa-ach__bar"><div class="mg3pa-ach__bar__t"><i style="width:0%"></i></div><span>0 / 5</span></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
     </section>
   </template>
 
