@@ -77,11 +77,12 @@ a { color: #2563EB; }
 .eum-logo--sm .eum-logo__txt { font-size: 18px; font-weight: 800; }
 /* MG4: 로고 좌상단 + 인사말 분리 */
 .mg-topbar--g4 { align-items: center; padding: 0 0 0; }
-.mg-greet--g4 { padding: 0 0 8px; }
+.mg-greet--g4 { padding: 0 0 9px; }
 .phone--MG4 .mg-body { padding-top: 0; }
 .phone--MG4 .mg-topbar { padding: 6px 0 12px; }
 .phone--MG4 .mg-radar__sub { margin-bottom: 14px; }
 .phone--MG4 .mg-greet small { font-size: 12px; }
+.phone--MG4 .mg-greet h2 { font-size: 18px; }
 .home__section { font-size: 14px; font-weight: 800; letter-spacing: -.01em; color: var(--muted); margin: 28px 0 12px; padding-top: 18px; border-top: 1px solid var(--line); text-transform: uppercase; }
 .home__section:first-of-type { padding-top: 0; border-top: none; margin-top: 8px; }
 .home__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
