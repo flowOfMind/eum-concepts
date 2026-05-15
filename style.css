@@ -71,6 +71,15 @@ a { color: #2563EB; }
   .eum-logo__c { mix-blend-mode: normal; opacity: .92; }
   .eum-logo__c--b { background: #2563EB; }
 }
+.eum-logo--sm { gap: 8px; }
+.eum-logo--sm .eum-logo__venn { width: 34px; height: 22px; }
+.eum-logo--sm .eum-logo__c { width: 22px; height: 22px; }
+.eum-logo--sm .eum-logo__txt { font-size: 17px; font-weight: 800; }
+/* MG4: 로고 좌상단 + 인사말 분리 */
+.mg-topbar--g4 { align-items: center; padding-bottom: 6px; }
+.mg-greet--g4 { padding: 4px 0 14px; }
+.mg-greet--g4 small { color: var(--mg-muted); font-size: 12.5px; font-weight: 600; letter-spacing: -.01em; }
+.mg-greet--g4 h2 { font-size: 19px; font-weight: 800; letter-spacing: -.02em; color: var(--mg-fg); margin: 4px 0 0; line-height: 1.32; }
 .home__section { font-size: 14px; font-weight: 800; letter-spacing: -.01em; color: var(--muted); margin: 28px 0 12px; padding-top: 18px; border-top: 1px solid var(--line); text-transform: uppercase; }
 .home__section:first-of-type { padding-top: 0; border-top: none; margin-top: 8px; }
 .home__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }

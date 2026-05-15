@@ -90,6 +90,7 @@
       <div class="topbar__tabs">
         <button class="tab" data-tab="home" aria-selected="true">시안 목록</button>
         <button class="tab" data-tab="MG3">G3</button>
+        <button class="tab" data-tab="MG4">G4</button>
         <button class="tab" data-tab="MG3M">G3·매칭</button>
         <button class="tab" data-tab="MG3C">G3·채팅</button>
         <button class="tab" data-tab="MG3CD">G3·채팅방</button>
@@ -705,6 +706,67 @@
       </div>
       <nav class="mg-nav mg-nav--g3">
         <button class="on" data-tab="MG3"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
+        <button data-tab="MG3M"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><small>매칭</small></button>
+        <button data-tab="MG3C"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>채팅</small></button>
+        <button data-tab="MG3K"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></span><small>커뮤니티</small></button>
+        <button data-tab="MG3P"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><small>프로필</small></button>
+      </nav>
+    </section>
+  </template>
+
+
+  <!-- MG4: G3 복제본 — 좌상단 이음 로고 + 인사말 분리 -->
+  <template id="MG4-template">
+    <section class="phone phone--MG phone--MG2 phone--MG3 phone--MG4">
+      <div class="phone__statusbar">9:41</div>
+      <div class="phone__body mg-body">
+        <div class="mg-topbar mg-topbar--g4">
+          <span class="eum-logo eum-logo--sm" aria-label="이음">
+            <span class="eum-logo__venn" aria-hidden="true">
+              <span class="eum-logo__c eum-logo__c--g"></span>
+              <span class="eum-logo__c eum-logo__c--b"></span>
+            </span>
+            <span class="eum-logo__txt">이음</span>
+          </span>
+          <button class="mg-bell" aria-label="알림"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></button>
+        </div>
+        <div class="mg-greet mg-greet--g4">
+          <small>안녕하세요, 도현님</small>
+          <h2>오늘도 새로운 동료를 만나볼까요?</h2>
+        </div>
+
+        <div class="mg-radar">
+          <div class="mg-radar__rings" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <button class="mg-radar__btn" type="button" data-tab="MV3">
+            <span class="mg-radar__icon">◉</span>
+            <span class="mg-radar__lbl">오늘의<br>바이브 코딩</span>
+          </button>
+          <div class="mg-radar__sub">Vibe Radar</div>
+          <div class="mg-radar__meta">
+            <small>📍 관악구 · 반경 1.2km</small>
+            <small>대기 중인 빌더 <em>12</em>명</small>
+          </div>
+        </div>
+
+        <div class="mg-section">
+          <h3 class="mg-section__title">가장 최근 매칭 된 모임</h3>
+          <ul class="mg-sched">
+            <li>
+              <span class="mg-sched__t">소규모</span>
+              <div><b>강남 모각코 후보</b><small>4 / 6명 · 미참여</small></div>
+              <button class="mg-sched__join">참여</button>
+            </li>
+            <li class="mg-sched--mute">
+              <span class="mg-sched__t">중규모</span>
+              <div><b>미션 마감</b><small>AI 랜딩페이지</small></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="mg-nav mg-nav--g3">
+        <button class="on" data-tab="MG4"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span><small>홈</small></button>
         <button data-tab="MG3M"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><small>매칭</small></button>
         <button data-tab="MG3C"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><small>채팅</small></button>
         <button data-tab="MG3K"><span class="mg-nav__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></span><small>커뮤니티</small></button>
