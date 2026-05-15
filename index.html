@@ -706,12 +706,12 @@
           <button class="mg-bell" aria-label="알림"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></button>
         </div>
         <div class="mg3m-tabs" role="tablist">
-          <button class="mg3m-tab is-on" type="button">전체</button>
-          <button class="mg3m-tab" type="button">대기 중</button>
-          <button class="mg3m-tab" type="button">확정</button>
+          <button class="mg3m-tab is-on" type="button" data-mg3m-filter="all">전체</button>
+          <button class="mg3m-tab" type="button" data-mg3m-filter="wait">대기 중</button>
+          <button class="mg3m-tab" type="button" data-mg3m-filter="done">확정</button>
         </div>
         <ul class="mg3m-list">
-          <li class="mg3m-card mg3m-card--wait">
+          <li class="mg3m-card mg3m-card--wait" data-mg3m-state="wait">
             <div class="mg3m-card__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
             <div class="mg3m-card__body">
               <div class="mg3m-card__head"><b>모임</b><span class="mg3m-tag">소규모</span></div>
@@ -720,7 +720,7 @@
             </div>
             <span class="mg3m-card__pill mg3m-card__pill--wait">대기 중</span>
           </li>
-          <li class="mg3m-card mg3m-card--done">
+          <li class="mg3m-card mg3m-card--done" data-mg3m-state="done">
             <div class="mg3m-card__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
             <div class="mg3m-card__body">
               <div class="mg3m-card__head"><b>담담님과의 모임</b><span class="mg3m-tag">소규모</span></div>
@@ -729,7 +729,7 @@
             </div>
             <span class="mg3m-card__pill mg3m-card__pill--done">채팅 종료</span>
           </li>
-          <li class="mg3m-card mg3m-card--done">
+          <li class="mg3m-card mg3m-card--done" data-mg3m-state="done">
             <div class="mg3m-card__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
             <div class="mg3m-card__body">
               <div class="mg3m-card__head"><b>프렌즈·담담 모임</b><span class="mg3m-tag">중규모</span></div>
@@ -738,7 +738,7 @@
             </div>
             <span class="mg3m-card__pill mg3m-card__pill--done">채팅 종료</span>
           </li>
-          <li class="mg3m-card mg3m-card--done">
+          <li class="mg3m-card mg3m-card--done" data-mg3m-state="done">
             <div class="mg3m-card__ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
             <div class="mg3m-card__body">
               <div class="mg3m-card__head"><b>담담님과의 모임</b><span class="mg3m-tag">소규모</span></div>

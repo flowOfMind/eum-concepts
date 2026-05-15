@@ -16,6 +16,23 @@
     carousel.addEventListener('scroll', update, { passive: true });
   };
 
+  const setupMG3MTabs = () => {
+    const phone = document.querySelector('.phone--MG3M');
+    if (!phone) return;
+    const tabBtns = phone.querySelectorAll('.mg3m-tab');
+    const cards = phone.querySelectorAll('.mg3m-card');
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.mg3mFilter || 'all';
+        tabBtns.forEach(b => b.classList.toggle('is-on', b === btn));
+        cards.forEach(c => {
+          const state = c.dataset.mg3mState;
+          c.hidden = !(filter === 'all' || state === filter);
+        });
+      });
+    });
+  };
+
   const setupMEThemeToggle = () => {
     const phone = document.querySelector('.phone--ME');
     if (!phone) return;
@@ -63,6 +80,7 @@ const render = (key) => {
     });
     if (key === 'PX') setupPXCarousel();
     if (key === 'ME' || key === 'MQ') setupMEThemeToggle();
+    if (key === 'MG3M') setupMG3MTabs();
     stage.querySelectorAll('.m-ai-tag, .mv-chip').forEach(btn => {
       btn.addEventListener('click', e => {
         e.preventDefault();
