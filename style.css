@@ -81,7 +81,7 @@ a { color: #2563EB; }
 .phone--MG4 .mg-body { padding-top: 0; }
 .phone--MG4 .mg-topbar { padding: 6px 0 12.5px; }
 .phone--MG4 .mg-radar__sub { margin-bottom: 14px; }
-.phone--MG4 .mg-greet small { font-size: 12px; }
+.phone--MG4 .mg-greet small { font-size: 13px; }
 .phone--MG4 .mg-greet h2 { font-size: 18px; }
 .home__section { font-size: 14px; font-weight: 800; letter-spacing: -.01em; color: var(--muted); margin: 28px 0 12px; padding-top: 18px; border-top: 1px solid var(--line); text-transform: uppercase; }
 .home__section:first-of-type { padding-top: 0; border-top: none; margin-top: 8px; }
