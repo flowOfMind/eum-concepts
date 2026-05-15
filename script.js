@@ -85,10 +85,13 @@ const render = (key) => {
       const phone = stage.querySelector('.phone--MV3');
       if (!phone) return;
       const cta = phone.querySelector('.mv-cta');
+      if (!cta) return;
       const wantOn = phone.querySelector('.mv-want__item.is-on');
       const row = phone.querySelector('.mv-pick__row');
       const rowOn = row ? row.querySelector('.mv-chip.is-on') : null;
-      if (cta) cta.disabled = !(wantOn && rowOn);
+      const enabled = !!(wantOn && rowOn);
+      cta.disabled = !enabled;
+      cta.textContent = enabled ? '지금 매칭하기 →' : '모임을 선택해주세요';
     };
     stage.querySelectorAll('.m-ai-tag, .mv-chip, .mv-want__item').forEach(btn => {
       btn.addEventListener('click', e => {
