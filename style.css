@@ -2906,10 +2906,6 @@ a { color: #2563EB; }
 .mg3cd-sheet__act--block .mg3cd-sheet__txt small { font-size: 12px; font-weight: 600; color: #B91C1C; opacity: .85; }
 .mg3cd-sheet__act--report .mg3cd-sheet__txt small { font-size: 12px; font-weight: 600; color: #92400E; opacity: .85; }
 
-/* 채팅 빈 상태 보조 CTA */
-.mg3c-cta--ghost { background: transparent; color: var(--mg-acc); border: 1px solid var(--mg-acc); margin-top: 8px; }
-.mg3c-cta--ghost:active { transform: scale(.98); }
-
 /* MG3CC — 모임 만들기 */
 .phone--MG3CC .phone__body { padding: 0 0 28px; }
 .mg3cc-body { background: #fff; }
