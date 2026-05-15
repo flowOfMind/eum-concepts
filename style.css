@@ -2460,7 +2460,7 @@ a { color: #2563EB; }
 .mg3p-hero__tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-bottom: 12px; }
 .mg3p-hero__tags span { font-size: 12px; font-weight: 700; color: var(--mg-acc); background: rgba(45,179,108,.10); padding: 6px 12px; border-radius: 99px; letter-spacing: -.01em; }
 .mg3p-hero__meta { font-size: 13px; color: var(--mg-muted); font-weight: 600; margin-bottom: 16px; }
-.mg3p-hero__edit { background: var(--mg-acc); color: #fff; border: 0; border-radius: 99px; padding: 13px 32px; margin-top: 6px; margin-bottom: 18px; font-family: inherit; font-size: 14px; font-weight: 800; cursor: pointer; box-shadow: 0 8px 20px rgba(45,179,108,.30); letter-spacing: -.01em; }
+.mg3p-hero__edit { background: var(--mg-acc); color: #fff; border: 0; border-radius: 99px; padding: 13px 22px; margin-top: 6px; margin-bottom: 18px; font-family: inherit; font-size: 14px; font-weight: 800; cursor: pointer; box-shadow: 0 8px 20px rgba(45,179,108,.30); letter-spacing: -.01em; }
 .mg3p-hero__edit:active { transform: scale(.98); }
 
 .mg3p-menu { list-style: none; padding: 0; margin: 0 -18px; background: var(--mg-card); border-top: 1px solid var(--mg-line); }
